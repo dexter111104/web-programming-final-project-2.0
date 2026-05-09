@@ -1,0 +1,498 @@
+/* === 啟動畫面 === */
+#splash {
+    position: fixed;
+    inset: 0;
+    background: #0a0a0a;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.8s ease;
+}
+#splash.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+.splash-content {
+    text-align: center;
+    animation: splash-in 0.8s ease both;
+}
+@keyframes splash-in {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.splash-logo {
+    margin-bottom: 24px;
+    filter: drop-shadow(0 0 18px rgba(0,255,65,0.6));
+}
+.splash-title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+.splash-sub {
+    font-size: 0.9rem;
+    color: #00FF41;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* === 基礎重置 === */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 17px;
+    background: #0a0a0a;
+    color: #e0e0e0;
+    overflow: hidden;
+}
+
+/* === 全螢幕地圖 === */
+#map {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 1;
+}
+
+/* === 頂部標題列 === */
+.top-bar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 48px;
+    background: rgba(10, 10, 10, 0.88);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #222;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+.top-bar-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+}
+.top-bar-sub {
+    font-size: 0.68rem;
+    font-weight: 400;
+    color: #00FF41;
+    letter-spacing: 1.5px;
+    margin-left: 8px;
+    opacity: 0.8;
+}
+
+.panel-toggle-btn {
+    background: transparent;
+    border: 1px solid #00FF41;
+    color: #00FF41;
+    padding: 5px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.82rem;
+    transition: 0.2s;
+}
+.panel-toggle-btn:hover { background: #00FF41; color: #000; }
+
+/* === 右側浮動面板 === */
+.control-panel {
+    position: fixed;
+    top: 48px; right: 0;
+    width: 340px;
+    height: calc(100vh - 48px);
+    background: rgba(13, 13, 13, 0.93);
+    backdrop-filter: blur(12px);
+    border-left: 1px solid #222;
+    z-index: 999;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 12px;
+    transition: transform 0.3s ease;
+    scrollbar-width: thin;
+    scrollbar-color: #333 #0d0d0d;
+}
+
+.control-panel.hidden {
+    transform: translateX(100%);
+}
+
+.control-panel::-webkit-scrollbar { width: 5px; }
+.control-panel::-webkit-scrollbar-track { background: #0d0d0d; }
+.control-panel::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+
+/* === 數據面板 === */
+.data-panel {
+    display: flex;
+    justify-content: space-around;
+    background: #141414;
+    border: 1px solid #1e1e1e;
+    border-radius: 8px;
+    padding: 10px 6px;
+    margin-bottom: 10px;
+}
+
+.data-item {
+    text-align: center;
+    font-size: 0.7rem;
+    color: #666;
+}
+.data-item span {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-top: 3px;
+}
+
+/* === 通用區塊 === */
+.section-block {
+    background: #141414;
+    border: 1px solid #1e1e1e;
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+}
+
+.section-label {
+    font-size: 0.72rem;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 8px;
+}
+
+/* === 滑桿 === */
+input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+    margin: 6px 0 4px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #2a2a2a;
+    height: 5px;
+    border-radius: 3px;
+    outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px; height: 16px;
+    background: #00FF41;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0,255,65,0.7);
+    cursor: pointer;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.68rem;
+    color: #444;
+}
+
+/* === 底圖按鈕 === */
+.layer-btns {
+    display: flex;
+    gap: 6px;
+}
+.layer-btn {
+    flex: 1;
+    padding: 6px 4px;
+    background: #1e1e1e;
+    color: #666;
+    border: 1px solid #2a2a2a;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    transition: 0.2s;
+}
+.layer-btn.active, .layer-btn:hover {
+    background: #00FF41;
+    color: #000;
+    border-color: #00FF41;
+    font-weight: 600;
+}
+
+/* === 切換開關 === */
+.toggle-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.toggle-label { font-size: 0.82rem; color: #aaa; }
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 44px; height: 22px;
+    flex-shrink: 0;
+}
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider-round {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: #2a2a2a;
+    border-radius: 22px;
+    transition: .3s;
+}
+.slider-round:before {
+    position: absolute;
+    content: "";
+    height: 16px; width: 16px;
+    left: 3px; bottom: 3px;
+    background: #fff;
+    border-radius: 50%;
+    transition: .3s;
+}
+input:checked + .slider-round { background: #00FF41; }
+input:checked + .slider-round:before { transform: translateX(22px); }
+
+/* === 數據卡片列 === */
+.stats-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.stat-card {
+    flex: 1;
+    background: #141414;
+    border: 1px solid #1e1e1e;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+}
+.stat-label {
+    font-size: 0.68rem;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+    line-height: 1.3;
+}
+.stat-value {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #fff;
+    border-bottom: 2px solid #00FF41;
+    display: inline-block;
+    padding-bottom: 2px;
+}
+.stat-value small {
+    font-size: 0.72rem;
+    color: #666;
+    font-weight: 400;
+    margin-left: 3px;
+}
+
+/* === 圓環圖 === */
+.chart-container {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* === 生態衝擊 === */
+.eco-tags {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+.eco-btn {
+    background: transparent;
+    border: 1px solid #00FF41;
+    color: #00FF41;
+    padding: 4px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    transition: 0.2s;
+}
+.eco-btn:hover { background: #00FF41; color: #000; }
+
+.eco-detail-box {
+    background: #0d0d0d;
+    border-left: 3px solid #00FF41;
+    border-radius: 0 6px 6px 0;
+    padding: 10px;
+    min-height: 44px;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.5;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* === 永續方案 === */
+.solution-section { margin-bottom: 20px; }
+.sol-item {
+    background: #0d0d0d;
+    border-radius: 6px;
+    padding: 8px 10px;
+    margin-top: 6px;
+}
+.sol-item h4 { color: #00FF41; font-size: 0.8rem; margin-bottom: 3px; }
+.sol-item p { font-size: 0.75rem; color: #666; line-height: 1.4; }
+
+/* 地圖容器深色背景，避免邊界露出白色 */
+.leaflet-container {
+    background: #0a0a0a !important;
+}
+
+/* 光害疊加圖層：screen 混合讓黑色底色透明 */
+.lp-overlay {
+    mix-blend-mode: screen;
+}
+
+/* 點擊標記 */
+.click-marker { background: none; border: none; }
+.click-pin {
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #00FF41;
+    box-shadow: 0 0 0 3px rgba(0,255,65,0.3), 0 0 12px rgba(0,255,65,0.6);
+    animation: pin-pulse 1.5s ease-out infinite;
+}
+@keyframes pin-pulse {
+    0%   { box-shadow: 0 0 0 3px rgba(0,255,65,0.3), 0 0 12px rgba(0,255,65,0.6); }
+    50%  { box-shadow: 0 0 0 7px rgba(0,255,65,0.1), 0 0 20px rgba(0,255,65,0.4); }
+    100% { box-shadow: 0 0 0 3px rgba(0,255,65,0.3), 0 0 12px rgba(0,255,65,0.6); }
+}
+
+/* 衛星底圖降低亮度 */
+.dim-layer {
+    filter: brightness(0.5);
+}
+
+/* 街道底圖略暗 */
+.street-layer {
+    filter: brightness(0.5);
+}
+
+/* === Leaflet 樣式覆寫 === */
+.leaflet-control-zoom {
+    margin-top: 60px !important;
+    border: none !important;
+}
+.leaflet-control-zoom a {
+    background: rgba(13,13,13,0.9) !important;
+    color: #00FF41 !important;
+    border: 1px solid #222 !important;
+    backdrop-filter: blur(6px);
+}
+.leaflet-control-zoom a:hover {
+    background: #00FF41 !important;
+    color: #000 !important;
+}
+.leaflet-control-attribution {
+    background: rgba(0,0,0,0.6) !important;
+    color: #444 !important;
+    font-size: 0.6rem !important;
+}
+.leaflet-control-attribution a { color: #555 !important; }
+
+/* === 左側位置資訊面板 === */
+.loc-panel {
+    position: fixed;
+    top: 60px; left: 12px;
+    width: 260px;
+    max-height: calc(100vh - 80px);
+    background: rgba(10,10,10,0.92);
+    backdrop-filter: blur(14px);
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    z-index: 998;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-6px);
+    transition: opacity 0.22s ease, transform 0.22s ease;
+    scrollbar-width: thin;
+    scrollbar-color: #333 #0d0d0d;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+}
+.loc-panel.open { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.loc-panel::-webkit-scrollbar { width: 4px; }
+.loc-panel::-webkit-scrollbar-track { background: transparent; }
+.loc-panel::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
+
+.loc-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 14px 14px 12px;
+    border-bottom: 1px solid #1e1e1e;
+    gap: 8px;
+}
+.loc-place-name {
+    font-size: 0.8rem;
+    color: #aaa;
+    line-height: 1.4;
+    flex: 1;
+    word-break: break-all;
+}
+.loc-close-btn {
+    background: none;
+    border: none;
+    color: #444;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0;
+    flex-shrink: 0;
+    line-height: 1;
+    transition: color 0.2s;
+}
+.loc-close-btn:hover { color: #aaa; }
+
+.loc-body { padding: 14px; }
+
+.loc-hint {
+    color: #333;
+    font-size: 0.78rem;
+    text-align: center;
+    padding: 28px 0;
+    line-height: 1.6;
+}
+.loc-loading {
+    color: #444;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 28px 0;
+}
+
+.loc-class-num {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+.loc-class-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 4px 0 18px;
+}
+.loc-divider {
+    border: none;
+    border-top: 1px solid #1e1e1e;
+    margin: 0 0 4px;
+}
+.loc-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 9px 0;
+    border-bottom: 1px solid #141414;
+    font-size: 0.78rem;
+}
+.loc-row:last-child { border-bottom: none; }
+.loc-key { color: #555; }
+.loc-val { color: #ccc; font-weight: 600; text-align: right; }
+

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Pollution Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 啟動畫面 -->
+    <div id="splash">
+        <div class="splash-content">
+            <div class="splash-logo">
+                <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="36" cy="36" r="10" fill="#8A2BE2"/>
+                    <circle cx="36" cy="36" r="10" fill="#8A2BE2" opacity="0.3">
+                        <animate attributeName="r" values="10;22;10" dur="2s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.3;0;0.3" dur="2s" repeatCount="indefinite"/>
+                    </circle>
+                    <line x1="36" y1="4" x2="36" y2="16" stroke="#8A2BE2" stroke-width="2.5" stroke-linecap="round"/>
+                    <line x1="36" y1="56" x2="36" y2="68" stroke="#8A2BE2" stroke-width="2.5" stroke-linecap="round"/>
+                    <line x1="4" y1="36" x2="16" y2="36" stroke="#8A2BE2" stroke-width="2.5" stroke-linecap="round"/>
+                    <line x1="56" y1="36" x2="68" y2="36" stroke="#8A2BE2" stroke-width="2.5" stroke-linecap="round"/>
+                    <line x1="11" y1="11" x2="19" y2="19" stroke="#8A2BE2" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+                    <line x1="53" y1="53" x2="61" y2="61" stroke="#8A2BE2" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+                    <line x1="61" y1="11" x2="53" y2="19" stroke="#8A2BE2" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+                    <line x1="19" y1="53" x2="11" y2="61" stroke="#8A2BE2" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+                </svg>
+            </div>
+            <div class="splash-title">光害地圖</div>
+            <div class="splash-sub">Light Pollution Atlas</div>
+        </div>
+    </div>
+
+    <!-- 全螢幕地圖 -->
+    <div id="map"></div>
+
+    <!-- 左側位置資訊面板 -->
+    <div id="loc-panel" class="loc-panel">
+        <div class="loc-header">
+            <span id="loc-place" class="loc-place-name">—</span>
+            <button id="loc-close" class="loc-close-btn">✕</button>
+        </div>
+        <div id="loc-body" class="loc-body">
+            <div class="loc-hint">點擊地圖上任意位置查詢光害資訊</div>
+        </div>
+    </div>
+
+    <!-- 頂部標題列 -->
+    <div class="top-bar">
+        <div class="top-bar-title">
+            <svg width="18" height="18" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;margin-right:7px;filter:drop-shadow(0 0 4px rgba(0,255,65,0.7))">
+                <circle cx="36" cy="36" r="10" fill="#8A2BE2"/>
+                <line x1="36" y1="4" x2="36" y2="16" stroke="#8A2BE2" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="36" y1="56" x2="36" y2="68" stroke="#8A2BE2" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="4" y1="36" x2="16" y2="36" stroke="#8A2BE2" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="56" y1="36" x2="68" y2="36" stroke="#8A2BE2" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="11" y1="11" x2="19" y2="19" stroke="#8A2BE2" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+                <line x1="53" y1="53" x2="61" y2="61" stroke="#8A2BE2" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+                <line x1="61" y1="11" x2="53" y2="19" stroke="#8A2BE2" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+                <line x1="19" y1="53" x2="11" y2="61" stroke="#8A2BE2" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+            </svg>
+            光害地圖 <span class="top-bar-sub">Light Pollution Atlas</span>
+        </div>
+        <button id="panel-toggle" class="panel-toggle-btn">☰</button>
+    </div>
+
+    <!-- 右側浮動控制面板 -->
+    <div id="control-panel" class="control-panel">
+
+        <!-- 底圖選擇 -->
+        <div class="section-block">
+            <div class="section-label">底圖選擇</div>
+            <div class="layer-btns">
+                <button class="layer-btn active" data-layer="street">街道</button>
+                <button class="layer-btn" data-layer="satellite">衛星</button>
+            </div>
+        </div>
+
+        <!-- 光害疊加圖層控制 -->
+        <div class="section-block">
+            <div class="toggle-wrapper">
+                <span class="toggle-label">顯示光害疊加圖層</span>
+                <label class="switch">
+                    <input type="checkbox" id="lpToggle" checked>
+                    <span class="slider-round"></span>
+                </label>
+            </div>
+        </div>
+
+        <!-- 波特爾等級圖例 -->
+        <div class="section-block">
+            <div class="section-label">波特爾等級圖例</div>
+            <div class="bortle-legend">
+                <div class="bortle-row"><span class="bortle-dot" style="background:#9bb8ff"></span><span class="bortle-class">1</span><span class="bortle-desc">天空完全黑暗的觀測點</span></div>
+                <div class="bortle-row"><span class="bortle-dot" style="background:#7fc4ff"></span><span class="bortle-class">2</span><span class="bortle-desc">典型的真正黑暗的觀測點</span></div>
+                <div class="bortle-row"><span class="bortle-dot" style="background:#00aa44"></span><span class="bortle-class">3</span><span class="bortle-desc">鄉村的星空</span></div>
+                <div class="bortle-row"><span class="bortle-dot" style="background:#00dd55"></span><span class="bortle-class">4</span><span class="bortle-desc">鄉村／郊區的過渡帶</span></div>
+                <div class="bortle-row"><span class="bortle-dot" style="background:#eeee00"></span><span class="bortle-class">5</span><span class="bortle-desc">郊區的星空</span></div>
+                <div class="bortle-row"><span class="bortle-dot" style="background:#ffaa44"></span><span class="bortle-class">6</span><span class="bortle-desc">明亮的郊區星空</span></div>
+                <div class="bortle-row"><span class="bortle-dot" style="background:#ff8888"></span><span class="bortle-class">7</span><span class="bortle-desc">郊區／城市的過渡帶</span></div>
+                <div class="bortle-row"><span class="bortle-dot" style="background:#bbbbbb"></span><span class="bortle-class">8</span><span class="bortle-desc">城市的星空</span></div>
+                <div class="bortle-row"><span class="bortle-dot" style="background:#eeeeee"></span><span class="bortle-class">9</span><span class="bortle-desc">市中心的星空</span></div>
+            </div>
+        </div>
+
+        <!-- 暗空聖地 -->
+        <div class="section-block">
+            <div class="section-label">全球暗空聖地 (IDA 認證)</div>
+            <div id="darksite-list" class="darksite-list"></div>
+        </div>
+
+    </div>
+
+    <!-- 暗空聖地浮動資訊面板 -->
+    <div id="site-panel" class="site-panel">
+        <div class="site-panel-img-wrap">
+            <img id="site-panel-img" src="" alt="">
+        </div>
+        <div class="site-panel-body">
+            <button class="site-panel-close" onclick="closeSitePanel()">✕</button>
+            <div id="site-panel-year" class="site-panel-year"></div>
+            <div id="site-panel-name" class="site-panel-name"></div>
+            <div id="site-panel-ename" class="site-panel-ename"></div>
+            <div id="site-panel-country" class="site-panel-country"></div>
+            <p id="site-panel-desc" class="site-panel-desc"></p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

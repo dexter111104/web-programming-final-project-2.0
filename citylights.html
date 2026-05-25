@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Pollution Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 啟動畫面 -->
+    <div id="splash">
+        <div class="splash-content">
+            <div class="splash-logo">
+                <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="36" cy="33" r="22" fill="#ffffff" opacity="0">
+                        <animate attributeName="r" values="22;36;22" dur="2.5s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0;0.07;0" dur="2.5s" repeatCount="indefinite"/>
+                    </circle>
+                    <path d="M36 6C21.6 6 10 17.6 10 32C10 42.4 16.2 51.4 25 55.4L25 60L47 60L47 55.4C55.8 51.4 62 42.4 62 32C62 17.6 50.4 6 36 6Z" stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round" style="filter:drop-shadow(0 0 3px rgba(255,255,255,0.65))"/>
+                    <line x1="25" y1="63" x2="47" y2="63" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+                    <line x1="28" y1="67" x2="44" y2="67" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M31 42L34 33L36 40L38 33L41 42" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+                    <g opacity="0.6" style="filter:drop-shadow(0 0 3px rgba(255,255,255,0.55))">
+                        <path d="M62 5L64.5 9.5L69 12L64.5 14.5L62 19L59.5 14.5L55 12L59.5 9.5Z" fill="#ffffff"/>
+                        <path d="M20 3.5L21.5 6.5L24.5 8L21.5 9.5L20 12.5L18.5 9.5L15.5 8L18.5 6.5Z" fill="#ffffff" opacity="0.85"/>
+                        <path d="M7 34.5L8.2 36.8L10.5 38L8.2 39.2L7 41.5L5.8 39.2L3.5 38L5.8 36.8Z" fill="#ffffff" opacity="0.7"/>
+                        <path d="M65 49L66 51L68 52L66 53L65 55L64 53L62 52L64 51Z" fill="#ffffff" opacity="0.65"/>
+                        <path d="M48 2L48.6 3.4L50 4L48.6 4.6L48 6L47.4 4.6L46 4L47.4 3.4Z" fill="#ffffff" opacity="0.55"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="splash-title">光害地圖</div>
+            <div class="splash-sub">Light Pollution Atlas</div>
+        </div>
+    </div>
+
+    <!-- 全螢幕地圖 -->
+    <div id="map"></div>
+
+    <!-- 左側位置資訊面板 -->
+    <div id="loc-panel" class="loc-panel">
+        <div class="loc-header">
+            <span id="loc-place" class="loc-place-name">—</span>
+            <button id="loc-close" class="loc-close-btn">✕</button>
+        </div>
+        <div id="loc-body" class="loc-body">
+            <div class="loc-hint" data-i18n="loc_hint">點擊地圖上任意位置查詢光害資訊</div>
+        </div>
+    </div>
+
+    <!-- 頂部標題列 -->
+    <div class="top-bar">
+        <div class="top-bar-title">
+            <svg width="22" height="22" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;margin-right:7px;filter:drop-shadow(0 0 4px rgba(255,255,255,1)) drop-shadow(0 0 12px rgba(180,210,255,0.85)) drop-shadow(0 0 28px rgba(120,170,255,0.5))">
+                <path d="M36 6C21.6 6 10 17.6 10 32C10 42.4 16.2 51.4 25 55.4L25 60L47 60L47 55.4C55.8 51.4 62 42.4 62 32C62 17.6 50.4 6 36 6Z" stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round"/>
+                <line x1="25" y1="63" x2="47" y2="63" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="28" y1="67" x2="44" y2="67" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                <path d="M31 42L34 33L36 40L38 33L41 42" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+                <g opacity="0.6" style="filter:drop-shadow(0 0 3px rgba(255,255,255,0.55))">
+                    <path d="M62 5L64.5 9.5L69 12L64.5 14.5L62 19L59.5 14.5L55 12L59.5 9.5Z" fill="#ffffff"/>
+                    <path d="M20 3.5L21.5 6.5L24.5 8L21.5 9.5L20 12.5L18.5 9.5L15.5 8L18.5 6.5Z" fill="#ffffff" opacity="0.85"/>
+                    <path d="M7 34.5L8.2 36.8L10.5 38L8.2 39.2L7 41.5L5.8 39.2L3.5 38L5.8 36.8Z" fill="#ffffff" opacity="0.7"/>
+                    <path d="M65 49L66 51L68 52L66 53L65 55L64 53L62 52L64 51Z" fill="#ffffff" opacity="0.65"/>
+                    <path d="M48 2L48.6 3.4L50 4L48.6 4.6L48 6L47.4 4.6L46 4L47.4 3.4Z" fill="#ffffff" opacity="0.55"/>
+                </g>
+            </svg>
+            <span>光害地圖 <small style="opacity:0.6;font-size:0.75em;font-weight:400">Light Pollution Atlas</small></span>
+        </div>
+        <button id="panel-toggle" class="panel-toggle-btn">☰</button>
+    </div>
+
+    <!-- 右側浮動控制面板 -->
+    <div id="control-panel" class="control-panel">
+
+        <!-- 底圖選擇 -->
+        <div class="section-block">
+            <div class="section-label" data-i18n="basemap">底圖選擇</div>
+            <div class="layer-btns">
+                <button class="layer-btn active" data-layer="street" data-i18n="street">街道</button>
+                <button class="layer-btn" data-layer="satellite" data-i18n="satellite">衛星</button>
+            </div>
+        </div>
+
+        <!-- 光害疊加圖層控制 -->
+        <div class="section-block">
+            <div class="toggle-wrapper">
+                <span class="toggle-label" data-i18n="lp_layer">光害圖層</span>
+                <label class="switch">
+                    <input type="checkbox" id="lpToggle" checked>
+                    <span class="slider-round"></span>
+                </label>
+            </div>
+        </div>
+
+        <!-- 波特爾等級圖例 -->
+        <div class="section-block">
+            <div class="section-label" data-i18n="bortle_legend">波特爾等級圖例</div>
+            <div class="bortle-legend">
+                <div class="bortle-row"><span class="bortle-dot" style="background:#9bb8ff"></span><span class="bortle-class">1</span><span class="bortle-desc" data-i18n="b1">天空完全黑暗的觀測點</span></div>
+                <div class="bortle-row"><span class="bortle-dot" style="background:#7fc4ff"></span><span class="bortle-class">2</span><span class="bortle-desc" data-i18n="b2">典型的真正黑暗的觀測點</span></div>
+                <div class="bortle-row"><span class="bortle-dot" style="background:#00aa44"></span><span class="bortle-class">3</span><span class="bortle-desc" data-i18n="b3">鄉村的星空</span></div>
+                <div class="bortle-row"><span class="bortle-dot" style="background:#00dd55"></span><span class="bortle-class">4</span><span class="bortle-desc" data-i18n="b4">鄉村／郊區的過渡帶</span></div>
+                <div class="bortle-row"><span class="bortle-dot" style="background:#eeee00"></span><span class="bortle-class">5</span><span class="bortle-desc" data-i18n="b5">郊區的星空</span></div>
+                <div class="bortle-row"><span class="bortle-dot" style="background:#ffaa44"></span><span class="bortle-class">6</span><span class="bortle-desc" data-i18n="b6">明亮的郊區星空</span></div>
+                <div class="bortle-row"><span class="bortle-dot" style="background:#ff8888"></span><span class="bortle-class">7</span><span class="bortle-desc" data-i18n="b7">郊區／城市的過渡帶</span></div>
+                <div class="bortle-row"><span class="bortle-dot" style="background:#bbbbbb"></span><span class="bortle-class">8</span><span class="bortle-desc" data-i18n="b8">城市的星空</span></div>
+                <div class="bortle-row"><span class="bortle-dot" style="background:#eeeeee"></span><span class="bortle-class">9</span><span class="bortle-desc" data-i18n="b9">市中心的星空</span></div>
+            </div>
+        </div>
+
+        <!-- 暗空聖地 -->
+        <div class="section-block">
+            <div class="section-label" data-i18n="darksites">全球暗空聖地 (IDA 認證)</div>
+            <div id="darksite-list" class="darksite-list"></div>
+        </div>
+
+        <!-- 年份光害對比動畫 -->
+        <div class="section-block">
+            <div class="section-label" data-i18n="year_compare">年份光害對比</div>
+            <div class="layer-btns" id="yearBtns" style="flex-wrap:wrap;gap:4px">
+                <button class="layer-btn" data-year="2016">2016</button>
+                <button class="layer-btn" data-year="2020">2020</button>
+                <button class="layer-btn" data-year="2022">2022</button>
+                <button class="layer-btn" data-year="2023">2023</button>
+                <button class="layer-btn active" data-year="2024">2024</button>
+            </div>
+        </div>
+
+        <!-- 今晚觀星時間 -->
+        <div class="section-block">
+            <div class="section-label"><span data-i18n="stargaze">今晚觀星時間</span> <span id="stargazeLoc" class="stargaze-loc-tag"></span></div>
+            <div id="stargazeInfo" class="stargaze-loading">計算中…</div>
+        </div>
+
+
+    </div>
+
+    <!-- 暗空聖地浮動資訊面板 -->
+    <div id="site-panel" class="site-panel">
+        <div class="site-panel-img-wrap">
+            <img id="site-panel-img" src="" alt="">
+        </div>
+        <div class="site-panel-body">
+            <button class="site-panel-close" onclick="closeSitePanel()">✕</button>
+            <div id="site-panel-year" class="site-panel-year"></div>
+            <div id="site-panel-name" class="site-panel-name"></div>
+            <div id="site-panel-ename" class="site-panel-ename"></div>
+            <div id="site-panel-country" class="site-panel-country"></div>
+            <p id="site-panel-desc" class="site-panel-desc"></p>
+            <div id="site-panel-bortle" class="site-panel-bortle"></div>
+        </div>
+    </div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -44,9 +44,14 @@
 /* === 基礎重置 === */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* 明確設定根字體大小為基準，讓所有 rem 單位計算一致 */
+html {
+    font-size: 16px;
+}
+
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    font-size: 21px;
+    font-size: 1.3125rem; /* 21px ÷ 16px = 1.3125rem */
     background: #0a0a0a;
     color: #b8c4d0;
     overflow: hidden;
@@ -328,7 +333,61 @@ input:checked + .slider-round:before { transform: translateX(22px); background: 
 .bortle-desc { color: #666; line-height: 1.3; }
 
 /* === 暗空聖地列表 === */
-.darksite-list { display: flex; flex-direction: column; gap: 4px; }
+.all-sites-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    padding: 6px 10px;
+    margin-bottom: 8px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    color: #aaa;
+    font-size: 0.74rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.all-sites-btn:hover { background: rgba(255,255,255,0.1); color: #ddd; border-color: #3a3a3a; }
+.all-sites-btn.active { background: rgba(180,210,255,0.12); color: #90c0ff; border-color: #4a7ab5; }
+
+/* IDA 類型顏色圖例 */
+.type-legend {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 4px;
+    margin-bottom: 8px;
+    padding: 7px 8px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid #1e1e1e;
+    border-radius: 6px;
+}
+.type-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.68rem;
+    color: #666;
+}
+.type-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    opacity: 0.9;
+}
+
+.darksite-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-height: 440px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #333 transparent;
+}
+.darksite-list::-webkit-scrollbar { width: 4px; }
+.darksite-list::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
 .darksite-item {
     display: flex;
     align-items: center;
@@ -388,15 +447,43 @@ input:checked + .slider-round:before { transform: translateX(22px); background: 
     width: 100%;
     height: 200px;
     overflow: hidden;
-    background: linear-gradient(135deg, #0a1628 0%, #0d2a3d 100%);
+    background: linear-gradient(160deg, #05080f 0%, #0a1628 45%, #060d1e 100%);
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+.site-panel-img-wrap.img-fallback {
+    /* 以 --fallback-color（由 JS 依類型注入）染色邊框光暈 */
+    box-shadow: inset 0 0 40px color-mix(in srgb, var(--fallback-color, #7ec8ff) 20%, transparent);
+}
+.site-panel-img-wrap.img-fallback::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(1px 1px at 15% 25%, rgba(255,255,255,0.7) 0%, transparent 100%),
+        radial-gradient(1px 1px at 40% 15%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 65% 30%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 80% 12%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 55%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 55% 60%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 75% 50%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 10% 75%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 88% 70%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 50% 85%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 33% 40%, rgba(255,255,255,0.8) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 70% 80%, rgba(255,255,255,0.7) 0%, transparent 100%);
 }
 .site-panel-img-wrap.img-fallback::after {
     content: '✦';
-    font-size: 2.5rem;
-    color: rgba(255,255,255,0.6);
+    font-size: 2.8rem;
+    color: color-mix(in srgb, var(--fallback-color, #7ec8ff) 60%, white);
+    text-shadow:
+        0 0 12px color-mix(in srgb, var(--fallback-color, #7ec8ff) 80%, transparent),
+        0 0 28px color-mix(in srgb, var(--fallback-color, #7ec8ff) 40%, transparent);
+    position: relative;
+    z-index: 1;
 }
 #site-panel-img {
     width: 100%;
@@ -530,15 +617,88 @@ input:checked + .slider-round:before { transform: translateX(22px); background: 
     filter: brightness(1.5);
 }
 
+
+/* === 定位錯誤 Toast === */
+.geo-toast {
+    position: fixed;
+    top: 68px; /* 頂部標題列（48px）下方，留一點間距 */
+    left: 50%;
+    transform: translateX(-50%) translateY(-6px);
+    background: rgba(12, 12, 12, 0.96);
+    color: #bbb;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 0.82rem;
+    white-space: nowrap;
+    z-index: 9000;
+    opacity: 0;
+    pointer-events: none;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.55);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.geo-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+.geo-toast svg {
+    flex-shrink: 0;
+    color: #e07070;
+}
+
+/* === 定位按鈕 === */
+.geolocate-btn {
+    position: fixed;
+    bottom: 16px;
+    left: 10px;
+    z-index: 1000;
+    width: 32px;
+    height: 32px;
+    background: rgba(13, 13, 13, 0.9);
+    color: #ffffff;
+    border: 1px solid #222;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(6px);
+    transition: background 0.15s, color 0.15s;
+    padding: 0;
+}
+.geolocate-btn:hover:not(:disabled) {
+    background: #ffffff;
+    color: #000000;
+}
+.geolocate-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+.geolocate-btn.loading svg {
+    animation: geo-spin 1s linear infinite;
+}
+@keyframes geo-spin {
+    to { transform: rotate(360deg); }
+}
+
 /* === Leaflet 樣式覆寫 === */
 .leaflet-control-zoom {
-    margin-top: 60px !important;
+    margin-bottom: 56px !important; /* 為定位按鈕（32px）+ 間距留空 */
+    margin-left: 10px !important;
     border: none !important;
 }
 .leaflet-control-zoom a {
+    width: 32px !important;
+    height: 32px !important;
+    line-height: 32px !important;
     background: rgba(13,13,13,0.9) !important;
     color: #ffffff !important;
     border: 1px solid #222 !important;
+    border-radius: 6px !important;
     backdrop-filter: blur(6px);
 }
 .leaflet-control-zoom a:hover {
@@ -648,6 +808,15 @@ input:checked + .slider-round:before { transform: translateX(22px); background: 
     font-size: 0.9rem;
     text-align: center;
     padding: 28px 0;
+}
+
+/* 網路錯誤或資料異常時顯示的提示 */
+.loc-error {
+    color: #b05050;
+    font-size: 0.88rem;
+    text-align: center;
+    padding: 24px 0;
+    line-height: 1.6;
 }
 
 .loc-class-num {

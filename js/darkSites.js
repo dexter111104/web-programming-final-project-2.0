@@ -27,8 +27,7 @@ const TYPE_DESC = {
 };
 
 /**
- * 同時載入 darksites.json（精選，含完整資訊）與 allsites.json（全量，僅座標）
- * 合併為統一的顯示列表：精選在前，其餘依類型排序在後
+ * 載入 darksites.json（IDA 認證暗空聖地，含座標與完整資訊）
  * @returns {Promise<object[]|null>}
  */
 async function loadDarkSites() {

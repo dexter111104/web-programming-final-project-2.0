@@ -1,0 +1,14 @@
+{
+  "name": "light-pollution-atlas",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "光害地圖 — 觀星收藏與筆記（前端 + Node/Express 後端）",
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server/server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.2"
+  }
+}

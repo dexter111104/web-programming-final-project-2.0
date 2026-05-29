@@ -131,11 +131,22 @@ export function closeSitePanel() {
 }
 
 /**
+ * 取得目前選取的暗空聖地，供「加入收藏」使用；未選取時回傳 null
+ * @returns {{name:string, lat:number, lng:number, siteIndex:number}|null}
+ */
+export function getActiveSite() {
+    if (state.currentSiteIndex < 0) return null;
+    const s = DARK_SITES[state.currentSiteIndex];
+    if (!s) return null;
+    return { name: s.name || s.ename || '暗空聖地', lat: s.lat, lng: s.lng, siteIndex: state.currentSiteIndex };
+}
+
+/**
  * 飛行至指定暗空聖地並開啟資訊面板
  * 若點擊已開啟的聖地則關閉面板
  * 所有聖地（精選或非精選）均使用同一套面板邏輯
  */
-function flyTo(index) {
+export function flyTo(index) {
     if (state.currentSiteIndex === index) { closeSitePanel(); return; }
 
     // 由「未選取」狀態開始選取時，記錄當前視野，供取消選取時還原

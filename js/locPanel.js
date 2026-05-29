@@ -16,6 +16,18 @@ const locPanel = document.getElementById('loc-panel');
 const locPlace = document.getElementById('loc-place');
 const locBody  = document.getElementById('loc-body');
 
+// 最近一次查詢的地點（座標 + 地名），供「加入收藏」使用
+let lastQuery = null;
+
+/**
+ * 取得最近一次查詢的地點，供「加入收藏」使用；面板未開啟時回傳 null
+ * @returns {{name:string, lat:number, lng:number}|null}
+ */
+export function getActiveLoc() {
+    if (!locPanel.classList.contains('open') || !lastQuery) return null;
+    return { ...lastQuery };
+}
+
 // ── 關閉按鈕 ─────────────────────────────────────────────────
 document.getElementById('loc-close').addEventListener('click', () => {
     closeLocPanel(true);
@@ -81,6 +93,7 @@ export async function queryLocation(lat, lng) {
     locPlace.textContent = `${lat.toFixed(4)}, ${dispLng.toFixed(4)}`;
     locBody.innerHTML    = `<div class="loc-loading">載入中...</div>`;
     renderStargazeInfo(lat, dispLng);
+    lastQuery = { name: `${lat.toFixed(4)}, ${dispLng.toFixed(4)}`, lat, lng: dispLng };
 
     // 並行查詢光害數據與地名
     const [data, place] = await Promise.all([
@@ -88,7 +101,7 @@ export async function queryLocation(lat, lng) {
         reverseGeocode(lat, dispLng),
     ]);
 
-    if (place) locPlace.textContent = place;
+    if (place) { locPlace.textContent = place; lastQuery.name = place; }
     renderLocBody(data, lat, dispLng);
 }
 

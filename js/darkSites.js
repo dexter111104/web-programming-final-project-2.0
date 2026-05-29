@@ -11,20 +11,31 @@ import { state }                      from './state.js';
 let DARK_SITES     = [];
 let siteMarker     = null;
 let pendingMoveEnd = null;   // 目前等待 moveend 的 listener 參考
+let allSitesActive = false;        // 「標出全部地點」是否開啟
+const allSitesCopies = new Map();  // 世界副本偏移 k → 該副本的白點 L.layerGroup
+const allSitesParams = [];         // 每個聖地預先算好的白點參數（座標 + 隨機動畫），各副本共用
+const itemEls      = [];     // 依原始索引存放列表項目 DOM，用於高亮選取狀態
+
+/** 依目前選取的聖地索引，更新列表項目的 active 高亮（星星旋轉 + 框變色）*/
+function highlightActiveItem() {
+    itemEls.forEach((el, idx) => {
+        if (!el) return;
+        if (idx === state.currentSiteIndex) {
+            el.classList.remove('deselecting');
+            el.classList.add('active');
+        } else if (el.classList.contains('active')) {
+            // 由選取轉為未選取：觸發逆時針轉回動畫
+            el.classList.remove('active');
+            el.classList.add('deselecting');
+        }
+    });
+}
 
 // 快取常用 DOM 節點（模組載入時只查詢一次）
 const sitePanel = document.getElementById('site-panel');
 
 // ── 資料載入 ──────────────────────────────────────────────────
 
-
-/** 各類型的通用描述（供無 desc 的聖地使用） */
-const TYPE_DESC = {
-    P: 'IDA 認證暗天公園。此地擁有優質的黑暗夜空，是天文觀測與感受星空之美的絕佳去處。',
-    R: 'IDA 認證暗天保護區。致力於維護大面積自然黑暗環境，保護夜間生態系統不受光害侵擾。',
-    C: 'IDA 認證暗天社區。積極推廣負責任照明政策，讓居民與訪客都能仰望繁星點點的夜空。',
-    S: 'IDA 認證暗天庇護所。通常設於私人場域，提供遠離光害的絕佳黑暗夜空觀測體驗。',
-};
 
 /**
  * 載入 darksites.json（IDA 認證暗空聖地，含座標與完整資訊）
@@ -38,6 +49,27 @@ async function loadDarkSites() {
         console.error('[darkSites] 暗空聖地資料載入失敗:', err);
         return null;
     }
+}
+
+// ── 大洲分組 ──────────────────────────────────────────────────
+
+/** 各大洲顯示順序（亞洲在前，因預設展開）；未知國家歸入末端的「其他」 */
+const CONTINENT_ORDER = ['亞洲', '美洲', '歐洲', '大洋洲', '非洲', '其他'];
+
+/** 國家前綴 → 大洲 */
+const COUNTRY_CONTINENT = {
+    日本: '亞洲', 台灣: '亞洲', 韓國: '亞洲', 以色列: '亞洲',
+    美國: '美洲', 加拿大: '美洲', 智利: '美洲',
+    英國: '歐洲', 德國: '歐洲', 愛爾蘭: '歐洲', 匈牙利: '歐洲',
+    法國: '歐洲', 希臘: '歐洲', 挪威: '歐洲', 丹麥: '歐洲',
+    紐西蘭: '大洋洲', 澳大利亞: '大洋洲', 紐埃: '大洋洲', 英國海外領土: '大洋洲',
+    納米比亞: '非洲', 南非: '非洲',
+};
+
+/** 由 country 欄位（格式「國家・地區」）判斷所屬大洲 */
+function continentOf(country) {
+    const prefix = (country || '').split('・')[0];
+    return COUNTRY_CONTINENT[prefix] || '其他';
 }
 
 // ── 工具函式 ──────────────────────────────────────────────────
@@ -87,6 +119,7 @@ export function closeSitePanel() {
     state.currentSiteIndex = -1;
     sitePanel.classList.remove('open');
     if (siteMarker) { map.removeLayer(siteMarker); siteMarker = null; }
+    highlightActiveItem();
 }
 
 /**
@@ -105,6 +138,7 @@ function flyTo(index) {
     }
 
     state.currentSiteIndex = index;
+    highlightActiveItem();
     const site    = DARK_SITES[index];
     const panel   = sitePanel;
     const wasOpen = panel.classList.contains('open');
@@ -192,7 +226,7 @@ function fillSitePanel(site) {
         (site.ename && site.ename !== site.name) ? site.ename : '';
     document.getElementById('site-panel-country').textContent = site.country || '';
     document.getElementById('site-panel-desc').textContent    =
-        site.desc || TYPE_DESC[site.type] || 'IDA 認證暗天聖地，提供優質黑暗夜空環境。';
+        site.desc || 'IDA 認證暗天聖地，提供優質黑暗夜空環境。';
 
     const bortleEl = document.getElementById('site-panel-bortle');
     bortleEl.innerHTML = '<div class="site-bortle-loading">載入光害資料…</div>';
@@ -223,8 +257,88 @@ function fillSitePanel(site) {
     });
 }
 
-/** 顏色對應各類型（Park / Reserve / Community / Sanctuary）*/
-const TYPE_COLOR = { P: '#7ec8ff', R: '#a8e6a3', C: '#ffd97d', S: '#ffb3c6' };
+/** 建立單一白點的 divIcon（圓點中心精準錨在座標上）*/
+function dotIcon(p) {
+    return L.divIcon({
+        className: 'all-site-dot-icon',
+        html: `<div class="all-site-dot" style="animation-delay:${p.delay}s;animation-duration:${p.dur}s;--dot-dim:${p.dim}"></div>`,
+        iconSize:   [7, 7],
+        iconAnchor: [3.5, 3.5],
+    });
+}
+
+/** 預先計算每個聖地的白點參數（座標 + 隨機動畫），讓各世界副本共用同一組隨機值 */
+function buildAllSitesParams() {
+    allSitesParams.length = 0;
+    DARK_SITES.forEach(site => {
+        allSitesParams.push({
+            lat:   site.lat,
+            lng:   site.lng,
+            delay: (Math.random() * -6).toFixed(2),          // 相位：-6 ~ 0s
+            dur:   (1.8 + Math.random() * 3.4).toFixed(2),   // 週期：1.8 ~ 5.2s
+            dim:   (0.2 + Math.random() * 0.45).toFixed(2),  // 最暗不透明度：0.2 ~ 0.65
+        });
+    });
+}
+
+/**
+ * 依目前可見經度範圍，補齊/移除各世界副本（經度 ±360 倍數）的白點
+ * 地圖可無限左右捲動，故需動態渲染目前視野內的副本，避免標記無限增生
+ */
+function renderAllSitesCopies() {
+    if (!allSitesActive) return;
+
+    const bounds = map.getBounds();
+    // 聖地經度落在 [-180,180]，第 k 份副本約涵蓋 [-180+360k, 180+360k]
+    const kMin = Math.floor((bounds.getWest() - 180) / 360);
+    const kMax = Math.ceil((bounds.getEast()  + 180) / 360);
+
+    // 移除已離開視野的副本
+    for (const k of [...allSitesCopies.keys()]) {
+        if (k < kMin || k > kMax) {
+            map.removeLayer(allSitesCopies.get(k));
+            allSitesCopies.delete(k);
+        }
+    }
+    // 補上視野內尚未建立的副本
+    for (let k = kMin; k <= kMax; k++) {
+        if (allSitesCopies.has(k)) continue;
+        const offset = k * 360;
+        const grp = L.layerGroup();
+        allSitesParams.forEach(p => {
+            L.marker([p.lat, p.lng + offset], {
+                icon: dotIcon(p),
+                interactive: false,
+                keyboard:    false,
+            }).addTo(grp);
+        });
+        grp.addTo(map);
+        allSitesCopies.set(k, grp);
+    }
+}
+
+/**
+ * 切換「標出全部地點」：在地圖上以白色微閃標點顯示全部聖地（再次點擊則隱藏）
+ * 標點不可互動，僅作標示用途；可隨地圖無限捲動在各副本顯示
+ */
+function toggleAllSites(btn) {
+    if (allSitesActive) {
+        allSitesActive = false;
+        map.off('moveend', renderAllSitesCopies);
+        allSitesCopies.forEach(g => map.removeLayer(g));
+        allSitesCopies.clear();
+        btn.classList.remove('active');
+        btn.textContent = '標出全部地點';
+        return;
+    }
+
+    allSitesActive = true;
+    buildAllSitesParams();
+    renderAllSitesCopies();
+    map.on('moveend', renderAllSitesCopies);
+    btn.classList.add('active');
+    btn.textContent = '隱藏全部地點';
+}
 
 // ── 初始化（非同步，由 main.js 呼叫）────────────────────────
 
@@ -250,22 +364,62 @@ export async function initDarkSites() {
     DARK_SITES = sites;
     darksiteList.innerHTML = '';
 
-    DARK_SITES.forEach((site, i) => {
-        const el = document.createElement('div');
-        el.className = 'darksite-item';
+    // 依國家前綴分組到各大洲，預設僅展開「亞洲」
+    const STAR_SVG = `
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+             style="flex-shrink:0;margin-top:2px;filter:drop-shadow(0 0 3px rgba(255,255,255,0.75))">
+            <path d="M7 0L8.77 5.23L14 7L8.77 8.77L7 14L5.23 8.77L0 7L5.23 5.23Z" fill="#ffffff"/>
+        </svg>`;
 
-        el.innerHTML = `
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                 style="flex-shrink:0;margin-top:2px;filter:drop-shadow(0 0 3px rgba(255,255,255,0.75))">
-                <path d="M7 0L8.77 5.23L14 7L8.77 8.77L7 14L5.23 8.77L0 7L5.23 5.23Z" fill="#ffffff"/>
-            </svg>
-            <div>
-                <div class="darksite-name">${site.name}</div>
-                <div class="darksite-loc">${site.country}</div>
-            </div>`;
-        el.addEventListener('click', () => flyTo(i));
-        darksiteList.appendChild(el);
+    // 把每個聖地（保留原始索引）歸入對應大洲
+    const groups = new Map(CONTINENT_ORDER.map(name => [name, []]));
+    DARK_SITES.forEach((site, i) => {
+        const continent = continentOf(site.country);
+        if (!groups.has(continent)) groups.set(continent, []);
+        groups.get(continent).push({ site, i });
     });
+
+    groups.forEach((members, continent) => {
+        if (members.length === 0) return;
+
+        const group = document.createElement('div');
+        group.className = 'darksite-group';
+        if (continent !== '亞洲') group.classList.add('collapsed'); // 預設只開亞洲
+
+        const header = document.createElement('div');
+        header.className = 'darksite-group-header';
+        header.innerHTML = `
+            <span class="darksite-group-arrow">▸</span>
+            <span class="darksite-group-name">${continent}</span>
+            <span class="darksite-group-count">${members.length}</span>`;
+        header.addEventListener('click', () => group.classList.toggle('collapsed'));
+
+        const body = document.createElement('div');
+        body.className = 'darksite-group-body';
+
+        members.forEach(({ site, i }) => {
+            const el = document.createElement('div');
+            el.className = 'darksite-item';
+            el.innerHTML = `
+                ${STAR_SVG}
+                <div>
+                    <div class="darksite-name">${site.name}</div>
+                    <div class="darksite-loc">${site.country}</div>
+                </div>`;
+            el.addEventListener('click', () => flyTo(i));
+            el.addEventListener('animationend', () => el.classList.remove('deselecting'));
+            itemEls[i] = el;
+            body.appendChild(el);
+        });
+
+        group.appendChild(header);
+        group.appendChild(body);
+        darksiteList.appendChild(group);
+    });
+
+    // 「標出全部地點」切換按鈕
+    const toggleBtn = document.getElementById('toggle-all-sites');
+    if (toggleBtn) toggleBtn.addEventListener('click', () => toggleAllSites(toggleBtn));
 
     // 地圖拖動時：同步更新面板位置
     map.on('move', () => {

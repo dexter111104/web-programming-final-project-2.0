@@ -385,6 +385,96 @@ input:checked + .slider-round:before { transform: translateX(22px); background: 
 .darksite-name { font-size: 0.78rem; color: #ccc; font-weight: 600; }
 .darksite-loc { font-size: 0.68rem; color: #555; margin-top: 1px; }
 
+/* 選取中的項目：框變色 + 星星旋轉停在 X 形狀；取消時逆時針轉回 */
+.darksite-item svg { transition: transform 0.3s ease; transform-origin: 7px 7px; }
+.darksite-item.active {
+    background: rgba(126, 200, 255, 0.14);
+    box-shadow: inset 0 0 0 1px rgba(126, 200, 255, 0.55);
+}
+.darksite-item.active .darksite-name { color: #fff; }
+.darksite-item.active svg { animation: darksite-star-in 0.5s ease-out forwards; }
+.darksite-item.deselecting svg { animation: darksite-star-out 0.4s ease-in forwards; }
+@keyframes darksite-star-in {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(225deg); }
+}
+@keyframes darksite-star-out {
+    from { transform: rotate(225deg); }
+    to   { transform: rotate(0deg); }
+}
+
+/* === 大洲摺疊群組 === */
+.darksite-group { display: flex; flex-direction: column; }
+.darksite-group-header {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 8px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+.darksite-group-header:hover { background: #161616; }
+.darksite-group-arrow {
+    font-size: 0.7rem;
+    color: #888;
+    transition: transform 0.2s;
+    transform: rotate(90deg);
+}
+.darksite-group.collapsed .darksite-group-arrow { transform: rotate(0deg); }
+.darksite-group-name { font-size: 0.8rem; color: #ddd; font-weight: 700; letter-spacing: 0.5px; }
+.darksite-group-count {
+    font-size: 0.65rem;
+    color: #888;
+    background: #1c1c1c;
+    border-radius: 10px;
+    padding: 1px 7px;
+    margin-left: auto;
+}
+.darksite-group-body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 2px 0 6px 6px;
+}
+.darksite-group.collapsed .darksite-group-body { display: none; }
+
+/* === 標出全部地點 按鈕 === */
+.toggle-all-sites-btn {
+    width: 100%;
+    margin: 2px 0 8px;
+    padding: 7px 10px;
+    background: #111;
+    color: #cfd6e4;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    font-size: 0.74rem;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.toggle-all-sites-btn:hover { background: #1a1a1a; }
+.toggle-all-sites-btn.active {
+    background: rgba(126, 200, 255, 0.14);
+    border-color: rgba(126, 200, 255, 0.55);
+    color: #fff;
+}
+
+/* === 「標出全部地點」白色微閃標點 === */
+.all-site-dot-icon { background: none; border: none; }
+.all-site-dot {
+    width: 7px;
+    height: 7px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.9), 0 0 12px rgba(255, 255, 255, 0.45);
+    animation: all-site-twinkle 2.6s ease-in-out infinite;
+}
+@keyframes all-site-twinkle {
+    0%, 100% { opacity: var(--dot-dim, 0.5);  transform: scale(0.8); }
+    50%      { opacity: 1;                     transform: scale(1.15); }
+}
+
 /* === 暗空聖地地圖標記 === */
 .site-marker-icon { background: none; border: none; text-align: center; }
 .site-marker-pin {

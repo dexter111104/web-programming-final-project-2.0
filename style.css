@@ -702,6 +702,41 @@ input:checked + .slider-round:before { transform: translateX(20px); background: 
     opacity: 0.5;
 }
 
+/* === 浮動品牌標誌（定位按鈕旁）=== */
+.brand {
+    position: fixed;
+    bottom: 16px;
+    left: 50px;          /* 定位按鈕 10px + 32px + 8px 間距 */
+    z-index: 1000;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    pointer-events: none; /* 純裝飾，不擋地圖操作 */
+    user-select: none;
+}
+.brand-logo {
+    flex: 0 0 auto;
+    filter: drop-shadow(0 0 4px rgba(255,255,255,0.7)) drop-shadow(0 0 10px rgba(150,190,255,0.5));
+}
+.brand-text {
+    line-height: 1.1;
+}
+.brand-title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 1px;
+    text-shadow: 0 0 4px rgba(0,0,0,0.9), 0 0 8px rgba(120,170,255,0.4);
+}
+.brand-sub {
+    font-size: 0.5rem;
+    color: #cdd8ff;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-shadow: 0 0 4px rgba(0,0,0,0.9);
+}
+
 /* === Leaflet 樣式覆寫 === */
 .leaflet-control-zoom {
     margin-bottom: 56px !important; /* 為定位按鈕（32px）+ 間距留空 */

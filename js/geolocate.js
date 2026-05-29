@@ -3,10 +3,10 @@
  * 定位按鈕：使用瀏覽器 Geolocation API 跳到使用者所在位置並查詢光害數據
  */
 
-import { map }            from './map.js';
-import { queryLocation }  from './locPanel.js';
-import { closeSitePanel } from './darkSites.js';
-import { state }          from './state.js';
+import { map }                       from './map.js';
+import { queryLocation }             from './locPanel.js';
+import { closeSitePanel, nearestLng } from './darkSites.js';
+import { state }                     from './state.js';
 
 const btn = document.getElementById('geolocate-btn');
 
@@ -33,7 +33,8 @@ btn.addEventListener('click', () => {
 function onSuccess(pos) {
     setLoading(false);
     const lat = pos.coords.latitude;
-    const lng = pos.coords.longitude;
+    // 取離目前視野最近的等效經度，避免從已捲動的世界副本跳回中央副本
+    const lng = nearestLng(pos.coords.longitude, map.getCenter().lng);
 
     // 飛行到使用者位置，動畫結束後查詢光害
     map.flyTo([lat, lng], 10, { duration: 1.5 });

@@ -57,7 +57,10 @@ export function closeLocPanel(animate = false) {
  * @param {number} lng
  */
 export async function queryLocation(lat, lng) {
-    const latlng = L.latLng(lat, lng);
+    // lng 可能是捲動到其他世界副本後的等效經度（例如 481°），標記需用此值才能落在當前副本；
+    // 但顯示座標、時區與數據查詢一律使用正規化到 [-180, 180) 的經度
+    const dispLng = ((lng + 180) % 360 + 360) % 360 - 180;
+    const latlng  = L.latLng(lat, lng);
 
     // 更新或建立點擊標記
     if (state.clickMarker) {
@@ -75,18 +78,18 @@ export async function queryLocation(lat, lng) {
     }
 
     locPanel.classList.add('open');
-    locPlace.textContent = `${lat.toFixed(4)}, ${lng.toFixed(4)}`;
+    locPlace.textContent = `${lat.toFixed(4)}, ${dispLng.toFixed(4)}`;
     locBody.innerHTML    = `<div class="loc-loading">載入中...</div>`;
-    renderStargazeInfo(lat, lng);
+    renderStargazeInfo(lat, dispLng);
 
     // 並行查詢光害數據與地名
     const [data, place] = await Promise.all([
-        getDjlorenzData(lat, lng),
-        reverseGeocode(lat, lng),
+        getDjlorenzData(lat, dispLng),
+        reverseGeocode(lat, dispLng),
     ]);
 
     if (place) locPlace.textContent = place;
-    renderLocBody(data, lat, lng);
+    renderLocBody(data, lat, dispLng);
 }
 
 // ── 地圖點擊事件 ──────────────────────────────────────────────

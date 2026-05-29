@@ -78,7 +78,7 @@ function continentOf(country) {
 /**
  * 計算離 currentLng 最近的等效經度（處理多副本地圖防止跨界跳躍）
  */
-function nearestLng(targetLng, currentLng) {
+export function nearestLng(targetLng, currentLng) {
     const diff = ((targetLng - currentLng) % 360 + 540) % 360 - 180;
     return currentLng + diff;
 }

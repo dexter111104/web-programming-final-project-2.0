@@ -25,6 +25,10 @@
     margin-bottom: 24px;
     filter: drop-shadow(0 0 8px rgba(255,255,255,1)) drop-shadow(0 0 24px rgba(180,210,255,0.85)) drop-shadow(0 0 55px rgba(120,170,255,0.5));
 }
+/* 脈動光暈會超出 viewBox，預設會被裁成方形邊緣，改為不裁切 */
+.splash-logo svg {
+    overflow: visible;
+}
 .splash-title {
     font-size: 2.4rem;
     font-weight: 800;
@@ -216,7 +220,7 @@ input[type="range"]::-webkit-slider-thumb {
 .switch {
     position: relative;
     display: inline-block;
-    width: 44px; height: 22px;
+    width: 44px; height: 24px;
     flex-shrink: 0;
 }
 .switch input { opacity: 0; width: 0; height: 0; }
@@ -225,11 +229,11 @@ input[type="range"]::-webkit-slider-thumb {
     cursor: pointer;
     top: 0; left: 0; right: 0; bottom: 0;
     background: #2a2a2a;
-    border-radius: 22px;
+    border-radius: 24px;
     transition: .3s;
     display: flex;
-    align-items: center;      /* 垂直置中由 flex 處理，捨入對稱 */
-    padding-left: 3px;
+    align-items: center;      /* 垂直置中交給 flex，捨入對稱 */
+    padding-left: 4px;        /* 上下左右間距皆 4px：在 125%/150% 縮放下仍為整數，不會歪 */
     box-sizing: border-box;
 }
 .slider-round:before {
@@ -241,7 +245,7 @@ input[type="range"]::-webkit-slider-thumb {
     transition: .3s;
 }
 input:checked + .slider-round { background: rgba(255,255,255,0.9); }
-input:checked + .slider-round:before { transform: translateX(22px); background: #111; }
+input:checked + .slider-round:before { transform: translateX(20px); background: #111; }
 
 /* === 數據卡片列 === */
 .stats-row {

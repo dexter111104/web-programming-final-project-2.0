@@ -8,9 +8,10 @@ import { getDjlorenzData, ratioToZone } from './lpData.js';
 import { state }                      from './state.js';
 
 // 模組私有狀態
-let DARK_SITES    = [];
-let siteMarker    = null;
-let allSiteLayer  = null;   // 全部聖地標點的 LayerGroup
+let DARK_SITES       = [];
+let siteMarker       = null;
+let allSiteLayer     = null;   // 全部聖地標點的 LayerGroup
+let pendingMoveEnd   = null;   // 目前等待 moveend 的 listener 參考
 
 // 快取常用 DOM 節點（模組載入時只查詢一次）
 const sitePanel = document.getElementById('site-panel');
@@ -35,8 +36,8 @@ const TYPE_DESC = {
 async function loadDarkSites() {
     try {
         const [featured, all] = await Promise.all([
-            fetch('../data/darksites.json').then(r => { if (!r.ok) throw r; return r.json(); }),
-            fetch('../data/allsites.json').then(r => { if (!r.ok) throw r; return r.json(); }),
+            fetch('data/darksites.json').then(r => { if (!r.ok) throw r; return r.json(); }),
+            fetch('data/allsites.json').then(r => { if (!r.ok) throw r; return r.json(); }),
         ]);
 
         // 標記精選資料（含 img/desc）
@@ -89,9 +90,12 @@ function positionPanel() {
     const iconHalfW = 75;
     const gap       = 12;
 
+    const controlPanelEl = document.getElementById('control-panel');
+    const rightW = controlPanelEl.classList.contains('hidden') ? 0 : (controlPanelEl.offsetWidth || 340);
+
     let left = pt.x - iconHalfW - pw - gap;
     if (left < 8) left = pt.x + iconHalfW + gap;
-    left = Math.max(8, Math.min(left, mapSz.x - pw - 8));
+    left = Math.max(8, Math.min(left, mapSz.x - rightW - pw - 8));
 
     let top = pt.y - 22 - ph / 2;
     top = Math.max(56, Math.min(top, mapSz.y - ph - 8));
@@ -170,11 +174,14 @@ function flyTo(index) {
     map.flyTo([site.lat, adjLng], site.zoom, { duration: 1.8 });
     setTimeout(showMarkerAndPanel, wasOpen ? 260 : 0);
 
-    map.once('moveend', () => {
+    if (pendingMoveEnd) { map.off('moveend', pendingMoveEnd); }
+    pendingMoveEnd = () => {
+        pendingMoveEnd = null;
         if (state.currentSiteIndex !== index) return;
         positionPanel();
         panel.classList.add('open');
-    });
+    };
+    map.once('moveend', pendingMoveEnd);
 }
 
 /**
@@ -187,7 +194,7 @@ function loadSitePanelImage(site) {
 
     // 重置狀態，避免舊 handler 誤觸
     img.onerror = null;
-    img.src     = '';
+    img.removeAttribute('src');
     img.style.display = '';
     wrap.classList.remove('img-fallback');
 
@@ -270,7 +277,7 @@ async function toggleAllSites(btn) {
 
     btn.disabled = true;
     try {
-        const resp = await fetch('../data/allsites.json');
+        const resp = await fetch('data/allsites.json');
         if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
         const sites = await resp.json();
 

@@ -116,17 +116,3 @@ document.getElementById('lpToggle').addEventListener('change', function () {
     }
 });
 
-// ── 年份切換按鈕 ──────────────────────────────────────────────
-document.querySelectorAll('#yearBtns .layer-btn').forEach(btn => {
-    btn.addEventListener('click', function () {
-        setActiveBtn('#yearBtns .layer-btn', this);
-
-        const year = this.dataset.year;
-        state.currentYear = year;
-
-        const visible = map.hasLayer(lpOverlay);
-        map.removeLayer(lpOverlay);
-        lpOverlay = createLpLayer(year, LP_OPACITY);
-        if (visible) lpOverlay.addTo(map);
-    });
-});

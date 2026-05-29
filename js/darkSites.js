@@ -43,7 +43,7 @@ async function loadDarkSites() {
         const featuredSites = featured.map(s => ({ ...s, _featured: true }));
 
         // 從全量清單中排除已在精選中的（以座標接近度判斷）
-        const THRESH = 0.2;
+        const THRESH = 0.1;
         const extra = all.filter(a =>
             !featuredSites.some(f =>
                 Math.abs(f.lat - a.lat) < THRESH && Math.abs(f.lng - a.lng) < THRESH
@@ -331,11 +331,15 @@ export async function initDarkSites() {
         const el = document.createElement('div');
         el.className = 'darksite-item';
 
-        // 全部聖地統一使用白色星形圖示
-        const icon = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                style="flex-shrink:0;margin-top:2px;filter:drop-shadow(0 0 3px rgba(255,255,255,0.75))">
-               <path d="M7 0L8.77 5.23L14 7L8.77 8.77L7 14L5.23 8.77L0 7L5.23 5.23Z" fill="#ffffff"/>
-           </svg>`;
+        // 精選聖地：白色星形；其他聖地：以 IDA 類型顏色標示的圓點
+        const icon = site._featured
+            ? `<svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                    style="flex-shrink:0;margin-top:2px;filter:drop-shadow(0 0 3px rgba(255,255,255,0.75))">
+                   <path d="M7 0L8.77 5.23L14 7L8.77 8.77L7 14L5.23 8.77L0 7L5.23 5.23Z" fill="#ffffff"/>
+               </svg>`
+            : `<span style="flex-shrink:0;width:8px;height:8px;border-radius:50%;
+                            background:${TYPE_COLOR[site.type] ?? '#888'};
+                            display:inline-block;margin-top:4px;opacity:0.85"></span>`;
 
         el.innerHTML = `
             ${icon}

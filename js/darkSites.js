@@ -421,8 +421,16 @@ export async function initDarkSites() {
             if (willOpen) group.classList.remove('collapsed');
         });
 
+        // 三層結構供高度動畫：
+        //   body  → grid-template-rows 0fr↔1fr 動畫外層
+        //   clip  → overflow:hidden 裁切層（不可有 padding，否則無法收到 0）
+        //   content → 實際 padding 與項目列表
         const body = document.createElement('div');
         body.className = 'darksite-group-body';
+        const clip = document.createElement('div');
+        clip.className = 'darksite-group-body-clip';
+        const content = document.createElement('div');
+        content.className = 'darksite-group-body-content';
 
         members.forEach(({ site, i }) => {
             const el = document.createElement('div');
@@ -436,8 +444,10 @@ export async function initDarkSites() {
             el.addEventListener('click', () => flyTo(i));
             el.addEventListener('animationend', () => el.classList.remove('deselecting'));
             itemEls[i] = el;
-            body.appendChild(el);
+            content.appendChild(el);
         });
+        clip.appendChild(content);
+        body.appendChild(clip);
 
         group.appendChild(header);
         group.appendChild(body);

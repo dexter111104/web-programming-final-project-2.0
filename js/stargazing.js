@@ -3,6 +3,20 @@
  * 天文計算：日落、各段暮光、天文黑夜開始時間
  */
 
+// 經緯度 → IANA 時區查詢（離線資料庫，海上回傳 Etc/GMT±X）
+import tzlookup from 'https://esm.sh/tz-lookup@6.1.25';
+
+/**
+ * 取得座標所屬的官方時區（IANA 名稱）；查詢失敗時回傳 null
+ * @param {number} lat
+ * @param {number} lng
+ * @returns {string|null}
+ */
+function timeZoneOf(lat, lng) {
+    try { return tzlookup(lat, lng); }
+    catch { return null; }
+}
+
 /**
  * 計算指定座標今日的日落與各段暮光時間（UTC 太陽位置近似算法）
  *
@@ -39,9 +53,20 @@ export function calcSunTimes(lat, lng) {
     const cosPhi  = Math.cos(phi);
     const utcBase = Date.UTC(today.getFullYear(), today.getMonth(), today.getDate());
 
-    /** 將 UTC 小時數格式化為本地時間字串 */
-    const fmt = h => new Date(utcBase + h * 3600000)
-        .toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit', hour12: false });
+    // 取得該座標的官方時區；查不到時退回經度估算（每 15° 一時區）
+    const tz       = timeZoneOf(lat, lng);
+    const tzOffset = Math.round(lng / 15);
+
+    /**
+     * 將 UTC 小時數轉為「查詢地點當地時間」字串（HH:MM）
+     * h 為 UTC 小時，utcBase 為今日 UTC 0 時，故 (utcBase + h小時) 為正確 UTC 瞬間；
+     * 有官方時區則交給 Intl 換算（自動套用 DST），否則手動加經度估算位移。
+     */
+    const fmt = tz
+        ? h => new Date(utcBase + h * 3600000)
+            .toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: tz })
+        : h => new Date(utcBase + (h + tzOffset) * 3600000)
+            .toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'UTC' });
 
     /**
      * 計算太陽位於指定高度角時的時角偏移（小時）
@@ -72,6 +97,16 @@ export function calcSunTimes(lat, lng) {
 }
 
 /**
+ * 清空「今晚觀星時間」區塊，回到「請選擇地點」提示（未選取任何地點時）
+ */
+export function clearStargazeInfo() {
+    document.getElementById('stargazeLoc').textContent = '';
+    const el = document.getElementById('stargazeInfo');
+    el.className = 'stargaze-loading';
+    el.innerHTML = '請選擇地點';
+}
+
+/**
  * 更新右側面板「今晚觀星時間」區塊的顯示內容
  * @param {number} lat
  * @param {number} lng
@@ -93,7 +128,6 @@ export function renderStargazeInfo(lat, lng) {
         return;
     }
 
-    const best = sun.astroEnd ?? sun.nautEnd ?? sun.civilEnd;
     el.className = 'stargaze-info';
     el.innerHTML = `
         <div class="stargaze-row">
@@ -114,9 +148,12 @@ export function renderStargazeInfo(lat, lng) {
             <span class="stargaze-key">天文黑夜始</span>
             <span class="stargaze-val" style="color:#fff">${sun.astroEnd ?? '不發生'}</span>
         </div>
-        ${best ? `
+        ${sun.astroEnd ? `
         <div class="stargaze-best">
-            ⭐ 建議從 <strong>${best}</strong> 開始觀星
-        </div>` : ''}
+            ⭐ 建議從 <strong>${sun.astroEnd}</strong> 開始觀星
+        </div>` : `
+        <div class="stargaze-best stargaze-best-none">
+            ☁ 今夜無完整天文黑夜，不適合深空觀星
+        </div>`}
     `;
 }

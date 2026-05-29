@@ -7,7 +7,8 @@ import { map }                          from './map.js';
 import { getDjlorenzData, ratioToZone,
          roundRatio }                   from './lpData.js';
 import { reverseGeocode }               from './geocode.js';
-import { renderStargazeInfo }           from './stargazing.js';
+import { renderStargazeInfo,
+         clearStargazeInfo }            from './stargazing.js';
 import { BORTLE_TIPS }                  from './config.js';
 import { state }                        from './state.js';
 
@@ -26,6 +27,7 @@ document.getElementById('loc-close').addEventListener('click', () => {
  */
 export function closeLocPanel(animate = false) {
     locPanel.classList.remove('open');
+    clearStargazeInfo();   // 取消選取地點 → 觀星時間回到「請選擇地點」
     if (!state.clickMarker) return;
 
     if (animate) {

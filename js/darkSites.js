@@ -15,6 +15,7 @@ let allSitesActive = false;        // 「標出全部地點」是否開啟
 const allSitesCopies = new Map();  // 世界副本偏移 k → 該副本的白點 L.layerGroup
 const allSitesParams = [];         // 每個聖地預先算好的白點參數（座標 + 隨機動畫），各副本共用
 const itemEls      = [];     // 依原始索引存放列表項目 DOM，用於高亮選取狀態
+let preFlyView     = null;   // 點擊聖地前的地圖視野（center + zoom），取消選取時還原
 
 /** 依目前選取的聖地索引，更新列表項目的 active 高亮（星星旋轉 + 框變色）*/
 function highlightActiveItem() {
@@ -53,7 +54,7 @@ async function loadDarkSites() {
 
 // ── 大洲分組 ──────────────────────────────────────────────────
 
-/** 各大洲顯示順序（亞洲在前，因預設展開）；未知國家歸入末端的「其他」 */
+/** 各大洲顯示順序（亞洲在前）；未知國家歸入末端的「其他」 */
 const CONTINENT_ORDER = ['亞洲', '美洲', '歐洲', '大洋洲', '非洲', '其他'];
 
 /** 國家前綴 → 大洲 */
@@ -120,6 +121,13 @@ export function closeSitePanel() {
     sitePanel.classList.remove('open');
     if (siteMarker) { map.removeLayer(siteMarker); siteMarker = null; }
     highlightActiveItem();
+
+    // 還原至點擊聖地前的視野（縮放 + 中心）
+    if (preFlyView) {
+        const { center, zoom } = preFlyView;
+        preFlyView = null;
+        map.flyTo(center, zoom, { duration: 1.2 });
+    }
 }
 
 /**
@@ -129,6 +137,14 @@ export function closeSitePanel() {
  */
 function flyTo(index) {
     if (state.currentSiteIndex === index) { closeSitePanel(); return; }
+
+    // 由「未選取」狀態開始選取時，記錄當前視野，供取消選取時還原
+    if (state.currentSiteIndex === -1) {
+        preFlyView = { center: map.getCenter(), zoom: map.getZoom() };
+    }
+
+    // 點選個別聖地時，自動關閉「標出全部地點」
+    hideAllSites();
 
     // 關閉位置查詢面板
     document.getElementById('loc-panel').classList.remove('open');
@@ -262,8 +278,8 @@ function dotIcon(p) {
     return L.divIcon({
         className: 'all-site-dot-icon',
         html: `<div class="all-site-dot" style="animation-delay:${p.delay}s;animation-duration:${p.dur}s;--dot-dim:${p.dim}"></div>`,
-        iconSize:   [7, 7],
-        iconAnchor: [3.5, 3.5],
+        iconSize:   [5.3, 5.3],
+        iconAnchor: [2.65, 2.65],
     });
 }
 
@@ -321,16 +337,22 @@ function renderAllSitesCopies() {
  * 切換「標出全部地點」：在地圖上以白色微閃標點顯示全部聖地（再次點擊則隱藏）
  * 標點不可互動，僅作標示用途；可隨地圖無限捲動在各副本顯示
  */
-function toggleAllSites(btn) {
-    if (allSitesActive) {
-        allSitesActive = false;
-        map.off('moveend', renderAllSitesCopies);
-        allSitesCopies.forEach(g => map.removeLayer(g));
-        allSitesCopies.clear();
+/** 關閉「標出全部地點」並清除所有副本白點（若未開啟則不動作） */
+function hideAllSites() {
+    if (!allSitesActive) return;
+    allSitesActive = false;
+    map.off('moveend', renderAllSitesCopies);
+    allSitesCopies.forEach(g => map.removeLayer(g));
+    allSitesCopies.clear();
+    const btn = document.getElementById('toggle-all-sites');
+    if (btn) {
         btn.classList.remove('active');
         btn.textContent = '標出全部地點';
-        return;
     }
+}
+
+function toggleAllSites(btn) {
+    if (allSitesActive) { hideAllSites(); return; }
 
     allSitesActive = true;
     buildAllSitesParams();
@@ -364,7 +386,7 @@ export async function initDarkSites() {
     DARK_SITES = sites;
     darksiteList.innerHTML = '';
 
-    // 依國家前綴分組到各大洲，預設僅展開「亞洲」
+    // 依國家前綴分組到各大洲，預設全部摺疊（手風琴：一次只開一個）
     const STAR_SVG = `
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
              style="flex-shrink:0;margin-top:2px;filter:drop-shadow(0 0 3px rgba(255,255,255,0.75))">
@@ -383,8 +405,7 @@ export async function initDarkSites() {
         if (members.length === 0) return;
 
         const group = document.createElement('div');
-        group.className = 'darksite-group';
-        if (continent !== '亞洲') group.classList.add('collapsed'); // 預設只開亞洲
+        group.className = 'darksite-group collapsed'; // 預設全部摺疊
 
         const header = document.createElement('div');
         header.className = 'darksite-group-header';
@@ -392,7 +413,13 @@ export async function initDarkSites() {
             <span class="darksite-group-arrow">▸</span>
             <span class="darksite-group-name">${continent}</span>
             <span class="darksite-group-count">${members.length}</span>`;
-        header.addEventListener('click', () => group.classList.toggle('collapsed'));
+        header.addEventListener('click', () => {
+            const willOpen = group.classList.contains('collapsed');
+            // 手風琴：先把所有分組收起，再展開被點的那一個
+            darksiteList.querySelectorAll('.darksite-group')
+                .forEach(g => g.classList.add('collapsed'));
+            if (willOpen) group.classList.remove('collapsed');
+        });
 
         const body = document.createElement('div');
         body.className = 'darksite-group-body';

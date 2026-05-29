@@ -9,7 +9,7 @@ import './map.js';
 import './locPanel.js';
 import './geolocate.js';
 import { initDarkSites, closeSitePanel } from './darkSites.js';
-import { renderStargazeInfo }            from './stargazing.js';
+import { clearStargazeInfo }             from './stargazing.js';
 import { LP_ZONES }                      from './config.js';
 
 // ── 啟動畫面 ──────────────────────────────────────────────────
@@ -21,12 +21,11 @@ window.addEventListener('load', () => {
     }, 1700);
 });
 
-// ── 右側面板收折 ──────────────────────────────────────────────
-if (window.innerWidth <= 600) {
-    document.getElementById('control-panel').classList.add('hidden');
-}
+// ── 右側面板收折（預設收起，只顯示 ☰ 按鈕，點擊後自選單彈出）──
+const controlPanel = document.getElementById('control-panel');
+controlPanel.classList.add('hidden');
 document.getElementById('panel-toggle').addEventListener('click', () => {
-    document.getElementById('control-panel').classList.toggle('hidden');
+    controlPanel.classList.toggle('hidden');
 });
 
 // ── 暗空聖地面板關閉按鈕 ─────────────────────────────────────
@@ -44,8 +43,8 @@ LP_ZONES.filter(z => z.legend).forEach(z => {
     bortleLegend.appendChild(row);
 });
 
-// ── 預設觀星資訊（桃園）────────────────────────────────────
-renderStargazeInfo(24.99, 121.31);
+// ── 預設觀星資訊：未選取地點，顯示提示 ──────────────────────
+clearStargazeInfo();
 
 // ── 初始化暗空聖地列表 ────────────────────────────────────────
 initDarkSites();

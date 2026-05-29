@@ -8,17 +8,15 @@ import { getDjlorenzData, ratioToZone } from './lpData.js';
 import { state }                      from './state.js';
 
 // 模組私有狀態
-let DARK_SITES       = [];
-let siteMarker       = null;
-let allSiteLayer     = null;   // 全部聖地標點的 LayerGroup
-let pendingMoveEnd   = null;   // 目前等待 moveend 的 listener 參考
+let DARK_SITES     = [];
+let siteMarker     = null;
+let pendingMoveEnd = null;   // 目前等待 moveend 的 listener 參考
 
 // 快取常用 DOM 節點（模組載入時只查詢一次）
 const sitePanel = document.getElementById('site-panel');
 
 // ── 資料載入 ──────────────────────────────────────────────────
 
-const TYPE_LABEL = { P: '暗天公園', R: '暗天保護區', C: '暗天社區', S: '暗天庇護所' };
 
 /** 各類型的通用描述（供無 desc 的聖地使用） */
 const TYPE_DESC = {
@@ -35,32 +33,8 @@ const TYPE_DESC = {
  */
 async function loadDarkSites() {
     try {
-        const [featured, all] = await Promise.all([
-            fetch('data/darksites.json').then(r => { if (!r.ok) throw r; return r.json(); }),
-            fetch('data/allsites.json').then(r => { if (!r.ok) throw r; return r.json(); }),
-        ]);
-
-        // 標記精選資料（含 img/desc）
-        const featuredSites = featured.map(s => ({ ...s, _featured: true }));
-
-        // 從全量清單中排除已在精選中的（以座標接近度判斷）
-        const THRESH = 0.1;
-        const extra = all.filter(a =>
-            !featuredSites.some(f =>
-                Math.abs(f.lat - a.lat) < THRESH && Math.abs(f.lng - a.lng) < THRESH
-            )
-        ).map(a => ({
-            name:    a.n,
-            ename:   a.n,
-            country: TYPE_LABEL[a.t] ?? '暗天聖地',
-            lat:     a.lat,
-            lng:     a.lng,
-            zoom:    9,
-            type:    a.t,
-            _featured: false,
-        }));
-
-        return [...featuredSites, ...extra];
+        return await fetch('data/darksites.json')
+            .then(r => { if (!r.ok) throw r; return r.json(); });
     } catch (err) {
         console.error('[darkSites] 暗空聖地資料載入失敗:', err);
         return null;
@@ -97,7 +71,7 @@ function positionPanel() {
     if (left < 8) left = pt.x + iconHalfW + gap;
     left = Math.max(8, Math.min(left, mapSz.x - rightW - pw - 8));
 
-    let top = pt.y - 22 - ph / 2;
+    let top = pt.y + 10 - ph / 2;
     top = Math.max(56, Math.min(top, mapSz.y - ph - 8));
 
     panel.style.left   = `${left}px`;
@@ -155,8 +129,8 @@ function flyTo(index) {
                 className: 'site-marker-icon',
                 html: `<div class="site-marker-pin"></div>
                        <div class="site-marker-label">${site.name}</div>`,
-                iconSize:  [140, 44],
-                iconAnchor:[70, 44],
+                iconSize:  [140, 38],
+                iconAnchor:[70, 6],
             }),
             interactive: false,
         }).addTo(map);
@@ -199,19 +173,13 @@ function loadSitePanelImage(site) {
     wrap.classList.remove('img-fallback');
 
     if (!site.img) {
-        // 無照片：直接顯示 fallback 背景
-        img.style.display = 'none';
-        wrap.classList.add('img-fallback');
-        // 以類型顏色染色 fallback 區域
-        wrap.style.setProperty('--fallback-color', TYPE_COLOR[site.type] ?? '#aaaaaa');
+        wrap.style.display = 'none';
         return;
     }
 
-    wrap.style.removeProperty('--fallback-color');
+    wrap.style.display = '';
     img.onerror = function () {
-        this.style.display = 'none';
-        wrap.classList.add('img-fallback');
-        wrap.style.setProperty('--fallback-color', TYPE_COLOR[site.type] ?? '#aaaaaa');
+        wrap.style.display = 'none';
     };
     img.src = site.img;
 }
@@ -256,55 +224,8 @@ function fillSitePanel(site) {
     });
 }
 
-// ── 全部標點 toggle ───────────────────────────────────────────
-
 /** 顏色對應各類型（Park / Reserve / Community / Sanctuary）*/
 const TYPE_COLOR = { P: '#7ec8ff', R: '#a8e6a3', C: '#ffd97d', S: '#ffb3c6' };
-
-/**
- * 切換「顯示全部 IDA 聖地」標點
- * 載入 data/allsites.json，用彩色圓點標示所有聖地位置
- */
-async function toggleAllSites(btn) {
-    // 若已顯示，移除
-    if (allSiteLayer) {
-        map.removeLayer(allSiteLayer);
-        allSiteLayer = null;
-        btn.classList.remove('active');
-        btn.querySelector('span').textContent = '顯示全部標點';
-        return;
-    }
-
-    btn.disabled = true;
-    try {
-        const resp = await fetch('data/allsites.json');
-        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-        const sites = await resp.json();
-
-        allSiteLayer = L.layerGroup();
-
-        sites.forEach(s => {
-            const color = TYPE_COLOR[s.t] ?? '#ffffff';
-            L.circleMarker([s.lat, s.lng], {
-                radius:      4,
-                color:       color,
-                fillColor:   color,
-                fillOpacity: 0.85,
-                weight:      1,
-                opacity:     0.9,
-                interactive: false,
-            }).addTo(allSiteLayer);
-        });
-
-        allSiteLayer.addTo(map);
-        btn.classList.add('active');
-        btn.querySelector('span').textContent = '隱藏全部標點';
-    } catch (err) {
-        console.error('[darkSites] allsites 載入失敗:', err);
-    } finally {
-        btn.disabled = false;
-    }
-}
 
 // ── 初始化（非同步，由 main.js 呼叫）────────────────────────
 
@@ -313,10 +234,6 @@ async function toggleAllSites(btn) {
  * 需在 DOM 就緒後呼叫
  */
 export async function initDarkSites() {
-    // 「顯示全部標點」按鈕
-    const allSitesBtn = document.getElementById('all-sites-btn');
-    allSitesBtn.addEventListener('click', () => toggleAllSites(allSitesBtn));
-
     const darksiteList = document.getElementById('darksite-list');
     darksiteList.innerHTML = `
         <div style="color:#444;font-size:0.75rem;padding:8px 0">載入中…</div>`;
@@ -338,18 +255,11 @@ export async function initDarkSites() {
         const el = document.createElement('div');
         el.className = 'darksite-item';
 
-        // 精選聖地：白色星形；其他聖地：以 IDA 類型顏色標示的圓點
-        const icon = site._featured
-            ? `<svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                    style="flex-shrink:0;margin-top:2px;filter:drop-shadow(0 0 3px rgba(255,255,255,0.75))">
-                   <path d="M7 0L8.77 5.23L14 7L8.77 8.77L7 14L5.23 8.77L0 7L5.23 5.23Z" fill="#ffffff"/>
-               </svg>`
-            : `<span style="flex-shrink:0;width:8px;height:8px;border-radius:50%;
-                            background:${TYPE_COLOR[site.type] ?? '#888'};
-                            display:inline-block;margin-top:4px;opacity:0.85"></span>`;
-
         el.innerHTML = `
-            ${icon}
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                 style="flex-shrink:0;margin-top:2px;filter:drop-shadow(0 0 3px rgba(255,255,255,0.75))">
+                <path d="M7 0L8.77 5.23L14 7L8.77 8.77L7 14L5.23 8.77L0 7L5.23 5.23Z" fill="#ffffff"/>
+            </svg>
             <div>
                 <div class="darksite-name">${site.name}</div>
                 <div class="darksite-loc">${site.country}</div>

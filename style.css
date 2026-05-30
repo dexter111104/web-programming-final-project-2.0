@@ -454,7 +454,7 @@ input:checked + .slider-round:before { transform: translateX(20px); background: 
 }
 .bortle-desc { color: #666; line-height: 1.3; }
 
-/* === 暗空聖地列表 === */
+/* === 暗空地點列表 === */
 /* IDA 類型顏色圖例 */
 .type-legend {
     display: grid;
@@ -601,7 +601,7 @@ input:checked + .slider-round:before { transform: translateX(20px); background: 
 
 /* 「標出全部地點」白色微閃標點改以 js/darkSites.js 的 Canvas 圖層繪製 */
 
-/* === 暗空聖地地圖標記 === */
+/* === 暗空地點地圖標記 === */
 .site-marker-icon { background: none; border: none; text-align: center; }
 .site-marker-pin {
     width: 12px; height: 12px;
@@ -623,7 +623,7 @@ input:checked + .slider-round:before { transform: translateX(20px); background: 
     backdrop-filter: blur(4px);
 }
 
-/* === 暗空聖地浮動資訊面板 === */
+/* === 暗空地點浮動資訊面板 === */
 .site-panel {
     position: fixed;
     width: 360px;

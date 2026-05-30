@@ -1,6 +1,6 @@
 /**
  * darkSites.js
- * 暗空聖地（IDA 認證）：資料載入、列表渲染、地圖標記、浮動資訊面板
+ * 暗空地點（IDA 認證）：資料載入、列表渲染、地圖標記、浮動資訊面板
  */
 
 import { map }                        from './map.js';
@@ -43,7 +43,7 @@ const sitePanel = document.getElementById('site-panel');
 
 
 /**
- * 載入 darksites.json（IDA 認證暗空聖地，含座標與完整資訊）
+ * 載入 darksites.json（IDA 認證暗空地點，含座標與完整資訊）
  * @returns {Promise<object[]|null>}
  */
 async function loadDarkSites() {
@@ -52,7 +52,7 @@ async function loadDarkSites() {
         return await fetch('data/darksites.json', { cache: 'no-cache' })
             .then(r => { if (!r.ok) throw r; return r.json(); });
     } catch (err) {
-        console.error('[darkSites] 暗空聖地資料載入失敗:', err);
+        console.error('[darkSites] 暗空地點資料載入失敗:', err);
         return null;
     }
 }
@@ -91,7 +91,7 @@ export function nearestLng(targetLng, currentLng) {
 }
 
 /**
- * 將暗空聖地浮動面板定位在標記旁邊（優先顯示於左側，不足時改右側）
+ * 將暗空地點浮動面板定位在標記旁邊（優先顯示於左側，不足時改右側）
  */
 function positionPanel() {
     if (!siteMarker) return;
@@ -121,7 +121,7 @@ function positionPanel() {
 
 // ── 面板操作 ──────────────────────────────────────────────────
 
-/** 關閉暗空聖地浮動面板並移除地圖標記 */
+/** 關閉暗空地點浮動面板並移除地圖標記 */
 export function closeSitePanel() {
     state.lastSiteIndex    = state.currentSiteIndex;
     state.currentSiteIndex = -1;
@@ -138,7 +138,7 @@ export function closeSitePanel() {
 }
 
 /**
- * 供外部模組（如地圖小動物螢火蟲）呼叫：隨機飛往一個暗空聖地並開啟面板
+ * 供外部模組（如地圖小動物螢火蟲）呼叫：隨機飛往一個暗空地點並開啟面板
  */
 export function flyToRandomSite() {
     if (!DARK_SITES.length) return;
@@ -166,7 +166,7 @@ export function flyToRandomSite() {
 }
 
 /**
- * 飛行至指定暗空聖地並開啟資訊面板
+ * 飛行至指定暗空地點並開啟資訊面板
  * 若點擊已開啟的聖地則關閉面板
  * 所有聖地（精選或非精選）均使用同一套面板邏輯
  */
@@ -459,7 +459,7 @@ function refreshSiteListLang() {
 // ── 初始化（非同步，由 main.js 呼叫）────────────────────────
 
 /**
- * 載入暗空聖地資料、渲染列表，並綁定地圖事件
+ * 載入暗空地點資料、渲染列表，並綁定地圖事件
  * 需在 DOM 就緒後呼叫
  */
 export async function initDarkSites() {

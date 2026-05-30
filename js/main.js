@@ -31,10 +31,10 @@ document.getElementById('panel-toggle').addEventListener('click', () => {
     controlPanel.classList.toggle('hidden');
 });
 
-// ── 暗空聖地面板關閉按鈕 ─────────────────────────────────────
+// ── 暗空地點面板關閉按鈕 ─────────────────────────────────────
 document.querySelector('.site-panel-close').addEventListener('click', closeSitePanel);
 
-// ── 按 Esc 取消選擇（關閉暗空聖地面板並還原視野）──────────────
+// ── 按 Esc 取消選擇（關閉暗空地點面板並還原視野）──────────────
 document.addEventListener('keydown', (e) => {
     if (e.key !== 'Escape') return;
     if (document.getElementById('site-panel').classList.contains('open')) {
@@ -80,5 +80,5 @@ updateLangToggleLabel();
 // ── 預設觀星資訊：未選取地點，顯示提示 ──────────────────────
 clearStargazeInfo();
 
-// ── 初始化暗空聖地列表 ────────────────────────────────────────
+// ── 初始化暗空地點列表 ────────────────────────────────────────
 initDarkSites();

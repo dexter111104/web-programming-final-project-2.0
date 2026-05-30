@@ -41,8 +41,8 @@ const UI = {
 
     // 暗空地點列表 / 浮動面板
     list_loading:        { zh: '載入中…',                          en: 'Loading…' },
-    list_load_fail:      { zh: '⚠ 暗空聖地資料載入失敗<br>請重新整理頁面', en: '⚠ Failed to load dark sky data<br>Please refresh the page' },
-    site_desc_fallback:  { zh: 'IDA 認證暗天聖地，提供優質黑暗夜空環境。', en: 'An IDA-certified dark sky place offering pristine night skies.' },
+    list_load_fail:      { zh: '⚠ 暗空地點資料載入失敗<br>請重新整理頁面', en: '⚠ Failed to load dark sky data<br>Please refresh the page' },
+    site_desc_fallback:  { zh: 'IDA 認證暗空地點，提供優質黑暗夜空環境。', en: 'An IDA-certified dark sky place offering pristine night skies.' },
     site_bortle_loading: { zh: '載入光害資料…',                     en: 'Loading light data…' },
     site_lp_fail:        { zh: '⚠ 光害資料載入失敗',                en: '⚠ Failed to load light data' },
 

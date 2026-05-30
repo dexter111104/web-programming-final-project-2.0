@@ -98,7 +98,7 @@ export async function queryLocation(lat, lng) {
 
 // ── 地圖點擊事件 ──────────────────────────────────────────────
 map.on('click', (e) => {
-    // 暗空聖地面板開啟中時，不響應地圖點擊
+    // 暗空地點面板開啟中時，不響應地圖點擊
     if (state.currentSiteIndex !== -1) return;
     const { lat, lng } = e.latlng;
     queryLocation(lat, lng);

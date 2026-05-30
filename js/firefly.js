@@ -3,9 +3,9 @@
  * 地圖小動物：會反應光害的螢火蟲。
  *
  *  - 平常在目前視野內隨意飛行（緩動到隨機目標點，到達後再換點）。
- *  - 發光亮度反映牠腳下的波特爾等級：暗空聖地（Bortle 1–2）亮起脈動，
+ *  - 發光亮度反映牠腳下的波特爾等級：暗空地點（Bortle 1–2）亮起脈動，
  *    城市（Bortle 8–9）幾乎熄滅。
- *  - 點擊牠 → 隨機飛往一個暗空聖地並開啟資訊面板（觀星嚮導）。
+ *  - 點擊牠 → 隨機飛往一個暗空地點並開啟資訊面板（觀星嚮導）。
  */
 
 import { map }              from './map.js';
@@ -202,7 +202,7 @@ function initFirefly() {
         el.addEventListener('mouseleave', () => { paused = false; el.classList.remove('firefly-hover'); });
     }
 
-    // 點擊螢火蟲 → 隨機飛往一個暗空聖地
+    // 點擊螢火蟲 → 隨機飛往一個暗空地點
     marker.on('click', () => {
         paused = false;
         flyToRandomSite();

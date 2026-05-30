@@ -17,7 +17,7 @@ btn.addEventListener('click', () => {
         return;
     }
 
-    // 若暗空聖地面板開啟中，先關閉
+    // 若暗空地點面板開啟中，先關閉
     if (state.currentSiteIndex !== -1) closeSitePanel();
 
     setLoading(true);

@@ -6,10 +6,10 @@
 import { DEFAULT_YEAR } from './config.js';
 
 export const state = {
-    /** 目前選中的暗空聖地索引（-1 表示未選中） */
+    /** 目前選中的暗空地點索引（-1 表示未選中） */
     currentSiteIndex: -1,
 
-    /** 前一個選中的暗空聖地索引，用於判斷是否重新開啟同一聖地 */
+    /** 前一個選中的暗空地點索引，用於判斷是否重新開啟同一聖地 */
     lastSiteIndex: -1,
 
     /** 地圖上目前的點擊標記（Leaflet Marker 或 null） */

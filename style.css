@@ -1,3 +1,35 @@
+/* === 資源載入失敗提示 === */
+#app-error {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;            /* 蓋過啟動畫面 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.92);
+    padding: 24px;
+}
+#app-error[hidden] { display: none; }
+.app-error-box {
+    max-width: 360px;
+    text-align: center;
+    color: #e8e8e8;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+.app-error-box strong { display: block; margin-bottom: 10px; font-size: 1rem; color: #ffd27a; }
+.app-error-box p { margin: 0 0 16px; color: #b8b8b8; }
+.app-error-box button {
+    padding: 8px 18px;
+    background: #1c1c1c;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+.app-error-box button:hover { background: #2a2a2a; border-color: #888; }
+
 /* === 啟動畫面 === */
 #splash {
     position: fixed;

@@ -9,6 +9,7 @@ import { state }                      from './state.js';
 import { t, zoneDesc, idaYear, continentName,
          siteName, siteSubName, siteCountry, siteDesc,
          onLangChange }               from './i18n.js';
+import { escapeHtml }                 from './util.js';
 
 // 模組私有狀態
 let DARK_SITES     = [];
@@ -211,7 +212,7 @@ function flyTo(index) {
             icon: L.divIcon({
                 className: 'site-marker-icon',
                 html: `<div class="site-marker-pin"></div>
-                       <div class="site-marker-label">${siteName(site)}</div>`,
+                       <div class="site-marker-label">${escapeHtml(siteName(site))}</div>`,
                 iconSize:  [140, 38],
                 iconAnchor:[70, 6],
             }),
@@ -533,8 +534,8 @@ export async function initDarkSites() {
             el.innerHTML = `
                 ${STAR_SVG}
                 <div>
-                    <div class="darksite-name">${siteName(site)}</div>
-                    <div class="darksite-loc">${siteCountry(site)}</div>
+                    <div class="darksite-name">${escapeHtml(siteName(site))}</div>
+                    <div class="darksite-loc">${escapeHtml(siteCountry(site))}</div>
                 </div>`;
             el.addEventListener('click', () => flyTo(i));
             el.addEventListener('animationend', () => el.classList.remove('deselecting'));

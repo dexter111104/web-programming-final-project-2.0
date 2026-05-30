@@ -54,7 +54,7 @@ function createLpLayer(year, opacity) {
     return L.tileLayer(
         `https://djlorenz.github.io/astronomy/image_tiles/tiles${year}/tile_{z}_{x}_{y}.png`,
         {
-            attribution: '光害資料 © <a href="https://djlorenz.github.io/astronomy/lp/" target="_blank">Light Pollution Atlas</a> (Falchi et al.)',
+            attribution: '光害資料 © <a href="https://djlorenz.github.io/astronomy/lp/" target="_blank" rel="noopener">Light Pollution Atlas</a> (Falchi et al.)',
             minZoom: 2,
             maxNativeZoom: 8,
             maxZoom: 19,

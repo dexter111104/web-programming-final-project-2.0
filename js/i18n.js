@@ -24,6 +24,12 @@ const UI = {
     show_all_sites: { zh: '標出全部地點', en: 'Show all places' },
     hide_all_sites: { zh: '隱藏全部地點', en: 'Hide all places' },
 
+    // 圖示按鈕的無障礙標籤（data-i18n-aria → aria-label）
+    aria_geolocate: { zh: '定位我的位置',   en: 'Locate me' },
+    aria_menu:      { zh: '開關控制面板',   en: 'Toggle control panel' },
+    aria_lang:      { zh: '切換語言',       en: 'Switch language' },
+    aria_close:     { zh: '關閉',           en: 'Close' },
+
     // 左側位置面板
     loading:          { zh: '載入中...',                              en: 'Loading...' },
     loc_out_of_range: { zh: '此位置超出資料範圍<br>(65°S ~ 75°N)',     en: 'Outside data coverage<br>(65°S – 75°N)' },
@@ -261,5 +267,10 @@ export function applyStaticI18n() {
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (UI[key]) el.textContent = UI[key][lang];
+    });
+    // 無障礙標籤：圖示按鈕等以 aria-label 提供語意（隨語言更新）
+    document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+        const key = el.getAttribute('data-i18n-aria');
+        if (UI[key]) el.setAttribute('aria-label', UI[key][lang]);
     });
 }

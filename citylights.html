@@ -4,10 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Light Pollution Map</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H"
+          crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
+    <!-- 必要外部資源（Leaflet / pako）載入失敗時，顯示提示而非整頁靜默壞掉 -->
+    <script>
+        window.__assetFail = function () {
+            var b = document.getElementById('app-error');
+            if (b) b.hidden = false;
+        };
+        // 捕捉階段攔截 script/link 載入錯誤（含 SRI 驗證失敗）
+        window.addEventListener('error', function (e) {
+            var el = e && e.target;
+            if (el && (el.tagName === 'SCRIPT' || el.tagName === 'LINK')) window.__assetFail();
+        }, true);
+        // 保險：載入後檢查關鍵全域變數是否就緒
+        window.addEventListener('load', function () {
+            if (typeof L === 'undefined' || typeof pako === 'undefined') window.__assetFail();
+        });
+    </script>
 </head>
 <body>
+
+    <!-- 資源載入失敗提示（預設隱藏，由 head 的守衛腳本顯示）-->
+    <div id="app-error" hidden role="alert">
+        <div class="app-error-box">
+            <strong>⚠ 載入失敗 · Failed to load</strong>
+            <p>部分必要資源無法載入，請檢查網路連線後重新整理。<br>
+               Some required resources couldn’t load. Check your connection and refresh.</p>
+            <button type="button" onclick="location.reload()">重新整理 · Reload</button>
+        </div>
+    </div>
 
     <!-- 啟動畫面 -->
     <div id="splash">
@@ -40,7 +69,7 @@
     <div id="map"></div>
 
     <!-- 定位按鈕 + 搜尋列（左下角同一排） -->
-    <button id="geolocate-btn" class="geolocate-btn" title="定位我的位置">
+    <button id="geolocate-btn" class="geolocate-btn" title="定位我的位置" data-i18n-aria="aria_geolocate">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 2C8.686 2 6 4.686 6 8c0 4.418 6 12 6 12s6-7.582 6-12c0-3.314-2.686-6-6-6z"/>
@@ -71,7 +100,7 @@
     <div id="loc-panel" class="loc-panel">
         <div class="loc-header">
             <span id="loc-place" class="loc-place-name">—</span>
-            <button id="loc-close" class="loc-close-btn">✕</button>
+            <button id="loc-close" class="loc-close-btn" data-i18n-aria="aria_close">✕</button>
         </div>
         <div id="loc-body" class="loc-body">
             <div class="loc-hint" data-i18n="loc_hint">點擊地圖上任意位置查詢光害資訊</div>
@@ -79,8 +108,8 @@
     </div>
 
     <!-- 語言切換 + 浮動面板開關按鈕 -->
-    <button id="lang-toggle" class="lang-toggle-btn" type="button" title="Switch language">EN</button>
-    <button id="panel-toggle" class="panel-toggle-btn">☰</button>
+    <button id="lang-toggle" class="lang-toggle-btn" type="button" title="Switch language" data-i18n-aria="aria_lang">EN</button>
+    <button id="panel-toggle" class="panel-toggle-btn" type="button" data-i18n-aria="aria_menu">☰</button>
 
     <!-- 右側浮動控制面板 -->
     <div id="control-panel" class="control-panel">
@@ -134,7 +163,7 @@
             <img id="site-panel-img" alt="">
         </div>
         <div class="site-panel-body">
-            <button class="site-panel-close">✕</button>
+            <button type="button" class="site-panel-close" data-i18n-aria="aria_close">✕</button>
             <div id="site-panel-year" class="site-panel-year"></div>
             <div id="site-panel-name" class="site-panel-name"></div>
             <div id="site-panel-ename" class="site-panel-ename"></div>
@@ -144,8 +173,12 @@
         </div>
     </div>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js"
+            integrity="sha384-rNlaE5fs9dGIjmxWDALQh/RBAaGRYT5ChrzHo6tRfgrZ36iRFAiquP5g41Jsv+0j"
+            crossorigin="anonymous"></script>
     <!-- ES 模組入口；需透過 HTTP 伺服器開啟（不支援 file:// 協定） -->
     <script type="module" src="js/main.js"></script>
 </body>

@@ -12,7 +12,7 @@ let DARK_SITES     = [];
 let siteMarker     = null;
 let pendingMoveEnd = null;   // 目前等待 moveend 的 listener 參考
 let allSitesActive = false;        // 「標出全部地點」是否開啟
-const allSitesCopies = new Map();  // 世界副本偏移 k → 該副本的白點 L.layerGroup
+let allSitesLayer  = null;         // 全部地點白點的 Canvas 圖層實例
 const allSitesParams = [];         // 每個聖地預先算好的白點參數（座標 + 隨機動畫），各副本共用
 const itemEls      = [];     // 依原始索引存放列表項目 DOM，用於高亮選取狀態
 let preFlyView     = null;   // 點擊聖地前的地圖視野（center + zoom），取消選取時還原
@@ -60,9 +60,11 @@ const CONTINENT_ORDER = ['亞洲', '美洲', '歐洲', '大洋洲', '非洲', '�
 /** 國家前綴 → 大洲 */
 const COUNTRY_CONTINENT = {
     日本: '亞洲', 台灣: '亞洲', 韓國: '亞洲', 以色列: '亞洲',
+    中國: '亞洲', 沙烏地阿拉伯: '亞洲',
     美國: '美洲', 加拿大: '美洲', 智利: '美洲',
     英國: '歐洲', 德國: '歐洲', 愛爾蘭: '歐洲', 匈牙利: '歐洲',
-    法國: '歐洲', 希臘: '歐洲', 挪威: '歐洲', 丹麥: '歐洲',
+    法國: '歐洲', 希臘: '歐洲', 挪威: '歐洲', 丹麥: '歐洲', 荷蘭: '歐洲',
+    盧森堡: '歐洲', 瑞士: '歐洲',
     紐西蘭: '大洋洲', 澳大利亞: '大洋洲', 紐埃: '大洋洲', 英國海外領土: '大洋洲',
     納米比亞: '非洲', 南非: '非洲',
 };
@@ -273,77 +275,115 @@ function fillSitePanel(site) {
     });
 }
 
-/** 建立單一白點的 divIcon（圓點中心精準錨在座標上）*/
-function dotIcon(p) {
-    return L.divIcon({
-        className: 'all-site-dot-icon',
-        html: `<div class="all-site-dot" style="animation-delay:${p.delay}s;animation-duration:${p.dur}s;--dot-dim:${p.dim}"></div>`,
-        iconSize:   [5.3, 5.3],
-        iconAnchor: [2.65, 2.65],
-    });
-}
+// ── 「標出全部地點」：Canvas 白點圖層 ──────────────────────────
+// 200 個聖地 × 多份世界副本 ≈ 數百個發光白點。改以單一 canvas 繪製，
+// 取代數百個會持續重繪 box-shadow/scale 的 DOM 標記，徹底改善拖曳流暢度。
 
-/** 預先計算每個聖地的白點參數（座標 + 隨機動畫），讓各世界副本共用同一組隨機值 */
+/** 預先計算每個聖地的白點參數（座標 + 隨機相位/週期/最暗值），各世界副本共用 */
 function buildAllSitesParams() {
     allSitesParams.length = 0;
     DARK_SITES.forEach(site => {
         allSitesParams.push({
             lat:   site.lat,
             lng:   site.lng,
-            delay: (Math.random() * -6).toFixed(2),          // 相位：-6 ~ 0s
-            dur:   (1.8 + Math.random() * 3.4).toFixed(2),   // 週期：1.8 ~ 5.2s
-            dim:   (0.2 + Math.random() * 0.45).toFixed(2),  // 最暗不透明度：0.2 ~ 0.65
+            phase: Math.random(),               // 起始相位：0 ~ 1
+            dur:   1.8 + Math.random() * 3.4,   // 閃爍週期：1.8 ~ 5.2s
+            dim:   0.2 + Math.random() * 0.45,  // 最暗不透明度：0.2 ~ 0.65
         });
     });
 }
 
+// 預先把「發光點」畫到離屏 canvas（徑向漸層光暈），之後每幀只要 drawImage 貼上，
+// 避免每點每幀重算 radial-gradient 或使用昂貴的 shadowBlur
+const GLOW_SPRITE = (() => {
+    const S = 48;
+    const c = document.createElement('canvas');
+    c.width = c.height = S;
+    const g = c.getContext('2d');
+    const r = S / 2;
+    const grad = g.createRadialGradient(r, r, 0, r, r, r);
+    grad.addColorStop(0,    'rgba(255,255,255,1)');
+    grad.addColorStop(0.38, 'rgba(255,255,255,1)');     // 實心核心邊緣（約佔 0.38 半徑）
+    grad.addColorStop(0.60, 'rgba(255,255,255,0.28)');
+    grad.addColorStop(0.82, 'rgba(255,255,255,0)');     // 光暈提早淡出，避免相鄰點糊在一起
+    grad.addColorStop(1,    'rgba(255,255,255,0)');
+    g.fillStyle = grad;
+    g.fillRect(0, 0, S, S);
+    return c;
+})();
+
+// 基準繪製尺寸（含光暈）；核心約佔 0.38 半徑 → 實心點 ≈ 4.4px，光暈收緊不外溢
+const DOT_BASE = 11.5;
+
 /**
- * 依目前可見經度範圍，補齊/移除各世界副本（經度 ±360 倍數）的白點
- * 地圖可無限左右捲動，故需動態渲染目前視野內的副本，避免標記無限增生
+ * 自訂 Canvas 圖層：把全部聖地白點（含各世界副本）畫在單一 canvas 上。
+ * 沿用 L.Canvas 的容器定位／縮放動畫處理，僅覆寫 _draw 並自帶 rAF 閃爍迴圈。
  */
-function renderAllSitesCopies() {
-    if (!allSitesActive) return;
+const AllSitesCanvas = L.Canvas.extend({
+    options: { padding: 0.2 },   // 加大邊距，拖曳時邊緣較不易露出空白
 
-    const bounds = map.getBounds();
-    // 聖地經度落在 [-180,180]，第 k 份副本約涵蓋 [-180+360k, 180+360k]
-    const kMin = Math.floor((bounds.getWest() - 180) / 360);
-    const kMax = Math.ceil((bounds.getEast()  + 180) / 360);
+    onAdd(map) {
+        L.Canvas.prototype.onAdd.call(this, map);
+        this._raf = L.Util.requestAnimFrame(this._frame, this);
+    },
 
-    // 移除已離開視野的副本
-    for (const k of [...allSitesCopies.keys()]) {
-        if (k < kMin || k > kMax) {
-            map.removeLayer(allSitesCopies.get(k));
-            allSitesCopies.delete(k);
+    onRemove(map) {
+        if (this._raf) L.Util.cancelAnimFrame(this._raf);
+        this._raf = null;
+        L.Canvas.prototype.onRemove.call(this, map);
+    },
+
+    _frame() {
+        if (!this._map) return;
+        // 縮放動畫期間容器以 CSS 縮放，座標暫時失準 → 跳過重繪
+        if (!this._map._animatingZoom) {
+            this._clear();
+            this._draw();
         }
-    }
-    // 補上視野內尚未建立的副本
-    for (let k = kMin; k <= kMax; k++) {
-        if (allSitesCopies.has(k)) continue;
-        const offset = k * 360;
-        const grp = L.layerGroup();
-        allSitesParams.forEach(p => {
-            L.marker([p.lat, p.lng + offset], {
-                icon: dotIcon(p),
-                interactive: false,
-                keyboard:    false,
-            }).addTo(grp);
-        });
-        grp.addTo(map);
-        allSitesCopies.set(k, grp);
-    }
-}
+        this._raf = L.Util.requestAnimFrame(this._frame, this);
+    },
 
-/**
- * 切換「標出全部地點」：在地圖上以白色微閃標點顯示全部聖地（再次點擊則隱藏）
- * 標點不可互動，僅作標示用途；可隨地圖無限捲動在各副本顯示
- */
-/** 關閉「標出全部地點」並清除所有副本白點（若未開啟則不動作） */
+    _draw() {
+        const map = this._map;
+        if (!map) return;
+
+        const ctx    = this._ctx;
+        const bounds = map.getBounds();
+        const z      = map.getZoom();
+        // 聖地經度落在 [-180,180]，第 k 份副本約涵蓋 [-180+360k, 180+360k]
+        const kMin = Math.floor((bounds.getWest() - 180) / 360);
+        const kMax = Math.ceil((bounds.getEast()  + 180) / 360);
+        // 360° 對應的像素寬（Web Mercator x 與緯度無關，每幀算一次即可）
+        const worldPx = map.project([0, 360], z).x - map.project([0, 0], z).x;
+        const t = performance.now() / 1000;
+
+        ctx.save();
+        for (const p of allSitesParams) {
+            // 三角波 0~1：平滑往返閃爍
+            const ph  = (t / p.dur + p.phase) % 1;
+            const tri = ph < 0.5 ? ph * 2 : (1 - ph) * 2;
+            const size = DOT_BASE * (0.8 + 0.35 * tri);
+            const half = size / 2;
+            ctx.globalAlpha = p.dim + (1 - p.dim) * tri;
+
+            const base = map.latLngToLayerPoint([p.lat, p.lng]);
+            for (let k = kMin; k <= kMax; k++) {
+                const x = base.x + k * worldPx;
+                ctx.drawImage(GLOW_SPRITE, x - half, base.y - half, size, size);
+            }
+        }
+        ctx.restore();
+    },
+});
+
+/** 關閉「標出全部地點」並移除 Canvas 圖層（若未開啟則不動作） */
 function hideAllSites() {
     if (!allSitesActive) return;
     allSitesActive = false;
-    map.off('moveend', renderAllSitesCopies);
-    allSitesCopies.forEach(g => map.removeLayer(g));
-    allSitesCopies.clear();
+    if (allSitesLayer) {
+        map.removeLayer(allSitesLayer);
+        allSitesLayer = null;
+    }
     const btn = document.getElementById('toggle-all-sites');
     if (btn) {
         btn.classList.remove('active');
@@ -351,13 +391,17 @@ function hideAllSites() {
     }
 }
 
+/**
+ * 切換「標出全部地點」：在地圖上以白色微閃標點顯示全部聖地（再次點擊則隱藏）
+ * 標點不可互動，僅作標示用途；以單一 canvas 繪製並隨地圖無限捲動在各副本顯示
+ */
 function toggleAllSites(btn) {
     if (allSitesActive) { hideAllSites(); return; }
 
     allSitesActive = true;
     buildAllSitesParams();
-    renderAllSitesCopies();
-    map.on('moveend', renderAllSitesCopies);
+    allSitesLayer = new AllSitesCanvas();
+    allSitesLayer.addTo(map);
     btn.classList.add('active');
     btn.textContent = '隱藏全部地點';
 }

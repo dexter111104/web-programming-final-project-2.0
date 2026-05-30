@@ -283,7 +283,7 @@
     "lng": 17.92,
     "zoom": 9,
     "desc": "匈牙利第一座 IDA 認證暗天公園（2009 年），位於南匈牙利巴拉尼亞縣。廣袤的森林丘陵遠離工業區，夜空透明度卓越，是中歐推動黑暗夜空保育的先驅之一。",
-    "img": null
+    "img": "https://darksky.org/app/uploads/2015/04/Zselic-featured-700px-460ps.png"
   },
   {
     "name": "克萊頓湖州立公園",
@@ -294,18 +294,18 @@
     "lng": -103.33,
     "zoom": 10,
     "desc": "以豐富的恐龍足跡化石著稱的高原公園，2010 年獲 IDA 認證。新墨西哥高原的乾燥氣候帶來極度清透的夜空，億萬年前的恐龍足跡在銀河輝映下更顯神秘壯觀。",
-    "img": null
+    "img": "https://lobolife.unm.edu/wp-content/uploads/2023/07/202306_UNM_ClaytonLakeStateParkandDinosaurTrackways_HyunjuBlemel_compressed-78-900x600.jpg"
   },
   {
     "name": "赫德蘭暗天公園",
     "ename": "Headlands International Dark Sky Park",
     "country": "美國・密歇根州",
     "year": 2011,
-    "lat": 45.77,
-    "lng": -84.97,
+    "lat": 45.776,
+    "lng": -84.785,
     "zoom": 10,
     "desc": "密歇根州首座 IDA 認證國際暗天公園（2011 年），位於麥基諾城附近，三面環抱休倫湖的半島地形天然隔絕光害。夏夜偶可見北極光，是密歇根州最知名的觀星聖地。",
-    "img": null
+    "img": "https://www.awesomemitten.com/wp-content/uploads/2021/04/Headlands-International-Dark-Sky-Park-Mackinaw-City-3rd_coast_images.jpg"
   },
   {
     "name": "天文臺公園",
@@ -316,7 +316,7 @@
     "lng": -81.06,
     "zoom": 10,
     "desc": "俄亥俄州首座 IDA 認證暗天公園（2011 年），位於基奧加縣。園內設有歷史悠久的弗羅林天文臺，長年推廣天文教育，是大湖區城市近郊難得的黑暗夜空保育地。",
-    "img": null
+    "img": "https://www.northeastohiothrive.com/wp-content/uploads/2019/08/star-gazing-1149228_1920.jpg"
   },
   {
     "name": "查科文化國家歷史公園",
@@ -327,7 +327,7 @@
     "lng": -107.96,
     "zoom": 9,
     "desc": "UNESCO 世界遺產，古代普韋布洛人精心設計的天文觀測中心，建築精確對準夏至日出方向。2013 年獲 IDA 金級認證，幾乎無人煙的荒漠夜空延續著千年前先民仰望星辰的傳統。",
-    "img": null
+    "img": "https://www.nps.gov/chcu/learn/management/images/NPS-by-K-Alden-Peterson_copy_weblarge.jpg"
   },
   {
     "name": "諾森伯蘭國家公園",
@@ -338,7 +338,7 @@
     "lng": -2.2,
     "zoom": 9,
     "desc": "英格蘭人口最稀少的國家公園，基爾德森林廣袤無垠，構成英格蘭最大的暗天保護地帶。2013 年獲 IDA 金星級認證，冬夜可觀測北極光，哈德良長城在銀河映照下盡顯千年滄桑。",
-    "img": null
+    "img": "https://www.northumberlandnationalpark.org.uk/wp-content/uploads/2017/11/Battlesteads.jpg"
   },
   {
     "name": "藍嶺天文臺暗天公園",
@@ -349,7 +349,7 @@
     "lng": -82.05,
     "zoom": 10,
     "desc": "位於北卡羅來納州阿巴拉契亞山脈的高地天文臺，2014 年獲 IDA 認證。山地高海拔與遠離都市的清淨環境帶來卓越觀星條件，是美國東南部觀測銀河與深空天體的優質據點。",
-    "img": null
+    "img": "https://darksky.org/app/uploads/2015/04/BlueRidge_Featured_Image.png"
   },
   {
     "name": "大峽谷-帕拉珊特國家保護區",
@@ -360,7 +360,7 @@
     "lng": -113.75,
     "zoom": 8,
     "desc": "毗鄰大峽谷、面積逾 4,900 平方公里的偏遠荒野，2014 年獲 IDA 認證。被評為北美最難抵達的國家保護區之一，也正因如此，夜空幾乎無任何人工光源，純淨程度堪稱完美。",
-    "img": null
+    "img": "https://www.nps.gov/para/learn/nature/images/MilkyWayPanoReal_Cave_20160830_P20448.jpg?maxwidth=1300&autorotate=false&quality=78&format=webp"
   },
   {
     "name": "霍文威普國家保護區",
@@ -371,7 +371,7 @@
     "lng": -109.07,
     "zoom": 10,
     "desc": "古代普韋布洛人遺址，方形與圓形塔樓精確對準夏至與冬至的日出日落方位，體現先民的天文智慧。2014 年獲 IDA 認證，四周荒涼沙漠帶來極致黑暗夜空，古塔剪影在銀河下格外神秘壯麗。",
-    "img": null
+    "img": "https://www.nps.gov/hove/planyourvisit/images/Hovenweep-Castle-at-Night-Landscape1-Jacob-W-Frank.jpg?maxwidth=1300&maxheight=1300&autorotate=false&format=webp"
   },
   {
     "name": "銅斷崖州立公園",
@@ -382,7 +382,7 @@
     "lng": -99.75,
     "zoom": 10,
     "desc": "德克薩斯州西部紅岩峽谷中的暗天公園，廣袤的草地與峽谷地形提供絕佳觀星視野。2014 年獲 IDA 認證，遠離都市的德克薩斯高原夜空清澈透明，是德州重要的天文觀測基地。",
-    "img": null
+    "img": "https://tpwd.texas.gov/state-parks/copper-breaks/gallery/copper_breaks_milkyway_campsite_panorama_1200p.jpg"
   },
   {
     "name": "魔岩州立自然區",
@@ -393,7 +393,7 @@
     "lng": -98.82,
     "zoom": 10,
     "desc": "德克薩斯州標誌性的粉紅色花崗岩圓頂，2014 年獲 IDA 認證。光禿的岩頂提供 360° 無遮擋觀星視野，卡曼奇人視此地為聖山，如今在璀璨銀河的映照下更添神秘色彩，是德州最受歡迎的觀星聖地。",
-    "img": null
+    "img": "https://www.stayllano.com/wp-content/uploads/milky-way-over-mountains-denis-degioanni-UnSpash-1515705576963-95cad62945b6-768x512.jpg"
   },
   {
     "name": "伊蘭河谷莊園",
@@ -404,7 +404,7 @@
     "lng": -3.65,
     "zoom": 9,
     "desc": "威爾斯中部連綿的山地水庫群，2015 年獲 IDA 認證為暗天公園。廣闊的無人高地與極少的人工照明創造出純淨夜空，靜謐水庫倒映繁星如畫，是威爾斯最受天文愛好者青睞的觀星聖地。",
-    "img": null
+    "img": "https://elanvalley.org.uk/app/uploads/2022/10/foel-trail-1hr-1024x683.jpg"
   },
   {
     "name": "梅奧國際暗天公園",
@@ -807,8 +807,8 @@
     "ename": "Øvre Pasvik National Park",
     "country": "挪威・芬馬克郡",
     "year": 2024,
-    "lat": 69.5,
-    "lng": 29.5,
+    "lat": 69.117,
+    "lng": 28.901,
     "zoom": 8,
     "desc": "IDA 認證暗天公園。挪威最北端靠近俄芬邊境的原始荒野，2024 年獲認，是斯堪地納維亞首批 IDA 認證地點之一，極夜期間可觀測壯麗極光。",
     "img": null
@@ -1262,6 +1262,941 @@
     "lng": 168.4,
     "zoom": 11,
     "desc": "IDA 認證暗天庇護所。瓦卡蒂普湖北端、電影《魔戒》拍攝地之一，2025 年獲認，雪山倒映湖面的繁星景象如夢似幻，是紐西蘭最新一批暗天認證地點。",
+    "img": null
+  },
+  {
+    "name": "塞文山國家公園",
+    "ename": "Cévennes National Park",
+    "country": "法國・奧克西塔尼",
+    "year": 2018,
+    "lat": 44.27,
+    "lng": 3.58,
+    "zoom": 9,
+    "desc": "歐洲面積最大的國際暗天保護區之一，2018 年獲認。花崗岩高原與深谷交織，遠離大城光害，是法國南部的觀星勝地。",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/C%C3%A9vennes_France_night_sky_with_stars_01.jpg/500px-C%C3%A9vennes_France_night_sky_with_stars_01.jpg"
+  },
+  {
+    "name": "藍色阿爾卑斯—梅康圖爾",
+    "ename": "Alpes Azur Mercantour",
+    "country": "法國・濱海阿爾卑斯",
+    "year": 2019,
+    "lat": 44.15,
+    "lng": 6.95,
+    "zoom": 9,
+    "desc": "2019 年獲認的國際暗天保護區，緊鄰地中海卻保有純淨夜空，高山湖泊與峽谷在銀河下格外靜謐。",
+    "img": null
+  },
+  {
+    "name": "比克國家公園",
+    "ename": "Bükk National Park",
+    "country": "匈牙利・包爾紹德州",
+    "year": 2017,
+    "lat": 48.07,
+    "lng": 20.5,
+    "zoom": 9,
+    "desc": "匈牙利第三座 IDA 暗天公園（2017）。喀斯特石灰岩高地與茂密森林，是中歐少見的低光害觀星地。",
+    "img": null
+  },
+  {
+    "name": "北約克沼澤國家公園",
+    "ename": "North York Moors National Park",
+    "country": "英國・英格蘭",
+    "year": 2020,
+    "lat": 54.37,
+    "lng": -0.9,
+    "zoom": 9,
+    "desc": "2020 年與約克郡谷地共同獲認的國際暗天保護區，遼闊石楠荒原延伸至海岸，是英格蘭東北最佳暗夜之一。",
+    "img": null
+  },
+  {
+    "name": "克蘭伯恩蔡斯",
+    "ename": "Cranborne Chase",
+    "country": "英國・英格蘭",
+    "year": 2019,
+    "lat": 50.97,
+    "lng": -2.07,
+    "zoom": 9,
+    "desc": "英格蘭南部白堊丘陵的國際暗天保護區（2019），古老林地與田園村落保有難得的黑暗夜空。",
+    "img": null
+  },
+  {
+    "name": "凱恩戈姆暗天公園",
+    "ename": "Tomintoul and Glenlivet – Cairngorms Dark Sky Park",
+    "country": "英國・蘇格蘭",
+    "year": 2018,
+    "lat": 57.25,
+    "lng": -3.37,
+    "zoom": 9,
+    "desc": "位於蘇格蘭凱恩戈姆山國家公園內（2018 認證），高地荒野人煙稀少，是英國本島最暗的天空之一。",
+    "img": null
+  },
+  {
+    "name": "OM 暗天公園",
+    "ename": "OM Dark Sky Park and Observatory",
+    "country": "英國・北愛爾蘭",
+    "year": 2020,
+    "lat": 54.7,
+    "lng": -6.93,
+    "zoom": 10,
+    "desc": "北愛爾蘭首座 IDA 暗天公園（2020）。達瓦森林結合史前石圈與現代天文台，文化與星空兼具。",
+    "img": null
+  },
+  {
+    "name": "圓頂礁國家公園",
+    "ename": "Capitol Reef National Park",
+    "country": "美國・猶他州",
+    "year": 2015,
+    "lat": 38.2,
+    "lng": -111.17,
+    "zoom": 9,
+    "desc": "猶他州色彩斑斕的褶皺岩層「水穴褶曲」，2015 年獲 IDA 認證，乾燥高原帶來極佳的銀河能見度。",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Fruita_Schoolhouse_with_night_sky.jpg/500px-Fruita_Schoolhouse_with_night_sky.jpg"
+  },
+  {
+    "name": "峽谷地國家公園",
+    "ename": "Canyonlands National Park",
+    "country": "美國・猶他州",
+    "year": 2015,
+    "lat": 38.33,
+    "lng": -109.88,
+    "zoom": 9,
+    "desc": "科羅拉多河與綠河切割出的壯闊峽谷迷宮，2015 年獲認，是美國西南最原始遼闊的暗夜荒野。",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Night_Sky_at_Chesler_Park_%2821523214929%29.jpg/500px-Night_Sky_at_Chesler_Park_%2821523214929%29.jpg"
+  },
+  {
+    "name": "拱門國家公園",
+    "ename": "Arches National Park",
+    "country": "美國・猶他州",
+    "year": 2019,
+    "lat": 38.73,
+    "lng": -109.59,
+    "zoom": 10,
+    "desc": "擁有逾兩千座天然石拱，2019 年獲 IDA 認證，銀河自紅岩拱門間升起是攝影師夢寐以求的畫面。",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Milky_Way_at_Double_Arch.jpg/500px-Milky_Way_at_Double_Arch.jpg"
+  },
+  {
+    "name": "甘尼森黑峽谷國家公園",
+    "ename": "Black Canyon of the Gunnison National Park",
+    "country": "美國・科羅拉多州",
+    "year": 2015,
+    "lat": 38.57,
+    "lng": -107.72,
+    "zoom": 10,
+    "desc": "以深邃陡峭的黑色峽壁聞名，2015 年獲認。狹窄谷底僅午間見光，入夜後星空格外深邃。",
+    "img": null
+  },
+  {
+    "name": "羚羊島州立公園",
+    "ename": "Antelope Island State Park",
+    "country": "美國・猶他州",
+    "year": 2017,
+    "lat": 41.03,
+    "lng": -112.2,
+    "zoom": 10,
+    "desc": "大鹽湖中最大的島嶼，2017 年獲認。雖鄰近鹽湖城卻保有開闊暗空，湖面映星別具一格。",
+    "img": null
+  },
+  {
+    "name": "卡普林火山國家紀念地",
+    "ename": "Capulin Volcano National Monument",
+    "country": "美國・新墨西哥州",
+    "year": 2016,
+    "lat": 36.78,
+    "lng": -103.97,
+    "zoom": 10,
+    "desc": "一座保存完好的死火山錐，2016 年獲認。登上火山口邊緣可 360 度飽覽地平線上的繁星。",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Capulin_Night_Sky.jpg/500px-Capulin_Night_Sky.jpg"
+  },
+  {
+    "name": "石化林國家公園",
+    "ename": "Petrified Forest National Park",
+    "country": "美國・亞利桑那州",
+    "year": 2018,
+    "lat": 34.91,
+    "lng": -109.81,
+    "zoom": 9,
+    "desc": "以兩億年前的矽化木與彩繪沙漠著稱，2018 年獲 IDA 認證，荒漠夜空清澈無比。",
+    "img": null
+  },
+  {
+    "name": "雪松崩國家紀念地",
+    "ename": "Cedar Breaks National Monument",
+    "country": "美國・猶他州",
+    "year": 2017,
+    "lat": 37.63,
+    "lng": -112.84,
+    "zoom": 10,
+    "desc": "海拔逾 3,000 公尺的天然圓形劇場岩壁，2017 年獲認。高海拔與乾燥空氣造就頂級觀星條件。",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/The_starry_night_sky_casts_celestial_light_onto_a_meadow_framed_by_conifer_trees_at_Cedar_Breaks_National_Monument%2C_Utah._%286bd9a8c7-155d-451f-6704-cdbe39baad12%29.jpg/500px-thumbnail.jpg"
+  },
+  {
+    "name": "妖精谷州立公園",
+    "ename": "Goblin Valley State Park",
+    "country": "美國・猶他州",
+    "year": 2016,
+    "lat": 38.57,
+    "lng": -110.7,
+    "zoom": 10,
+    "desc": "遍布奇形蘑菇狀岩柱的紅色谷地，2016 年獲認，宛如異星地表般的夜景。",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Man_Stars_Goblin_Valley_%28Unsplash%29.jpg/500px-Man_Stars_Goblin_Valley_%28Unsplash%29.jpg"
+  },
+  {
+    "name": "水牛國家河流",
+    "ename": "Buffalo National River",
+    "country": "美國・阿肯色州",
+    "year": 2019,
+    "lat": 36.03,
+    "lng": -92.75,
+    "zoom": 9,
+    "desc": "美國首批受保護的自由流動河流之一，2019 年獲認，是美國中南部難得的大片暗夜保護地。",
+    "img": null
+  },
+  {
+    "name": "西奧多·羅斯福國家公園",
+    "ename": "Theodore Roosevelt National Park",
+    "country": "美國・北達科他州",
+    "year": 2024,
+    "lat": 46.98,
+    "lng": -103.54,
+    "zoom": 9,
+    "desc": "北達科他惡地地貌與野牛群棲地，2024 年獲認，是美國北方大平原上的新晉暗天公園。",
+    "img": null
+  },
+  {
+    "name": "大盆地國家公園",
+    "ename": "Great Basin National Park",
+    "country": "美國・內華達州",
+    "year": 2016,
+    "lat": 38.98,
+    "lng": -114.3,
+    "zoom": 9,
+    "desc": "內華達偏遠的高山沙漠公園，2016 年獲認，擁有美國本土最黑暗的天空之一與古老的狐尾松林。",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Starry_sky_over_Great_Basin_National_Park_%2826904034291%29.jpg/500px-Starry_sky_over_Great_Basin_National_Park_%2826904034291%29.jpg"
+  },
+  {
+    "name": "史蒂芬·福斯特州立公園",
+    "ename": "Stephen C. Foster State Park",
+    "country": "美國・喬治亞州",
+    "year": 2016,
+    "lat": 30.83,
+    "lng": -82.36,
+    "zoom": 10,
+    "desc": "深入奧克弗諾基沼澤的入口，2016 年獲認，是美國東南部最暗的天空之一，星光倒映黑水沼澤尤為夢幻。",
+    "img": null
+  },
+  {
+    "name": "布萊斯峽谷國家公園",
+    "ename": "Bryce Canyon National Park",
+    "country": "美國・猶他州",
+    "year": 2019,
+    "lat": 37.57,
+    "lng": -112.18,
+    "zoom": 10,
+    "desc": "以紅岩尖塔群聞名，2019 年獲認，高海拔與乾燥空氣造就極佳透明度，肉眼可見約 7500 顆星。",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Bryce_Canyon%2C_the_heart_of_the_Milky_Way_%2815170471778%29.jpg/500px-Bryce_Canyon%2C_the_heart_of_the_Milky_Way_%2815170471778%29.jpg"
+  },
+  {
+    "name": "梅薩維德國家公園",
+    "ename": "Mesa Verde National Park",
+    "country": "美國・科羅拉多州",
+    "year": 2021,
+    "lat": 37.23,
+    "lng": -108.46,
+    "zoom": 10,
+    "desc": "保存古普韋布洛人懸崖民居的世界遺產，2021 年獲認，千年遺址在璀璨銀河下別具歷史氛圍。",
+    "img": null
+  },
+  {
+    "name": "圖馬卡科里國家歷史公園",
+    "ename": "Tumacácori National Historical Park",
+    "country": "美國・亞利桑那州",
+    "year": 2024,
+    "lat": 31.57,
+    "lng": -111.05,
+    "zoom": 11,
+    "desc": "保存西班牙傳教站遺跡，2024 年獲認，古老教堂在亞利桑那南部的星空下訴說邊疆歲月。",
+    "img": null
+  },
+  {
+    "name": "薩瓜羅國家公園",
+    "ename": "Saguaro National Park",
+    "country": "美國・亞利桑那州",
+    "year": 2023,
+    "lat": 32.25,
+    "lng": -110.5,
+    "zoom": 10,
+    "desc": "守護高大的巨柱仙人掌，2023 年獲認都市暗空地，緊鄰圖森仍保有壯麗的沙漠夜空剪影。",
+    "img": null
+  },
+  {
+    "name": "恐龍國家紀念地",
+    "ename": "Dinosaur National Monument",
+    "country": "美國・猶他州",
+    "year": 2019,
+    "lat": 40.52,
+    "lng": -108.98,
+    "zoom": 9,
+    "desc": "以化石牆與峽谷河流著稱，2019 年獲認，遠離城市的高原荒野提供開闊無遮的銀河視野。",
+    "img": null
+  },
+  {
+    "name": "庫雷坎蒂國家遊憩區",
+    "ename": "Curecanti National Recreation Area",
+    "country": "美國・科羅拉多州",
+    "year": 2015,
+    "lat": 38.45,
+    "lng": -107.33,
+    "zoom": 10,
+    "desc": "甘尼森河上的串連水庫，2015 年獲認，高山湖泊倒映繁星，是科羅拉多西部的觀星佳所。",
+    "img": null
+  },
+  {
+    "name": "黑台地州立公園",
+    "ename": "Black Mesa State Park",
+    "country": "美國・奧克拉荷馬州",
+    "year": 2021,
+    "lat": 36.842,
+    "lng": -102.883,
+    "zoom": 10,
+    "desc": "位於奧克拉荷馬狹長地帶西端，2021 年成為該州首座暗空公園，三州交界的偏遠高地天空極為純淨。",
+    "img": null
+  },
+  {
+    "name": "航海家國家公園",
+    "ename": "Voyageurs National Park",
+    "country": "美國・明尼蘇達州",
+    "year": 2020,
+    "lat": 48.5,
+    "lng": -92.88,
+    "zoom": 9,
+    "desc": "以縱橫水道與湖泊構成的北方森林公園，2020 年獲認，緯度高時偶可見極光與倒映湖面的星河。",
+    "img": null
+  },
+  {
+    "name": "猛獁洞國家公園",
+    "ename": "Mammoth Cave National Park",
+    "country": "美國・肯塔基州",
+    "year": 2021,
+    "lat": 37.18,
+    "lng": -86.1,
+    "zoom": 10,
+    "desc": "守護世界最長洞穴系統的世界遺產，2021 年獲認，地面森林之上保有美國東部少見的黑暗天空。",
+    "img": null
+  },
+  {
+    "name": "瓦托加州立公園",
+    "ename": "Watoga State Park",
+    "country": "美國・西維吉尼亞州",
+    "year": 2021,
+    "lat": 38.11,
+    "lng": -80.14,
+    "zoom": 11,
+    "desc": "西維吉尼亞最大的州立公園，2021 年偕鄰近自然區共同獲認，阿帕拉契山林深處天空格外幽暗。",
+    "img": null
+  },
+  {
+    "name": "基西米草原保護州立公園",
+    "ename": "Kissimmee Prairie Preserve State Park",
+    "country": "美國・佛羅里達州",
+    "year": 2016,
+    "lat": 27.6,
+    "lng": -81.05,
+    "zoom": 10,
+    "desc": "保存佛羅里達殘存的乾草原，2016 年獲認，是佛州少數能見銀河與深空天體的暗空避風港。",
+    "img": null
+  },
+  {
+    "name": "斯湯頓河州立公園",
+    "ename": "Staunton River State Park",
+    "country": "美國・維吉尼亞州",
+    "year": 2015,
+    "lat": 36.69,
+    "lng": -78.66,
+    "zoom": 11,
+    "desc": "維吉尼亞南部河畔的州立公園，2015 年成為該州首座暗空公園，遠離都會光暈的鄉野夜空清朗。",
+    "img": null
+  },
+  {
+    "name": "T.K. 勞利斯郡立公園",
+    "ename": "Dr. T.K. Lawless County Park",
+    "country": "美國・密西根州",
+    "year": 2019,
+    "lat": 41.88,
+    "lng": -85.74,
+    "zoom": 12,
+    "desc": "密西根西南部的郡立公園，2019 年獲認，雖位於人口稠密區域卻意外保有優質的黑暗天空。",
+    "img": null
+  },
+  {
+    "name": "皮克特 CCC 紀念州立公園",
+    "ename": "Pickett CCC Memorial State Park",
+    "country": "美國・田納西州",
+    "year": 2015,
+    "lat": 36.55,
+    "lng": -84.79,
+    "zoom": 11,
+    "desc": "坎伯蘭高原上的州立公園，2015 年成為田納西首座暗空公園，林木環抱的天然劇場仰望星河。",
+    "img": null
+  },
+  {
+    "name": "北叉公園",
+    "ename": "North Fork Park",
+    "country": "美國・猶他州",
+    "year": 2015,
+    "lat": 41.32,
+    "lng": -111.83,
+    "zoom": 12,
+    "desc": "韋伯郡的山谷公園，2015 年獲認，緊鄰奧格登都會區卻憑山勢屏障保有難得的暗空。",
+    "img": null
+  },
+  {
+    "name": "朱利安暗空社區",
+    "ename": "Julian Dark Sky Community",
+    "country": "美國・加利福尼亞州",
+    "year": 2021,
+    "lat": 33.08,
+    "lng": -116.6,
+    "zoom": 12,
+    "desc": "聖地牙哥東部的山中小鎮，2021 年獲認暗空社區，以蘋果派與清朗星空吸引週末造訪的觀星者。",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Milky_Way_Tree_Julian_Starfest_%2885487917%29.jpeg/500px-Milky_Way_Tree_Julian_Starfest_%2885487917%29.jpeg"
+  },
+  {
+    "name": "布拉夫暗空社區",
+    "ename": "Bluff Dark Sky Community",
+    "country": "美國・猶他州",
+    "year": 2025,
+    "lat": 37.28,
+    "lng": -109.55,
+    "zoom": 12,
+    "desc": "聖胡安河畔的歷史小鎮，2025 年獲認暗空社區，紅岩環抱的偏遠聚落保有極為原始的夜空。",
+    "img": null
+  },
+  {
+    "name": "約克郡谷地國家公園",
+    "ename": "Yorkshire Dales National Park",
+    "country": "英國・英格蘭",
+    "year": 2020,
+    "lat": 54.23,
+    "lng": -2.16,
+    "zoom": 9,
+    "desc": "綿延石牆與草甸谷地構成的英格蘭北部公園，2020 年獲認暗空保護區，是英國重要的觀星地。",
+    "img": null
+  },
+  {
+    "name": "勞沃斯梅爾國家公園",
+    "ename": "Lauwersmeer National Park",
+    "country": "荷蘭",
+    "year": 2016,
+    "lat": 53.37,
+    "lng": 6.235,
+    "zoom": 11,
+    "desc": "荷蘭北部圍墾而成的濕地湖泊公園，2016 年獲認暗空公園，是人口稠密的荷蘭少有的黑暗天空。",
+    "img": null
+  },
+  {
+    "name": "拉帕拉拉荒野自然保護區",
+    "ename": "Lapalala Wilderness Nature Reserve",
+    "country": "南非",
+    "year": 2025,
+    "lat": -23.81,
+    "lng": 28.31,
+    "zoom": 9,
+    "desc": "林波波省的私人荒野保護區，2025 年成為南非首座暗空公園，南半球的草原夜空可見南十字與銀河核心。",
+    "img": null
+  },
+  {
+    "name": "南拉諾河州立公園",
+    "ename": "South Llano River State Park",
+    "country": "美國・德克薩斯州",
+    "year": 2021,
+    "lat": 30.4261,
+    "lng": -99.8002,
+    "zoom": 11,
+    "desc": "德州丘陵地帶的河谷公園，遠離大城市光害，被認證為國際暗空公園，夏季可見明亮的銀河橫跨天際。",
+    "img": null
+  },
+  {
+    "name": "弗洛里森特化石層國家紀念地",
+    "ename": "Florissant Fossil Beds National Monument",
+    "country": "美國・科羅拉多州",
+    "year": 2021,
+    "lat": 38.9124,
+    "lng": -105.2814,
+    "zoom": 11,
+    "desc": "科羅拉多落磯山間的化石保護區，海拔逾 2500 公尺的高原乾燥空氣帶來通透夜空，銀河與深空天體清晰可辨。",
+    "img": null
+  },
+  {
+    "name": "煙囪岩國家紀念地",
+    "ename": "Chimney Rock National Monument",
+    "country": "美國・科羅拉多州",
+    "year": 2025,
+    "lat": 37.1842,
+    "lng": -107.3120,
+    "zoom": 11,
+    "desc": "科羅拉多西南部的古普韋布洛遺址，先民曾在此觀測天象，2025 年獲暗空認證，延續千年的星空文化。",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Star_Trails_Over_Chimney_Rock_%28233832313%29.jpeg/500px-Star_Trails_Over_Chimney_Rock_%28233832313%29.jpeg"
+  },
+  {
+    "name": "棉木峽谷州立公園",
+    "ename": "Cottonwood Canyon State Park",
+    "country": "美國・奧勒岡州",
+    "year": 2024,
+    "lat": 45.4699,
+    "lng": -120.4426,
+    "zoom": 10,
+    "desc": "奧勒岡中北部約翰戴河沿岸的乾燥峽谷公園，人煙稀少，是該州最暗的夜空之一，銀河核心清晰可見。",
+    "img": null
+  },
+  {
+    "name": "奧勒岡洞窟國家紀念地",
+    "ename": "Oregon Caves National Monument and Preserve",
+    "country": "美國・奧勒岡州",
+    "year": 2024,
+    "lat": 42.0951,
+    "lng": -123.4030,
+    "zoom": 11,
+    "desc": "奧勒岡西南山區的大理石洞窟保護區，四周森林環繞且遠離光源，地面之上的夜空同樣值得細賞。",
+    "img": null
+  },
+  {
+    "name": "西斯特斯暗空社區",
+    "ename": "Sisters Dark Sky Community",
+    "country": "美國・奧勒岡州",
+    "year": 2025,
+    "lat": 44.2909,
+    "lng": -121.5493,
+    "zoom": 12,
+    "desc": "奧勒岡中部喀斯喀特山腳下的小鎮，以照明友善政策保護星空，2025 年獲認證為國際暗空社區。",
+    "img": null
+  },
+  {
+    "name": "安特洛普暗空社區",
+    "ename": "Antelope Dark Sky Community",
+    "country": "美國・奧勒岡州",
+    "year": 2024,
+    "lat": 44.9105,
+    "lng": -120.7227,
+    "zoom": 12,
+    "desc": "奧勒岡中北部人口僅數十人的偏遠小鎮，四周為遼闊牧野，幾乎無人造光害，夜空純淨深邃。",
+    "img": null
+  },
+  {
+    "name": "阿提斯皇家動物園暗空地",
+    "ename": "ARTIS Amsterdam Royal Zoo",
+    "country": "荷蘭",
+    "year": 2024,
+    "lat": 52.3662,
+    "lng": 4.9165,
+    "zoom": 14,
+    "desc": "位於阿姆斯特丹市中心的歷史動物園，透過照明改造成為全球首座獲暗空認證的動物園，示範都市中的星空守護。",
+    "img": null
+  },
+  {
+    "name": "東峽谷州立公園",
+    "ename": "East Canyon State Park",
+    "country": "美國・猶他州",
+    "year": 2020,
+    "lat": 40.9192,
+    "lng": -111.5886,
+    "zoom": 11,
+    "desc": "猶他州沃薩奇山脈中的水庫公園，距鹽湖城不遠卻有受保護的暗空，是城市居民就近觀星的去處。",
+    "img": null
+  },
+  {
+    "name": "約旦內爾州立公園",
+    "ename": "Jordanelle State Park",
+    "country": "美國・猶他州",
+    "year": 2021,
+    "lat": 40.6261,
+    "lng": -111.4138,
+    "zoom": 11,
+    "desc": "猶他州沃薩奇後山的高山水庫公園，海拔較高、空氣清澈，提供良好的星空觀測環境。",
+    "img": null
+  },
+  {
+    "name": "羅克波特州立公園",
+    "ename": "Rockport State Park",
+    "country": "美國・猶他州",
+    "year": 2021,
+    "lat": 40.7748,
+    "lng": -111.3983,
+    "zoom": 11,
+    "desc": "猶他州北部的水庫公園，群山環抱阻隔了周邊城鎮的光害，夜空可見銀河與眾多星座。",
+    "img": null
+  },
+  {
+    "name": "鵝頸州立公園",
+    "ename": "Goosenecks State Park",
+    "country": "美國・猶他州",
+    "year": 2021,
+    "lat": 37.1740,
+    "lng": -109.9268,
+    "zoom": 12,
+    "desc": "猶他州東南聖胡安河的深切曲流峽谷，地處科羅拉多高原荒漠，是少有光害干擾的絕佳觀星地。",
+    "img": null
+  },
+  {
+    "name": "奧瑞克州立公園",
+    "ename": "Oracle State Park",
+    "country": "美國・亞利桑那州",
+    "year": 2014,
+    "lat": 32.6201,
+    "lng": -110.7271,
+    "zoom": 12,
+    "desc": "亞利桑那州聖卡塔利娜山北麓的自然公園，雖近土桑市仍維持暗空，是該州早期獲認證的暗空公園之一。",
+    "img": null
+  },
+  {
+    "name": "普林維爾水庫州立公園",
+    "ename": "Prineville Reservoir State Park",
+    "country": "美國・奧勒岡州",
+    "year": 2021,
+    "lat": 44.1264,
+    "lng": -120.7237,
+    "zoom": 11,
+    "desc": "奧勒岡中部高原沙漠中的水庫公園，是該州首座獲國際暗空認證的公園，夜空極為通透。",
+    "img": null
+  },
+  {
+    "name": "薩利納斯普韋布洛教會國家紀念地",
+    "ename": "Salinas Pueblo Missions National Monument",
+    "country": "美國・新墨西哥州",
+    "year": 2016,
+    "lat": 34.2637,
+    "lng": -106.1021,
+    "zoom": 11,
+    "desc": "新墨西哥州中部的西班牙殖民時期教會與普韋布洛遺址，四周荒原開闊，夜空保留著數百年前的純淨。",
+    "img": null
+  },
+  {
+    "name": "里奇韋暗空社區",
+    "ename": "Ridgway Dark Sky Community",
+    "country": "美國・科羅拉多州",
+    "year": 2020,
+    "lat": 38.1528,
+    "lng": -107.7617,
+    "zoom": 12,
+    "desc": "科羅拉多西南聖胡安山脈腳下的小鎮，以嚴格的照明規範守護星空，被認證為國際暗空社區。",
+    "img": null
+  },
+  {
+    "name": "博德明荒原暗空地景",
+    "ename": "Bodmin Moor Dark Sky Landscape",
+    "country": "英國・英格蘭",
+    "year": 2017,
+    "lat": 50.583,
+    "lng": -4.60,
+    "zoom": 11,
+    "desc": "英格蘭康沃爾郡的花崗岩荒原，地廣人稀的曠野遠離城市燈火，是英格蘭西南最佳的暗空地景之一。",
+    "img": null
+  },
+  {
+    "name": "諾伍德暗空社區",
+    "ename": "Norwood Dark Sky Community",
+    "country": "美國・科羅拉多州",
+    "year": 2019,
+    "lat": 38.1305,
+    "lng": -108.2923,
+    "zoom": 12,
+    "desc": "科羅拉多西南高原上的農牧小鎮，海拔逾 2100 公尺，乾燥的高地空氣帶來清晰深邃的星空。",
+    "img": null
+  },
+  {
+    "name": "城堡谷暗空社區",
+    "ename": "Castle Valley Dark Sky Community",
+    "country": "美國・猶他州",
+    "year": 2024,
+    "lat": 38.6394,
+    "lng": -109.4090,
+    "zoom": 12,
+    "desc": "猶他州摩押附近的紅岩谷地小鎮，群峰環繞，遠離光源，是觀賞科羅拉多高原星空的隱秘據點。",
+    "img": null
+  },
+  {
+    "name": "斯普林戴爾暗空社區",
+    "ename": "Springdale Dark Sky Community",
+    "country": "美國・猶他州",
+    "year": 2023,
+    "lat": 37.1889,
+    "lng": -112.9986,
+    "zoom": 12,
+    "desc": "猶他州錫安國家公園門戶的小鎮，與相鄰的國家公園共同守護紅岩峽谷上方的璀璨夜空。",
+    "img": null
+  },
+  {
+    "name": "美星町",
+    "ename": "Bisei Town, Ibara City",
+    "country": "日本・岡山縣",
+    "year": 2021,
+    "lat": 34.6722,
+    "lng": 133.5448,
+    "zoom": 12,
+    "desc": "岡山縣井原市的山間小鎮，早在 1989 年就制定日本首部光害防制條例，2021 年成為亞洲首座國際暗空社區。",
+    "img": null
+  },
+  {
+    "name": "南六呂師",
+    "ename": "Minami-Rokuroshi",
+    "country": "日本・福井縣",
+    "year": 2023,
+    "lat": 36.0142,
+    "lng": 136.5799,
+    "zoom": 12,
+    "desc": "福井縣大野市的六呂師高原，2023 年成為亞洲首座都市夜空地，在易達的高原上守護著清澈星空。",
+    "img": null
+  },
+  {
+    "name": "黃龍風景區",
+    "ename": "Huanglong National Scenic Area",
+    "country": "中國・四川省",
+    "year": 2025,
+    "lat": 32.7806,
+    "lng": 103.9282,
+    "zoom": 11,
+    "desc": "四川松潘縣的世界自然遺產，以鈣華彩池聞名，海拔逾 3000 公尺，2025 年成為中國大陸首座國際暗空公園。",
+    "img": null
+  },
+  {
+    "name": "西涌暗空社區",
+    "ename": "Xichong, Shenzhen",
+    "country": "中國・廣東省",
+    "year": 2023,
+    "lat": 22.4870,
+    "lng": 114.5332,
+    "zoom": 13,
+    "desc": "深圳大鵬半島東南端的海濱社區，三面環山、一面向海，2023 年成為中國首座國際暗空社區。",
+    "img": null
+  },
+  {
+    "name": "歐拉瑪納拉與蓋拉米爾自然保護區",
+    "ename": "AlUla Manara and AlGharameel Nature Reserves",
+    "country": "沙烏地阿拉伯",
+    "year": 2024,
+    "lat": 26.7800,
+    "lng": 37.9000,
+    "zoom": 11,
+    "desc": "沙烏地阿拉伯歐拉古城周邊的沙漠保護區，2024 年成為中東與海灣地區首座國際暗空公園，奇岩之上星河璀璨。",
+    "img": null
+  },
+  {
+    "name": "沙爾安國家公園",
+    "ename": "Sharaan National Park",
+    "country": "沙烏地阿拉伯",
+    "year": 2025,
+    "lat": 26.8663,
+    "lng": 38.2442,
+    "zoom": 10,
+    "desc": "歐拉地區的砂岩峽谷國家公園，2025 年納入暗空認證，遼闊荒漠遠離人造光源，是阿拉伯半島的觀星勝地。",
+    "img": null
+  },
+  {
+    "name": "納夫得暗空公園",
+    "ename": "AlNufud Dark Sky Park",
+    "country": "沙烏地阿拉伯",
+    "year": 2025,
+    "lat": 28.9200,
+    "lng": 40.3980,
+    "zoom": 8,
+    "desc": "哈伊勒地區的納夫得沙漠保護區，面積逾 1.3 萬平方公里，2025 年成為中東與北非最大的國際暗空公園。",
+    "img": null
+  },
+  {
+    "name": "普切德暗空社區",
+    "ename": "Putscheid",
+    "country": "盧森堡",
+    "year": 2025,
+    "lat": 49.9531,
+    "lng": 6.1353,
+    "zoom": 12,
+    "desc": "盧森堡北部阿爾登丘陵的鄉村社區，2025 年成為盧森堡首座國際暗空社區，林野間保有少見的黑暗夜空。",
+    "img": null
+  },
+  {
+    "name": "艾威勒暗空社區",
+    "ename": "Eiweiler",
+    "country": "德國・薩爾蘭",
+    "year": 2024,
+    "lat": 49.5550,
+    "lng": 7.0128,
+    "zoom": 12,
+    "desc": "德國薩爾蘭諾菲爾登鎮的小村，透過照明改造守護星空，2024 年獲認證為國際暗空社區。",
+    "img": null
+  },
+  {
+    "name": "諾森廷／施溫澤荒原自然公園",
+    "ename": "Nossentiner/Schwinzer Heide",
+    "country": "德國・梅克倫堡",
+    "year": 2024,
+    "lat": 53.5893,
+    "lng": 12.2978,
+    "zoom": 11,
+    "desc": "德國梅克倫堡—前波美拉尼亞中部的森林與湖沼自然公園，地廣人稀，是德國北部觀賞銀河的理想之地。",
+    "img": null
+  },
+  {
+    "name": "巴伐利亞森林國家公園",
+    "ename": "Bavarian Forest National Park",
+    "country": "德國・巴伐利亞",
+    "year": 2025,
+    "lat": 48.9946,
+    "lng": 13.3799,
+    "zoom": 11,
+    "desc": "德國巴伐利亞與捷克邊境的廣袤林地，是德國最古老的國家公園，2025 年與相鄰自然公園共同獲暗空保護區認證。",
+    "img": null
+  },
+  {
+    "name": "施皮克羅格星空島",
+    "ename": "Spiekeroog Star Island",
+    "country": "德國・下薩克森",
+    "year": 2024,
+    "lat": 53.7711,
+    "lng": 7.6947,
+    "zoom": 13,
+    "desc": "德國東弗里西亞群島中無汽車的小島，北海環抱、人造光稀少，是低地海島難得的暗空之地。",
+    "img": null
+  },
+  {
+    "name": "佩爾沃姆星空島",
+    "ename": "Pellworm Star Island",
+    "country": "德國・什列斯威",
+    "year": 2024,
+    "lat": 54.5218,
+    "lng": 8.6385,
+    "zoom": 12,
+    "desc": "德國北弗里西亞的潮間帶小島，地勢低平、村落稀疏，瓦登海上的夜空清澈深邃。",
+    "img": null
+  },
+  {
+    "name": "拉姆島",
+    "ename": "Isle of Rum",
+    "country": "英國・蘇格蘭",
+    "year": 2024,
+    "lat": 56.9976,
+    "lng": -6.3410,
+    "zoom": 11,
+    "desc": "蘇格蘭內赫布里底群島中的火山島，2024 年成為蘇格蘭首座國際暗空聖地，山海之間夜空近乎全然黑暗。",
+    "img": null
+  },
+  {
+    "name": "普雷斯泰恩與諾頓暗空社區",
+    "ename": "Presteigne and Norton",
+    "country": "英國・威爾斯",
+    "year": 2024,
+    "lat": 52.2927,
+    "lng": -3.0305,
+    "zoom": 12,
+    "desc": "威爾斯與英格蘭交界的邊境小鎮，2024 年成為威爾斯首座國際暗空社區，丘陵環抱間星光明亮。",
+    "img": null
+  },
+  {
+    "name": "索靈頓街暗空社區",
+    "ename": "Thorington Street",
+    "country": "英國・英格蘭",
+    "year": 2024,
+    "lat": 51.9813,
+    "lng": 0.9249,
+    "zoom": 13,
+    "desc": "英格蘭薩福克郡的鄉間小村，2024 年成為英格蘭首座國際暗空社區，田園之上保有罕見的黑暗夜空。",
+    "img": null
+  },
+  {
+    "name": "高爾半島暗空社區",
+    "ename": "Gower",
+    "country": "英國・威爾斯",
+    "year": 2025,
+    "lat": 51.5850,
+    "lng": -4.1800,
+    "zoom": 12,
+    "desc": "威爾斯斯旺西西側的高爾半島，是英國首處法定傑出自然景觀區，2025 年獲認證為國際暗空社區。",
+    "img": null
+  },
+  {
+    "name": "曼島暗空公園",
+    "ename": "Dark Sky Park Mandø",
+    "country": "丹麥",
+    "year": 2024,
+    "lat": 55.2812,
+    "lng": 8.5553,
+    "zoom": 12,
+    "desc": "丹麥瓦登海國家公園中的潮汐小島，僅靠潮間道路與本土相連，人煙稀少，夜空可見銀河與北極光。",
+    "img": null
+  },
+  {
+    "name": "卡里卡靈加暗空社區",
+    "ename": "Carrickalinga",
+    "country": "澳大利亞・南澳",
+    "year": 2024,
+    "lat": -35.4240,
+    "lng": 138.3244,
+    "zoom": 13,
+    "desc": "南澳弗勒里厄半島的海濱小鎮，2024 年獲認證為國際暗空社區，南半球夜空可見南十字與麥哲倫雲。",
+    "img": null
+  },
+  {
+    "name": "甘特里希自然公園",
+    "ename": "Gantrisch Dark Sky Zone",
+    "country": "瑞士",
+    "year": 2024,
+    "lat": 46.7709,
+    "lng": 7.4219,
+    "zoom": 11,
+    "desc": "瑞士伯恩與弗里堡之間的前阿爾卑斯自然公園，介於城市之間卻保有受保護的暗空，是中歐難得的觀星區。",
+    "img": null
+  },
+  {
+    "name": "海狸島州立野生動物研究區",
+    "ename": "Beaver Island State Wildlife Research Area",
+    "country": "美國・密西根州",
+    "year": 2024,
+    "lat": 45.6661,
+    "lng": -85.5544,
+    "zoom": 11,
+    "desc": "密西根湖中最大島嶼上的野生動物研究區，四周湖水隔絕了本土光害，是五大湖區優良的觀星地。",
+    "img": null
+  },
+  {
+    "name": "布魯諾沙丘州立公園",
+    "ename": "Bruneau Dunes State Park",
+    "country": "美國・愛達荷州",
+    "year": 2024,
+    "lat": 42.8909,
+    "lng": -115.7028,
+    "zoom": 12,
+    "desc": "愛達荷州南部擁有北美最高沙丘的州立公園，園內設有公眾天文台，乾燥沙漠夜空通透明亮。",
+    "img": null
+  },
+  {
+    "name": "摩押市",
+    "ename": "City of Moab",
+    "country": "美國・猶他州",
+    "year": 2024,
+    "lat": 38.5738,
+    "lng": -109.5462,
+    "zoom": 12,
+    "desc": "猶他州紅岩峽谷間的門戶城鎮，鄰近拱門與峽谷地國家公園，2024 年以照明友善政策獲認證為國際暗空社區。",
+    "img": null
+  },
+  {
+    "name": "甘尼森峽谷國家保護區",
+    "ename": "Gunnison Gorge National Conservation Area",
+    "country": "美國・科羅拉多州",
+    "year": 2024,
+    "lat": 38.7025,
+    "lng": -107.7947,
+    "zoom": 11,
+    "desc": "科羅拉多西部甘尼森河切割的荒野峽谷，地處高原乾燥地帶，遠離城鎮光害，夜空深邃清晰。",
+    "img": null
+  },
+  {
+    "name": "圖巴克暗空社區",
+    "ename": "Tubac",
+    "country": "美國・亞利桑那州",
+    "year": 2024,
+    "lat": 31.6126,
+    "lng": -111.0459,
+    "zoom": 13,
+    "desc": "亞利桑那州南部聖克魯茲河谷的歷史藝術小鎮，2024 年獲認證為國際暗空社區，沙漠夜空銀河清晰可見。",
     "img": null
   }
 ]

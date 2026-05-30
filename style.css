@@ -347,11 +347,10 @@ input:checked + .slider-round:before { transform: translateX(20px); background: 
     gap: 4px;
     max-height: 440px;
     overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: #333 transparent;
+    scrollbar-width: none;        /* Firefox：隱藏捲軸 */
+    -ms-overflow-style: none;     /* 舊版 Edge/IE：隱藏捲軸 */
 }
-.darksite-list::-webkit-scrollbar { width: 4px; }
-.darksite-list::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
+.darksite-list::-webkit-scrollbar { width: 0; height: 0; display: none; }  /* Chrome/Safari：隱藏捲軸 */
 .darksite-item {
     display: flex;
     align-items: center;
@@ -460,20 +459,7 @@ input:checked + .slider-round:before { transform: translateX(20px); background: 
     color: #fff;
 }
 
-/* === 「標出全部地點」白色微閃標點 === */
-.all-site-dot-icon { background: none; border: none; }
-.all-site-dot {
-    width: 5.3px;
-    height: 5.3px;
-    background: #ffffff;
-    border-radius: 50%;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.9), 0 0 10px rgba(255, 255, 255, 0.45);
-    animation: all-site-twinkle 2.6s ease-in-out infinite;
-}
-@keyframes all-site-twinkle {
-    0%, 100% { opacity: var(--dot-dim, 0.5);  transform: scale(0.8); }
-    50%      { opacity: 1;                     transform: scale(1.15); }
-}
+/* 「標出全部地點」白色微閃標點改以 js/darkSites.js 的 Canvas 圖層繪製 */
 
 /* === 暗空聖地地圖標記 === */
 .site-marker-icon { background: none; border: none; text-align: center; }

@@ -15,9 +15,9 @@ const UI = {
     basemap:       { zh: '底圖選擇',                     en: 'Base map' },
     street:        { zh: '街道',                         en: 'Street' },
     satellite:     { zh: '衛星',                         en: 'Satellite' },
-    lp_layer:      { zh: '光害圖層',                     en: 'Light pollution' },
-    bortle_legend: { zh: '波特爾等級圖例',               en: 'Bortle scale legend' },
-    darksites:     { zh: '國際暗空地點 (IDA 認證)',       en: 'Intl. Dark Sky Places (IDA)' },
+    lp_layer:      { zh: '光害圖層',                     en: 'Light pollution layer' },
+    bortle_legend: { zh: '波特爾等級圖例',               en: 'Bortle scale' },
+    darksites:     { zh: '國際暗空地點 (IDA 認證)',       en: 'Intl. Dark Sky Places (IDA Certified)' },
     stargaze:      { zh: '今晚觀星時間',                 en: "Tonight's stargazing" },
 
     // 「標出全部地點」按鈕

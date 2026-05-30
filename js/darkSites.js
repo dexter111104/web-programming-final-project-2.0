@@ -137,6 +137,34 @@ export function closeSitePanel() {
 }
 
 /**
+ * 供外部模組（如地圖小動物螢火蟲）呼叫：隨機飛往一個暗空聖地並開啟面板
+ */
+export function flyToRandomSite() {
+    if (!DARK_SITES.length) return;
+
+    // 反比加權隨機：資料嚴重偏美國（約 59%），若用均勻隨機會一直被帶到美國。
+    // 改用 1/√(該國地點數) 當權重——地點多的國家壓低、地點少的國家拉高，
+    // 各國機率較平均、但仍保留一點資料比例感（介於均勻與完全均等之間）。
+    const countryOf = s => String(s.country).split('・')[0];
+    const counts = {};
+    DARK_SITES.forEach(s => { const c = countryOf(s); counts[c] = (counts[c] || 0) + 1; });
+
+    // 目前已開啟的地點權重設 0，避免抽到同一個（否則 flyTo 會把它關掉）
+    const weights = DARK_SITES.map((s, i) =>
+        i === state.currentSiteIndex ? 0 : 1 / Math.sqrt(counts[countryOf(s)]));
+    const total = weights.reduce((a, b) => a + b, 0);
+    if (total <= 0) return;
+
+    let r = Math.random() * total;
+    let idx = weights.length - 1;
+    for (let i = 0; i < weights.length; i++) {
+        r -= weights[i];
+        if (r <= 0) { idx = i; break; }
+    }
+    flyTo(idx);
+}
+
+/**
  * 飛行至指定暗空聖地並開啟資訊面板
  * 若點擊已開啟的聖地則關閉面板
  * 所有聖地（精選或非精選）均使用同一套面板邏輯

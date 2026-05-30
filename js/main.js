@@ -8,6 +8,7 @@
 import './map.js';
 import './locPanel.js';
 import './geolocate.js';
+import './firefly.js';
 import { initDarkSites, closeSitePanel } from './darkSites.js';
 import { clearStargazeInfo }             from './stargazing.js';
 import { LP_ZONES }                      from './config.js';
@@ -32,6 +33,14 @@ document.getElementById('panel-toggle').addEventListener('click', () => {
 
 // ── 暗空聖地面板關閉按鈕 ─────────────────────────────────────
 document.querySelector('.site-panel-close').addEventListener('click', closeSitePanel);
+
+// ── 按 Esc 取消選擇（關閉暗空聖地面板並還原視野）──────────────
+document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    if (document.getElementById('site-panel').classList.contains('open')) {
+        closeSitePanel();
+    }
+});
 
 // ── 波特爾等級圖例（由 LP_ZONES 動態產生，不再寫死在 HTML）──
 const bortleLegend = document.getElementById('bortle-legend');

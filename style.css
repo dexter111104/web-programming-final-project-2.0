@@ -70,6 +70,87 @@ body {
 }
 
 /* === 頂部標題列 === */
+/* === 地圖小動物：螢火蟲 === */
+/* divIcon 外框去背 */
+.firefly-icon { background: transparent; border: none; }
+
+.firefly {
+    --rot: 0deg;                /* 航向角，由 JS 即時更新；身體與尾部都繼承它一起轉 */
+    position: relative;
+    width: 30px; height: 30px;
+    cursor: pointer;
+    /* 整體緩慢漂浮，營造振翅飛行感 */
+    animation: firefly-bob 2.6s ease-in-out infinite;
+}
+
+/* 像素螢火蟲身體：置中於容器，依航向旋轉，維持像素邊緣不模糊 */
+.firefly-body {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 18px; height: auto;
+    /* 先置中、再依行進方向旋轉（--rot 由 JS 即時更新） */
+    transform: translate(-50%, -50%) rotate(var(--rot));
+    image-rendering: pixelated;
+    /* 微微的描邊讓深色身體在亮底圖上也看得清 */
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.35));
+    transition: filter 0.15s ease;
+    pointer-events: none;
+}
+
+/* 翅鞘振翅：兩側快速開合，營造振翅飛行感 */
+.firefly-wings {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: firefly-flap 0.16s ease-in-out infinite;
+}
+
+/* 尾部支點：位於容器中央，跟著 --rot 旋轉，讓發光腹部永遠黏在身體尾端 */
+.firefly-tail {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 0; height: 0;
+    transform: rotate(var(--rot));   /* 以容器中央為支點旋轉 */
+    pointer-events: none;
+}
+
+/* 發光的腹部：掛在尾部支點上、往尾端偏移，亮度由 JS 的 --glow（0–1）即時控制 */
+.firefly-glow {
+    --glow: 0.6;
+    position: absolute;
+    top: 0; left: 0;
+    /* 從支點往身體尾端（+Y）位移 8px，落在腹節上；會隨尾部一起轉 */
+    transform: translate(-50%, -50%) translateY(8px);
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    pointer-events: none;
+    /* 暖黃綠色螢光 */
+    background: radial-gradient(circle, #f4ffd0 0%, #c8ff7a 45%, #8fe34a 100%);
+    opacity: calc(0.25 + 0.75 * var(--glow));
+    box-shadow:
+        0 0 calc(4px + 10px * var(--glow))  rgba(180, 255, 120, calc(0.5 * var(--glow))),
+        0 0 calc(8px + 22px * var(--glow))  rgba(150, 240, 90,  calc(0.45 * var(--glow)));
+    animation: firefly-pulse 1.5s ease-in-out infinite;
+}
+
+/* 滑鼠移入時身體變亮、提示可點擊（用 filter 避免和 .firefly 的漂浮 transform 衝突） */
+.firefly-hover .firefly-body { filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.35)) brightness(1.35); }
+
+@keyframes firefly-bob {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-1.5px); }
+}
+@keyframes firefly-pulse {
+    0%, 100% { opacity: calc(0.20 + 0.80 * var(--glow)); }
+    50%      { opacity: calc(0.45 + 0.55 * var(--glow)); }
+}
+@keyframes firefly-flap {
+    0%, 100% { transform: scaleX(1); }
+    50%      { transform: scaleX(1.32); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .firefly, .firefly-glow, .firefly-wings { animation: none; }
+}
+
 /* === 浮動面板開關按鈕 === */
 .panel-toggle-btn {
     position: fixed;

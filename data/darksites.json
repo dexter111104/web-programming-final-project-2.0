@@ -8,7 +8,8 @@
     "lng": 121.29,
     "zoom": 10,
     "desc": "台灣首座 IDA 國際暗天公園，海拔 3,422 公尺，全年皆可觀測銀河，是東亞最佳高山觀星地之一。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Hehuanshan%2C_Taiwan_%28Unsplash_aIiEOoEA5ps%29.jpg/500px-Hehuanshan%2C_Taiwan_%28Unsplash_aIiEOoEA5ps%29.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Hehuanshan%2C_Taiwan_%28Unsplash_aIiEOoEA5ps%29.jpg/500px-Hehuanshan%2C_Taiwan_%28Unsplash_aIiEOoEA5ps%29.jpg",
+    "desc_en": "Taiwan's first IDA International Dark Sky Park, at 3,422 m elevation. The Milky Way is visible year-round, making it one of East Asia's finest alpine stargazing sites."
   },
   {
     "name": "西表石垣國立公園",
@@ -19,7 +20,8 @@
     "lng": 124.16,
     "zoom": 9,
     "desc": "日本首座 IDA 認證暗天公園，遠離都市的珊瑚礁島嶼，星空幾乎零光害，琉球群島的自然暗夜寶庫。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Milky_Way_-_Lake_Yunoko_-_Nikko%2C_Tochigi_-_Japan_-_28_Sept._2013.jpg/500px-Milky_Way_-_Lake_Yunoko_-_Nikko%2C_Tochigi_-_Japan_-_28_Sept._2013.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Milky_Way_-_Lake_Yunoko_-_Nikko%2C_Tochigi_-_Japan_-_28_Sept._2013.jpg/500px-Milky_Way_-_Lake_Yunoko_-_Nikko%2C_Tochigi_-_Japan_-_28_Sept._2013.jpg",
+    "desc_en": "Japan's first IDA-certified dark sky park, a coral-reef island far from cities with near-zero light pollution — a natural dark-night treasure of the Ryukyu Islands."
   },
   {
     "name": "神津島",
@@ -30,7 +32,8 @@
     "lng": 139.14,
     "zoom": 10,
     "desc": "距東京約 180 公里的離島，2020 年獲 IDA 認證為暗天社區，是日本推動光害防治的先驅島嶼。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/The_Milky_Way_Galaxy_20200812_30615_by_Pcs34560.jpg/500px-The_Milky_Way_Galaxy_20200812_30615_by_Pcs34560.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/The_Milky_Way_Galaxy_20200812_30615_by_Pcs34560.jpg/500px-The_Milky_Way_Galaxy_20200812_30615_by_Pcs34560.jpg",
+    "desc_en": "An island about 180 km from Tokyo, certified an IDA Dark Sky Community in 2020 — a pioneering Japanese island in light-pollution prevention."
   },
   {
     "name": "死亡谷國家公園",
@@ -41,7 +44,8 @@
     "lng": -116.9,
     "zoom": 8,
     "desc": "北美最乾燥的國家公園，極低濕度帶來卓越大氣透明度，是銀河攝影的頂級聖地，2013 年獲 IDA 認證。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Deathvalleysky_nps_big.jpg/500px-Deathvalleysky_nps_big.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Deathvalleysky_nps_big.jpg/500px-Deathvalleysky_nps_big.jpg",
+    "desc_en": "North America's driest national park; extremely low humidity gives outstanding atmospheric transparency, making it a top sanctuary for Milky Way photography. IDA-certified in 2013."
   },
   {
     "name": "大峽谷國家公園",
@@ -52,7 +56,8 @@
     "lng": -112.1,
     "zoom": 8,
     "desc": "2019 年 IDA 認證，壯闊峽谷在銀河下更顯震撼，每年舉辦「星空音樂節」，是最具代表性的暗天景點。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Milky_Way_over_North_Rim%2C_Grand_Canyon.jpg/500px-Milky_Way_over_North_Rim%2C_Grand_Canyon.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Milky_Way_over_North_Rim%2C_Grand_Canyon.jpg/500px-Milky_Way_over_North_Rim%2C_Grand_Canyon.jpg",
+    "desc_en": "IDA-certified in 2019, the vast canyon looks even more breathtaking beneath the Milky Way. Its annual Star Party makes it one of the most iconic dark sky destinations."
   },
   {
     "name": "英陽螢火蟲暗天公園",
@@ -63,7 +68,8 @@
     "lng": 129.11,
     "zoom": 10,
     "desc": "韓國首座 IDA 認證暗天公園，以豐富的螢火蟲生態著稱，夏夜銀河與螢光交相輝映，是東亞獨特的觀星體驗。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Night_Sky_In_Andong_Korea_%28203229719%29.jpeg/500px-Night_Sky_In_Andong_Korea_%28203229719%29.jpeg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Night_Sky_In_Andong_Korea_%28203229719%29.jpeg/500px-Night_Sky_In_Andong_Korea_%28203229719%29.jpeg",
+    "desc_en": "Korea's first IDA-certified dark sky park, famed for its rich firefly ecology. On summer nights the Milky Way and firefly glow shine together — a uniquely East Asian stargazing experience."
   },
   {
     "name": "沃倫邦格國家公園",
@@ -74,7 +80,8 @@
     "lng": 148.97,
     "zoom": 8,
     "desc": "南半球首座 IDA 認證暗天公園（2016 年），澳大利亞最古老的火山地貌搭配璀璨南十字星，景觀壯麗。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Night_at_Dows_Camp.jpg/500px-Night_at_Dows_Camp.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Night_at_Dows_Camp.jpg/500px-Night_at_Dows_Camp.jpg",
+    "desc_en": "The Southern Hemisphere's first IDA-certified dark sky park (2016); Australia's oldest volcanic terrain paired with the brilliant Southern Cross makes for magnificent scenery."
   },
   {
     "name": "凱里國際暗天保護區",
@@ -85,7 +92,8 @@
     "lng": -9.74,
     "zoom": 9,
     "desc": "歐洲最大的 IDA 金級認證暗天保護區，愛爾蘭西南海岸的壯麗夜空，可觀測極光及銀河核心。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/CF_Ross_Castle_at_Night.jpg/500px-CF_Ross_Castle_at_Night.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/CF_Ross_Castle_at_Night.jpg/500px-CF_Ross_Castle_at_Night.jpg",
+    "desc_en": "Europe's largest IDA Gold-tier dark sky reserve, on Ireland's spectacular southwest coast where the aurora and the galactic core can both be observed."
   },
   {
     "name": "NamibRand 自然保護區",
@@ -96,7 +104,8 @@
     "lng": 16,
     "zoom": 7,
     "desc": "非洲首座 IDA 認證暗天保護區，納米比沙漠的極乾燥氣候與人煙稀少，帶來全球最純淨的星空之一。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Kanaan-Lodge_1901-0042.jpg/500px-Kanaan-Lodge_1901-0042.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Kanaan-Lodge_1901-0042.jpg/500px-Kanaan-Lodge_1901-0042.jpg",
+    "desc_en": "Africa's first IDA-certified dark sky reserve; the Namib Desert's extreme aridity and sparse population deliver one of the world's purest starry skies."
   },
   {
     "name": "天然橋國家保護區",
@@ -107,7 +116,8 @@
     "lng": -110.01,
     "zoom": 9,
     "desc": "全球首座 IDA 認證暗天公園（2006 年），三座砂岩天然拱橋聳立於極致黑暗的夜空下，波特爾等級約 2 級，是地球上最純淨的星空之一。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Owachomo_Silhouette_with_Milky_Way_and_Star_Reflections.jpg/500px-Owachomo_Silhouette_with_Milky_Way_and_Star_Reflections.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Owachomo_Silhouette_with_Milky_Way_and_Star_Reflections.jpg/500px-Owachomo_Silhouette_with_Milky_Way_and_Star_Reflections.jpg",
+    "desc_en": "The world's first IDA-certified dark sky park (2006); three natural sandstone bridges stand beneath an utterly dark sky of about Bortle 2 — among the purest skies on Earth."
   },
   {
     "name": "櫻桃泉州立公園",
@@ -118,7 +128,8 @@
     "lng": -77.82,
     "zoom": 10,
     "desc": "美東最佳觀星地點之一，海拔 700 公尺的黑暗高原四周被廣闊森林包圍，是美國東岸最靠近大城市卻仍能看見銀河的聖地。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/A_night_at_Cherry_Springs.jpg/500px-A_night_at_Cherry_Springs.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/A_night_at_Cherry_Springs.jpg/500px-A_night_at_Cherry_Springs.jpg",
+    "desc_en": "One of the eastern US's best stargazing spots, a dark 700 m plateau ringed by vast forest — the closest place to a major city on the US East Coast where the Milky Way is still visible."
   },
   {
     "name": "加洛韋森林公園",
@@ -129,7 +140,8 @@
     "lng": -4.48,
     "zoom": 8,
     "desc": "英國首座 IDA 認證暗天公園，蘇格蘭南部最暗的天空，廣袤的針葉林與稀少人口帶來接近波特爾 2 級的純淨星空。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Scottish_Dark_Sky_Observatory%2C_night_sky%2C_Dec_2017.jpg/500px-Scottish_Dark_Sky_Observatory%2C_night_sky%2C_Dec_2017.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Scottish_Dark_Sky_Observatory%2C_night_sky%2C_Dec_2017.jpg/500px-Scottish_Dark_Sky_Observatory%2C_night_sky%2C_Dec_2017.jpg",
+    "desc_en": "Britain's first IDA-certified dark sky park; the darkest sky in southern Scotland, where sprawling conifer forest and sparse population yield near-Bortle 2 purity."
   },
   {
     "name": "霍爾托巴吉國家公園",
@@ -140,7 +152,8 @@
     "lng": 21.11,
     "zoom": 9,
     "desc": "歐洲最大的草原國家公園，UNESCO 世界遺產，一望無際的平原提供無遮蔽的 360° 全景夜空，是中歐最壯觀的觀星環境之一。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Droga_Mleczna%2C_Hortob%C3%A1gyi.jpg/500px-Droga_Mleczna%2C_Hortob%C3%A1gyi.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Droga_Mleczna%2C_Hortob%C3%A1gyi.jpg/500px-Droga_Mleczna%2C_Hortob%C3%A1gyi.jpg",
+    "desc_en": "Europe's largest grassland national park and a UNESCO World Heritage Site; its endless plains offer an unobstructed 360° panorama of the night sky — one of Central Europe's most spectacular stargazing settings."
   },
   {
     "name": "大彎國家公園",
@@ -151,7 +164,8 @@
     "lng": -103.25,
     "zoom": 8,
     "desc": "美墨邊境的廣大荒野，銀河橫跨奇索斯山脈的磅礴景象令人屏息，德克薩斯州境內光害最少的國家公園。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Chisos_Mountains_Milky_Way_August_2018.jpg/500px-Chisos_Mountains_Milky_Way_August_2018.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Chisos_Mountains_Milky_Way_August_2018.jpg/500px-Chisos_Mountains_Milky_Way_August_2018.jpg",
+    "desc_en": "A vast wilderness on the US-Mexico border where the Milky Way arches breathtakingly over the Chisos Mountains — the least light-polluted national park in Texas."
   },
   {
     "name": "阿歐拉基麥肯齊暗天保護區",
@@ -162,7 +176,8 @@
     "lng": 170.46,
     "zoom": 8,
     "desc": "南半球最大的 IDA 認證暗天保護區，Lake Tekapo 湖畔的星空舉世聞名，南十字星高掛於阿歐拉基（庫克山）山頂，是紐西蘭最具代表性的觀星聖地。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Milky_way_galaxy%2C_lake_Tekapo%2C_stargazing_view_3.jpg/500px-Milky_way_galaxy%2C_lake_Tekapo%2C_stargazing_view_3.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Milky_way_galaxy%2C_lake_Tekapo%2C_stargazing_view_3.jpg/500px-Milky_way_galaxy%2C_lake_Tekapo%2C_stargazing_view_3.jpg",
+    "desc_en": "The Southern Hemisphere's largest IDA-certified dark sky reserve; the skies over Lake Tekapo are world-renowned, with the Southern Cross hanging above Aoraki (Mount Cook) — New Zealand's most iconic stargazing site."
   },
   {
     "name": "布雷肯比肯斯國家公園",
@@ -173,7 +188,8 @@
     "lng": -3.44,
     "zoom": 9,
     "desc": "威爾斯中部的高原國家公園，Llangorse 湖上的古代水上木樁屋倒映著銀河，是英國境內最受歡迎的暗天景點之一。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Milky_Way_over_the_Crannog_at_Llangorse_Lake%2C_South_Wales.jpg/500px-Milky_Way_over_the_Crannog_at_Llangorse_Lake%2C_South_Wales.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Milky_Way_over_the_Crannog_at_Llangorse_Lake%2C_South_Wales.jpg/500px-Milky_Way_over_the_Crannog_at_Llangorse_Lake%2C_South_Wales.jpg",
+    "desc_en": "A highland national park in central Wales where ancient lake-dwelling crannogs on Llangorse Lake mirror the Milky Way — one of Britain's most popular dark sky destinations."
   },
   {
     "name": "庇里牛斯山天文台",
@@ -184,7 +200,8 @@
     "lng": 0.14,
     "zoom": 10,
     "desc": "海拔 2,877 公尺的高山天文台，自 19 世紀起即為歐洲重要的天文研究站，清澈的山地空氣帶來卓越的星空透明度，是法國最知名的觀星目的地。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Wide-field_image_of_the_sky_in_Pyr%C3%A9n%C3%A9es.jpg/500px-Wide-field_image_of_the_sky_in_Pyr%C3%A9n%C3%A9es.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Wide-field_image_of_the_sky_in_Pyr%C3%A9n%C3%A9es.jpg/500px-Wide-field_image_of_the_sky_in_Pyr%C3%A9n%C3%A9es.jpg",
+    "desc_en": "A 2,877 m mountaintop observatory, a key European astronomy station since the 19th century; the clear mountain air gives outstanding sky transparency — France's most famous stargazing destination."
   },
   {
     "name": "艾費爾國家公園",
@@ -195,7 +212,8 @@
     "lng": 6.43,
     "zoom": 9,
     "desc": "德國首座 IDA 認證暗天公園，低人口密度的古老火山地貌搭配嚴格的光污染管制，讓這片森林成為中西歐難得的暗夜綠洲。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Dahlem-Kronenburg%2C_Sternenblick_%E2%80%9ESternenstaub%E2%80%9C%2C_Nachtaufnahme_-_9017.jpg/500px-Dahlem-Kronenburg%2C_Sternenblick_%E2%80%9ESternenstaub%E2%80%9C%2C_Nachtaufnahme_-_9017.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Dahlem-Kronenburg%2C_Sternenblick_%E2%80%9ESternenstaub%E2%80%9C%2C_Nachtaufnahme_-_9017.jpg/500px-Dahlem-Kronenburg%2C_Sternenblick_%E2%80%9ESternenstaub%E2%80%9C%2C_Nachtaufnahme_-_9017.jpg",
+    "desc_en": "Germany's first IDA-certified dark sky park; low population density, ancient volcanic terrain and strict light-pollution control make this forest a rare dark-night oasis in west-central Europe."
   },
   {
     "name": "西哈費爾蘭自然公園",
@@ -206,7 +224,8 @@
     "lng": 12.25,
     "zoom": 9,
     "desc": "柏林近郊難得的暗天保護區，廣闊濕地與稀少路燈創造銀河清晰可見的夜空，也是德國東北部著名的流星雨觀測地點。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Kyritz_night.jpg/500px-Kyritz_night.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Kyritz_night.jpg/500px-Kyritz_night.jpg",
+    "desc_en": "A rare dark sky reserve near Berlin where broad wetlands and few street lights make the Milky Way clearly visible — also a famous meteor-shower viewing site in northeastern Germany."
   },
   {
     "name": "斯諾多尼亞國家公園",
@@ -217,7 +236,8 @@
     "lng": -3.89,
     "zoom": 9,
     "desc": "威爾斯北部的山岳國家公園，崎嶇的岩石山峰與幽靜的冰河湖共同映照著銀河，積極推廣暗夜生態旅遊。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Llyn_Ogwen_Milky_Way.jpg/500px-Llyn_Ogwen_Milky_Way.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Llyn_Ogwen_Milky_Way.jpg/500px-Llyn_Ogwen_Milky_Way.jpg",
+    "desc_en": "A mountainous national park in north Wales where rugged rocky peaks and tranquil glacial lakes reflect the Milky Way; it actively promotes dark-night ecotourism."
   },
   {
     "name": "瓦特頓-冰河國際和平公園",
@@ -228,7 +248,8 @@
     "lng": -113.92,
     "zoom": 8,
     "desc": "世界首座跨國 IDA 認證暗天公園，連結加拿大亞伯達省與美國蒙大拿州，在冰河湖面上仰望銀河是此地獨一無二的體驗。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Starry_constellations_over_Glacier_National_Park_%2826368402193%29.jpg/500px-Starry_constellations_over_Glacier_National_Park_%2826368402193%29.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Starry_constellations_over_Glacier_National_Park_%2826368402193%29.jpg/500px-Starry_constellations_over_Glacier_National_Park_%2826368402193%29.jpg",
+    "desc_en": "The world's first cross-border IDA-certified dark sky park, linking Alberta, Canada with Montana, USA — gazing at the Milky Way mirrored on glacial lakes is a one-of-a-kind experience here."
   },
   {
     "name": "拉蒙坑暗天公園",
@@ -239,7 +260,8 @@
     "lng": 34.82,
     "zoom": 9,
     "desc": "世界最大的天然侵蝕坑地形，內蓋夫沙漠的極低濕度與稀少雲層帶來超過 300 個清晰觀星夜，是中東地區最佳暗天聖地。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Milky_Way%2C_Nahal_Gvanim%2C_Makhtesh_Ramon_at_night_01.jpg/500px-Milky_Way%2C_Nahal_Gvanim%2C_Makhtesh_Ramon_at_night_01.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Milky_Way%2C_Nahal_Gvanim%2C_Makhtesh_Ramon_at_night_01.jpg/500px-Milky_Way%2C_Nahal_Gvanim%2C_Makhtesh_Ramon_at_night_01.jpg",
+    "desc_en": "The world's largest natural erosion crater; the Negev Desert's very low humidity and few clouds bring over 300 clear stargazing nights a year — the Middle East's finest dark sky sanctuary."
   },
   {
     "name": "約書亞樹國家公園",
@@ -250,7 +272,8 @@
     "lng": -115.9,
     "zoom": 9,
     "desc": "科羅拉多沙漠與莫哈維沙漠交界，獨特的約書亞樹剪影與滿天星斗構成舉世聞名的夜景，是南加州距大城市最近的黑暗天空。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Silent_Beauty%2C_Joshua_Tree_National_Park_%2815651280890%29.jpg/500px-Silent_Beauty%2C_Joshua_Tree_National_Park_%2815651280890%29.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Silent_Beauty%2C_Joshua_Tree_National_Park_%2815651280890%29.jpg/500px-Silent_Beauty%2C_Joshua_Tree_National_Park_%2815651280890%29.jpg",
+    "desc_en": "At the meeting of the Colorado and Mojave Deserts, the distinctive silhouettes of Joshua trees against a sky full of stars form a world-famous nightscape — the darkest sky nearest a major city in Southern California."
   },
   {
     "name": "月球隕石坑國家保護區",
@@ -261,7 +284,8 @@
     "lng": -113.52,
     "zoom": 9,
     "desc": "外貌酷似月球表面的玄武岩熔岩地形，NASA 太空人曾在此訓練，壯觀的火山景觀在無光害的星空下呈現超現實奇幻景象。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Milky_Way_over_Craters_of_the_Moon_entrance_sign_%2837071340835%29.jpg/500px-Milky_Way_over_Craters_of_the_Moon_entrance_sign_%2837071340835%29.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Milky_Way_over_Craters_of_the_Moon_entrance_sign_%2837071340835%29.jpg/500px-Milky_Way_over_Craters_of_the_Moon_entrance_sign_%2837071340835%29.jpg",
+    "desc_en": "A basalt lava landscape resembling the lunar surface where NASA astronauts once trained; the spectacular volcanic terrain takes on a surreal, fantastical look under a pollution-free sky."
   },
   {
     "name": "弗拉格斯塔夫市",
@@ -272,7 +296,8 @@
     "lng": -111.65,
     "zoom": 10,
     "desc": "全球首座 IDA 認證暗天社區（2001 年），羅威爾天文台所在地，也是人類首次發現冥王星的城市，百年來持續執行嚴格路燈管制，是護天城市的世界典範。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Milky_Way_over_Flagstaff_%2850155823802%29.jpg/500px-Milky_Way_over_Flagstaff_%2850155823802%29.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Milky_Way_over_Flagstaff_%2850155823802%29.jpg/500px-Milky_Way_over_Flagstaff_%2850155823802%29.jpg",
+    "desc_en": "The world's first IDA-certified Dark Sky Community (2001), home of Lowell Observatory and the city where Pluto was first discovered; a century of strict street-light control makes it a world model for sky-protecting cities."
   },
   {
     "name": "塞利奇景觀保護區",
@@ -283,7 +308,8 @@
     "lng": 17.92,
     "zoom": 9,
     "desc": "匈牙利第一座 IDA 認證暗天公園（2009 年），位於南匈牙利巴拉尼亞縣。廣袤的森林丘陵遠離工業區，夜空透明度卓越，是中歐推動黑暗夜空保育的先驅之一。",
-    "img": "https://darksky.org/app/uploads/2015/04/Zselic-featured-700px-460ps.png"
+    "img": "https://darksky.org/app/uploads/2015/04/Zselic-featured-700px-460ps.png",
+    "desc_en": "Hungary's first IDA-certified dark sky park (2009), in Baranya County in the south. Its rolling forested hills lie far from industry, with outstanding sky transparency — a Central European pioneer of dark-sky conservation."
   },
   {
     "name": "克萊頓湖州立公園",
@@ -294,7 +320,8 @@
     "lng": -103.33,
     "zoom": 10,
     "desc": "以豐富的恐龍足跡化石著稱的高原公園，2010 年獲 IDA 認證。新墨西哥高原的乾燥氣候帶來極度清透的夜空，億萬年前的恐龍足跡在銀河輝映下更顯神秘壯觀。",
-    "img": "https://lobolife.unm.edu/wp-content/uploads/2023/07/202306_UNM_ClaytonLakeStateParkandDinosaurTrackways_HyunjuBlemel_compressed-78-900x600.jpg"
+    "img": "https://lobolife.unm.edu/wp-content/uploads/2023/07/202306_UNM_ClaytonLakeStateParkandDinosaurTrackways_HyunjuBlemel_compressed-78-900x600.jpg",
+    "desc_en": "A plateau park famed for its abundant dinosaur trackway fossils, IDA-certified in 2010. The dry New Mexico highlands bring an extremely clear sky, the eons-old footprints all the more mysterious beneath the Milky Way."
   },
   {
     "name": "赫德蘭暗天公園",
@@ -305,7 +332,8 @@
     "lng": -84.785,
     "zoom": 10,
     "desc": "密歇根州首座 IDA 認證國際暗天公園（2011 年），位於麥基諾城附近，三面環抱休倫湖的半島地形天然隔絕光害。夏夜偶可見北極光，是密歇根州最知名的觀星聖地。",
-    "img": "https://www.awesomemitten.com/wp-content/uploads/2021/04/Headlands-International-Dark-Sky-Park-Mackinaw-City-3rd_coast_images.jpg"
+    "img": "https://www.awesomemitten.com/wp-content/uploads/2021/04/Headlands-International-Dark-Sky-Park-Mackinaw-City-3rd_coast_images.jpg",
+    "desc_en": "Michigan's first IDA-certified International Dark Sky Park (2011), near Mackinaw City; the peninsula, embraced on three sides by Lake Huron, is naturally shielded from light pollution. The aurora is occasionally visible on summer nights — Michigan's best-known stargazing site."
   },
   {
     "name": "天文臺公園",
@@ -316,7 +344,8 @@
     "lng": -81.06,
     "zoom": 10,
     "desc": "俄亥俄州首座 IDA 認證暗天公園（2011 年），位於基奧加縣。園內設有歷史悠久的弗羅林天文臺，長年推廣天文教育，是大湖區城市近郊難得的黑暗夜空保育地。",
-    "img": "https://www.northeastohiothrive.com/wp-content/uploads/2019/08/star-gazing-1149228_1920.jpg"
+    "img": "https://www.northeastohiothrive.com/wp-content/uploads/2019/08/star-gazing-1149228_1920.jpg",
+    "desc_en": "Ohio's first IDA-certified dark sky park (2011), in Geauga County. Its historic Florine Observatory has long promoted astronomy education — a rare dark-sky conservation site near the Great Lakes cities."
   },
   {
     "name": "查科文化國家歷史公園",
@@ -327,7 +356,8 @@
     "lng": -107.96,
     "zoom": 9,
     "desc": "UNESCO 世界遺產，古代普韋布洛人精心設計的天文觀測中心，建築精確對準夏至日出方向。2013 年獲 IDA 金級認證，幾乎無人煙的荒漠夜空延續著千年前先民仰望星辰的傳統。",
-    "img": "https://www.nps.gov/chcu/learn/management/images/NPS-by-K-Alden-Peterson_copy_weblarge.jpg"
+    "img": "https://www.nps.gov/chcu/learn/management/images/NPS-by-K-Alden-Peterson_copy_weblarge.jpg",
+    "desc_en": "A UNESCO World Heritage Site, an astronomical observation center carefully designed by the ancient Puebloans with structures aligned precisely to the summer-solstice sunrise. Gold-tier IDA-certified in 2013, its near-uninhabited desert sky carries on a thousand-year tradition of gazing at the stars."
   },
   {
     "name": "諾森伯蘭國家公園",
@@ -338,7 +368,8 @@
     "lng": -2.2,
     "zoom": 9,
     "desc": "英格蘭人口最稀少的國家公園，基爾德森林廣袤無垠，構成英格蘭最大的暗天保護地帶。2013 年獲 IDA 金星級認證，冬夜可觀測北極光，哈德良長城在銀河映照下盡顯千年滄桑。",
-    "img": "https://www.northumberlandnationalpark.org.uk/wp-content/uploads/2017/11/Battlesteads.jpg"
+    "img": "https://www.northumberlandnationalpark.org.uk/wp-content/uploads/2017/11/Battlesteads.jpg",
+    "desc_en": "England's most sparsely populated national park; the vast Kielder Forest forms England's largest dark sky reserve. Gold-tier IDA-certified in 2013, the aurora can be seen on winter nights, with Hadrian's Wall showing its age beneath the Milky Way."
   },
   {
     "name": "藍嶺天文臺暗天公園",
@@ -349,7 +380,8 @@
     "lng": -82.05,
     "zoom": 10,
     "desc": "位於北卡羅來納州阿巴拉契亞山脈的高地天文臺，2014 年獲 IDA 認證。山地高海拔與遠離都市的清淨環境帶來卓越觀星條件，是美國東南部觀測銀河與深空天體的優質據點。",
-    "img": "https://darksky.org/app/uploads/2015/04/BlueRidge_Featured_Image.png"
+    "img": "https://darksky.org/app/uploads/2015/04/BlueRidge_Featured_Image.png",
+    "desc_en": "A highland observatory in the Appalachian Mountains of North Carolina, IDA-certified in 2014. Its high elevation and remote, clean setting bring excellent stargazing — a fine base for observing the Milky Way and deep-sky objects in the southeastern US."
   },
   {
     "name": "大峽谷-帕拉珊特國家保護區",
@@ -360,7 +392,8 @@
     "lng": -113.75,
     "zoom": 8,
     "desc": "毗鄰大峽谷、面積逾 4,900 平方公里的偏遠荒野，2014 年獲 IDA 認證。被評為北美最難抵達的國家保護區之一，也正因如此，夜空幾乎無任何人工光源，純淨程度堪稱完美。",
-    "img": "https://www.nps.gov/para/learn/nature/images/MilkyWayPanoReal_Cave_20160830_P20448.jpg?maxwidth=1300&autorotate=false&quality=78&format=webp"
+    "img": "https://www.nps.gov/para/learn/nature/images/MilkyWayPanoReal_Cave_20160830_P20448.jpg?maxwidth=1300&autorotate=false&quality=78&format=webp",
+    "desc_en": "A remote wilderness of over 4,900 sq km adjoining the Grand Canyon, IDA-certified in 2014. Rated one of North America's hardest-to-reach reserves — and for that very reason its sky is almost entirely free of artificial light, nearly perfect in purity."
   },
   {
     "name": "霍文威普國家保護區",
@@ -371,7 +404,8 @@
     "lng": -109.07,
     "zoom": 10,
     "desc": "古代普韋布洛人遺址，方形與圓形塔樓精確對準夏至與冬至的日出日落方位，體現先民的天文智慧。2014 年獲 IDA 認證，四周荒涼沙漠帶來極致黑暗夜空，古塔剪影在銀河下格外神秘壯麗。",
-    "img": "https://www.nps.gov/hove/planyourvisit/images/Hovenweep-Castle-at-Night-Landscape1-Jacob-W-Frank.jpg?maxwidth=1300&maxheight=1300&autorotate=false&format=webp"
+    "img": "https://www.nps.gov/hove/planyourvisit/images/Hovenweep-Castle-at-Night-Landscape1-Jacob-W-Frank.jpg?maxwidth=1300&maxheight=1300&autorotate=false&format=webp",
+    "desc_en": "An ancient Puebloan site whose square and circular towers align precisely with the solstice sunrise and sunset, reflecting the ancestors' astronomical wisdom. IDA-certified in 2014, the desolate desert around it brings an utterly dark sky, the tower silhouettes especially mysterious beneath the Milky Way."
   },
   {
     "name": "銅斷崖州立公園",
@@ -382,7 +416,8 @@
     "lng": -99.75,
     "zoom": 10,
     "desc": "德克薩斯州西部紅岩峽谷中的暗天公園，廣袤的草地與峽谷地形提供絕佳觀星視野。2014 年獲 IDA 認證，遠離都市的德克薩斯高原夜空清澈透明，是德州重要的天文觀測基地。",
-    "img": "https://tpwd.texas.gov/state-parks/copper-breaks/gallery/copper_breaks_milkyway_campsite_panorama_1200p.jpg"
+    "img": "https://tpwd.texas.gov/state-parks/copper-breaks/gallery/copper_breaks_milkyway_campsite_panorama_1200p.jpg",
+    "desc_en": "A dark sky park among the red-rock canyons of West Texas, with broad grasslands and canyon terrain giving superb stargazing views. IDA-certified in 2014, the clear Texas plateau sky makes it a key astronomy site in the state."
   },
   {
     "name": "魔岩州立自然區",
@@ -393,7 +428,8 @@
     "lng": -98.82,
     "zoom": 10,
     "desc": "德克薩斯州標誌性的粉紅色花崗岩圓頂，2014 年獲 IDA 認證。光禿的岩頂提供 360° 無遮擋觀星視野，卡曼奇人視此地為聖山，如今在璀璨銀河的映照下更添神秘色彩，是德州最受歡迎的觀星聖地。",
-    "img": "https://www.stayllano.com/wp-content/uploads/milky-way-over-mountains-denis-degioanni-UnSpash-1515705576963-95cad62945b6-768x512.jpg"
+    "img": "https://www.stayllano.com/wp-content/uploads/milky-way-over-mountains-denis-degioanni-UnSpash-1515705576963-95cad62945b6-768x512.jpg",
+    "desc_en": "Texas's iconic pink-granite dome, IDA-certified in 2014. Its bare summit offers a 360° unobstructed view; the Comanche regarded it as a sacred mountain, and beneath the brilliant Milky Way it grows more mysterious still — one of Texas's most popular stargazing sites."
   },
   {
     "name": "伊蘭河谷莊園",
@@ -404,7 +440,8 @@
     "lng": -3.65,
     "zoom": 9,
     "desc": "威爾斯中部連綿的山地水庫群，2015 年獲 IDA 認證為暗天公園。廣闊的無人高地與極少的人工照明創造出純淨夜空，靜謐水庫倒映繁星如畫，是威爾斯最受天文愛好者青睞的觀星聖地。",
-    "img": "https://elanvalley.org.uk/app/uploads/2022/10/foel-trail-1hr-1024x683.jpg"
+    "img": "https://elanvalley.org.uk/app/uploads/2022/10/foel-trail-1hr-1024x683.jpg",
+    "desc_en": "A chain of mountain reservoirs across central Wales, certified an IDA dark sky park in 2015. Its vast uninhabited uplands and minimal artificial lighting create a pristine sky, the tranquil reservoirs mirroring the stars — a favorite of Welsh astronomers."
   },
   {
     "name": "梅奧國際暗天公園",
@@ -415,7 +452,8 @@
     "lng": -9.89,
     "zoom": 9,
     "desc": "位於愛爾蘭西部梅奧縣的野性荒原，馬利克羅伊國家公園的核心地帶，2016 年獲 IDA 認證。大西洋沿岸的濕地泥炭高原人跡罕至，秋冬季節可觀測極光，是愛爾蘭第二座暗天公園。",
-    "img": null
+    "img": null,
+    "desc_en": "A wild moorland in County Mayo in western Ireland, at the heart of Wild Nephin National Park, IDA-certified in 2016. Its little-visited Atlantic peat bogs offer aurora viewing in autumn and winter — Ireland's second dark sky park."
   },
   {
     "name": "大柏樹國家保護區",
@@ -426,7 +464,8 @@
     "lng": -81,
     "zoom": 8,
     "desc": "美東南部最大的暗天公園，廣達 7,300 平方公里的柏樹濕地遠離都市光害，2016 年獲 IDA 認證。大沼澤地旁的廣袤荒野夜空清澈，銀河倒映於靜謐的沼澤水面，是佛羅里達州最佳觀星地之一。",
-    "img": null
+    "img": null,
+    "desc_en": "The largest dark sky park in the southeastern US, a 7,300 sq km cypress wetland far from city light, IDA-certified in 2016. Beside the Everglades its broad wilderness sky is clear, the Milky Way mirrored on quiet swamp waters — one of Florida's best stargazing spots."
   },
   {
     "name": "卡特奇納洞窟州立公園",
@@ -437,7 +476,8 @@
     "lng": -110.35,
     "zoom": 10,
     "desc": "亞利桑那州以地下溶洞奇觀與絕佳夜空雙重特色著稱的暗天公園，2017 年獲 IDA 認證。公園嚴格執行暗天照明標準，地處偏遠山區，銀河清晰可見，地上地下皆有奇景。",
-    "img": null
+    "img": null,
+    "desc_en": "An Arizona dark sky park celebrated for both its underground cavern wonders and superb night sky, IDA-certified in 2017. The park strictly follows dark-sky lighting standards and sits in a remote mountain area where the Milky Way is clearly visible — wonders above and below ground."
   },
   {
     "name": "奧貝德野生風景河",
@@ -448,7 +488,8 @@
     "lng": -84.69,
     "zoom": 9,
     "desc": "田納西州首個 IDA 認證地點，2017 年獲認。峽谷地貌天然屏蔽四周光害，清澈的河流與茂密原始森林環繞，夜晚星空皎潔，是美國東南部難得一見的優質觀星勝地。",
-    "img": null
+    "img": null,
+    "desc_en": "Tennessee's first IDA-certified site, certified in 2017. Its canyon terrain naturally shields surrounding light; encircled by clear rivers and dense old-growth forest, its bright starry sky makes it a rare high-quality stargazing spot in the southeastern US."
   },
   {
     "name": "安扎-博雷戈沙漠州立公園",
@@ -459,7 +500,8 @@
     "lng": -116.4,
     "zoom": 8,
     "desc": "加利福尼亞州最大的州立公園，乾燥的沙漠氣候造就全年超過 300 天的晴朗夜空，2018 年獲 IDA 認證。與暗天社區博雷戈泉共同構成南加州最重要的暗天保護區域，銀河橫亙沙丘的景象令人嘆服。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Milky_Way_Over_Anza_Borrego_%2885533793%29.jpeg/500px-Milky_Way_Over_Anza_Borrego_%2885533793%29.jpeg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Milky_Way_Over_Anza_Borrego_%2885533793%29.jpeg/500px-Milky_Way_Over_Anza_Borrego_%2885533793%29.jpeg",
+    "desc_en": "California's largest state park; its dry desert climate yields over 300 clear nights a year, IDA-certified in 2018. Together with the Borrego Springs dark sky community it forms Southern California's most important dark sky area, the Milky Way spanning the dunes a marvel to behold."
   },
   {
     "name": "斯坦納克州立公園",
@@ -470,7 +512,8 @@
     "lng": -109.52,
     "zoom": 10,
     "desc": "猶他州維納爾附近的高原湖畔公園，2018 年獲 IDA 認證。周邊人口稀少，光害極低，高原乾燥氣候全年提供優質觀星條件，是猶他州東北部難得的暗天保育地。",
-    "img": null
+    "img": null,
+    "desc_en": "A plateau lakeside park near Vernal, Utah, IDA-certified in 2018. Sparse surrounding population means very low light pollution, and the dry highland climate gives fine stargazing year-round — a rare dark-sky site in northeastern Utah."
   },
   {
     "name": "埃克斯穆爾國家公園",
@@ -481,7 +524,8 @@
     "lng": -3.78,
     "zoom": 8,
     "desc": "英格蘭首座、也是歐洲首座 IDA 認證暗天保護區，2011 年獲認。英格蘭西南部廣袤的石南荒原與稀疏農村聚落，帶來英格蘭最暗的夜空之一，公園各地定期舉辦星空教育活動，推廣暗天保育意識。",
-    "img": null
+    "img": null,
+    "desc_en": "The first IDA-certified dark sky reserve in England — and in Europe — certified in 2011. The vast heather moors and scattered hamlets of southwest England give one of England's darkest skies; the park regularly holds stargazing education events to promote dark-sky awareness."
   },
   {
     "name": "梅甘蒂克國際暗天保護區",
@@ -492,7 +536,8 @@
     "lng": -71.15,
     "zoom": 9,
     "desc": "全球首個 IDA 國際暗天保護區，2008 年獲認。梅甘蒂克天文臺坐落山頂，與周邊地方政府共同制定全球最早的光害防制法規，成為世界暗天保護立法的典範，是加拿大觀星愛好者的精神聖地。",
-    "img": null
+    "img": null,
+    "desc_en": "The world's first IDA International Dark Sky Reserve, certified in 2008. The Mont-Mégantic Observatory crowns the summit; together with surrounding municipalities it set the world's earliest light-pollution regulations, becoming a model for dark-sky legislation — a spiritual home for Canadian stargazers."
   },
   {
     "name": "中愛達荷暗天保護區",
@@ -503,7 +548,8 @@
     "lng": -114.5,
     "zoom": 7,
     "desc": "面積達 140 萬英畝的巨型暗天保護區，2017 年獲 IDA 認證，是全球最大的 IDA 暗天保護區之一。愛達荷州中部薩蒙河山區人煙稀少，光害趨近於零，Bortle 等級可達 1 至 2 級，是北美大陸最純淨的天然暗夜環境之一。",
-    "img": null
+    "img": null,
+    "desc_en": "A vast 1.4 million-acre dark sky reserve, IDA-certified in 2017 and one of the world's largest. The Salmon River Mountains of central Idaho are sparsely settled with near-zero light pollution; Bortle levels reach 1 to 2 — one of North America's purest natural dark-night environments."
   },
   {
     "name": "勒恩生物圈保護區",
@@ -514,7 +560,8 @@
     "lng": 10.1,
     "zoom": 8,
     "desc": "德國中部的「黑暗天堂」，2014 年獲 IDA 認證，是德國最重要的暗天保育地之一。高原濕地與低山丘陵地景中，地方政府積極推廣暗天友善照明。銀河橫貫廣袤草本沼澤，別具德國鄉村特有的靜謐之美，年均舉辦多場觀星活動。",
-    "img": null
+    "img": null,
+    "desc_en": "Central Germany's 'dark paradise,' IDA-certified in 2014 and one of the country's most important dark-sky sites. Across its highland wetlands and low hills, local governments actively promote dark-sky-friendly lighting. The Milky Way spans the broad herbaceous marshes with a tranquil rural German beauty, hosting many stargazing events each year."
   },
   {
     "name": "薩克暗天島",
@@ -525,7 +572,8 @@
     "lng": -2.36,
     "zoom": 11,
     "desc": "全球首個 IDA 認證暗天島嶼，2011 年獲認，位於英吉利海峽，面積僅 5.45 平方公里。島上禁止汽車行駛，無公共照明設施，夜空幾乎零光害，肉眼可見近 6,000 顆星星。傳統封建制度的最後守護地，也是世界上最獨特的人文暗天體驗。",
-    "img": null
+    "img": null,
+    "desc_en": "The world's first IDA-certified Dark Sky Island, certified in 2011, in the English Channel and just 5.45 sq km. Cars are banned and there is no public lighting; the sky has almost zero light pollution, with nearly 6,000 stars visible to the naked eye. As the last bastion of traditional feudalism, it offers one of the world's most distinctive cultural dark-sky experiences."
   },
   {
     "name": "博雷戈泉暗天社區",
@@ -536,7 +584,8 @@
     "lng": -116.37,
     "zoom": 10,
     "desc": "加利福尼亞州首座 IDA 認證暗天社區，2009 年獲認，毗鄰安扎-博雷戈沙漠州立公園。全鎮居民共同推廣負責任照明政策，與相鄰沙漠公園形成南加州最重要的連續暗天保護帶，每年吸引大批天文愛好者在沙漠夜空下觀星。",
-    "img": null
+    "img": null,
+    "desc_en": "California's first IDA-certified Dark Sky Community, certified in 2009, adjoining Anza-Borrego Desert State Park. Its residents jointly promote responsible-lighting policy, forming with the neighboring desert park Southern California's most important continuous dark sky belt — drawing crowds of stargazers each year."
   },
   {
     "name": "西克利夫與銀崖暗天社區",
@@ -547,7 +596,8 @@
     "lng": -105.46,
     "zoom": 11,
     "desc": "科羅拉多州首座 IDA 認證暗天社區，2015 年獲認，位於韋特山脈腳下海拔近 2,500 公尺的雙城小鎮。四面雄偉山脈守護的高原夜空銀河清晰可辨，是科羅拉多州觀星愛好者的首選去處，也是美國高海拔暗天社區的典範。",
-    "img": null
+    "img": null,
+    "desc_en": "Colorado's first IDA-certified Dark Sky Community, certified in 2015, a pair of small towns at nearly 2,500 m at the foot of the Wet Mountains. The highland sky, guarded by majestic peaks on all sides, shows a clear Milky Way — a top choice for Colorado stargazers and a model high-altitude dark-sky community."
   },
   {
     "name": "滴泉暗天社區",
@@ -558,7 +608,8 @@
     "lng": -98.09,
     "zoom": 11,
     "desc": "德克薩斯州首座 IDA 認證暗天社區，2014 年獲認，位於奧斯汀西郊的希爾鄉地帶。積極推廣社區夜間照明改革，結合麥當勞天文臺的天文推廣資源，是大城市周邊難得兼具宜居環境與暗天保育理念的社區典範。",
-    "img": null
+    "img": null,
+    "desc_en": "Texas's first IDA-certified Dark Sky Community, certified in 2014, in the Hill Country west of Austin. It actively promotes community night-lighting reform and draws on McDonald Observatory's outreach — a rare community combining a livable setting with dark-sky values near a big city."
   },
   {
     "name": "南唐斯國家公園",
@@ -569,7 +620,8 @@
     "lng": -0.63,
     "zoom": 8,
     "desc": "英格蘭南部的白堊丘陵地景，2016 年成為全球首個「都市邊緣」IDA 認證暗天保護區，距倫敦僅約 50 公里。積極推廣負責任照明改革，證明即使在人口稠密的都市近郊，仍能透過努力守護可觀的黑暗夜空，是全球暗天保育的創新典範。",
-    "img": null
+    "img": null,
+    "desc_en": "The chalk-downland landscape of southern England; in 2016 it became the world's first 'urban-edge' IDA-certified dark sky reserve, just 50 km from London. By actively promoting responsible-lighting reform it proves that even near a densely populated city a considerable dark sky can be protected — a global innovation in dark-sky conservation."
   },
   {
     "name": "莫法特暗天城市",
@@ -580,7 +632,8 @@
     "lng": -3.44,
     "zoom": 11,
     "desc": "蘇格蘭南部達姆弗里斯郡的歷史小鎮，2016 年獲 IDA 認證，是英國首個 IDA 認證暗天城市。蘇格蘭南部高地的稀疏人口與廣袤農田，配合積極的社區照明管制，使整個小鎮成為英國難得的暗天社區典範，每年吸引天文愛好者前來觀星。",
-    "img": null
+    "img": null,
+    "desc_en": "A historic town in Dumfriesshire, southern Scotland, IDA-certified in 2016 — Britain's first IDA-certified Dark Sky Town. The sparse population and broad farmland of the southern Scottish uplands, with active community lighting control, make the whole town a rare British dark-sky model, drawing stargazers each year."
   },
   {
     "name": "科爾島暗天社區",
@@ -591,7 +644,8 @@
     "lng": -6.53,
     "zoom": 10,
     "desc": "蘇格蘭西海岸內赫布里底群島中的小島，2013 年獲 IDA 認證，常住人口僅約 200 人。面積 77 平方公里的科爾島四面環海，是大不列顛光污染最低的地區之一。秋冬北極光在黑暗的大西洋夜空中舞動，是英國最珍稀的銀河與極光共賞地點。",
-    "img": null
+    "img": null,
+    "desc_en": "A small island in the Inner Hebrides off Scotland's west coast, IDA-certified in 2013, with only about 200 permanent residents. The 77 sq km Isle of Coll is surrounded by sea and among Britain's least light-polluted areas. With the autumn-winter aurora dancing in the dark Atlantic sky, it is one of Britain's rarest places to see both the Milky Way and the northern lights."
   },
   {
     "name": "大彎牧場州立公園",
@@ -602,7 +656,8 @@
     "lng": -104.11,
     "zoom": 8,
     "desc": "IDA 認證暗天公園。緊鄰大彎國家公園，廣袤德州荒野中的偏遠牧場，極低光害帶來壯觀銀河景象，是德州西部最純淨的觀星地之一。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified dark sky park. Adjoining Big Bend National Park, this remote ranch in the vast Texas wilderness has very low light pollution and a spectacular Milky Way — one of the purest stargazing spots in West Texas."
   },
   {
     "name": "死馬角州立公園",
@@ -613,7 +668,8 @@
     "lng": -109.74,
     "zoom": 9,
     "desc": "IDA 認證暗天公園。科羅拉多河蜿蜒於峽谷之中，高台俯瞰視野震撼，無光害的猶他夜空讓這片地貌在銀河映照下更顯壯麗。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified dark sky park. The Colorado River winds through the canyon below a dramatic overlook; the pollution-free Utah sky makes the landscape all the more magnificent beneath the Milky Way."
   },
   {
     "name": "烏帕特基國家保護區",
@@ -624,7 +680,8 @@
     "lng": -111.37,
     "zoom": 10,
     "desc": "IDA 認證暗天公園。古普韋布洛人石砌遺址，位於弗拉格斯塔夫北部荒原，乾燥透明的亞利桑那夜空與千年古蹟共同構成獨特觀星體驗。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified dark sky park. Ancient Puebloan masonry ruins on the wilderness north of Flagstaff; the dry, transparent Arizona sky and millennia-old relics together make a unique stargazing experience."
   },
   {
     "name": "核桃峽谷國家保護區",
@@ -635,7 +692,8 @@
     "lng": -111.51,
     "zoom": 10,
     "desc": "IDA 認證暗天公園。辛那瓜人崖居遺址嵌入峽谷壁間，弗拉格斯塔夫暗天生態系的重要成員，夜空清澈，古蹟與星空相得益彰。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified dark sky park. Sinagua cliff dwellings set into the canyon walls; a key member of Flagstaff's dark-sky ecosystem, where the clear sky and the ruins complement one another."
   },
   {
     "name": "日落火山口國家保護區",
@@ -646,7 +704,8 @@
     "lng": -111.5,
     "zoom": 10,
     "desc": "IDA 認證暗天公園。約 900 年前的火山噴發遺跡，熔岩地景奇特，是弗拉格斯塔夫暗天保護區域的組成部分，亞利桑那高原夜空透明澄澈。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified dark sky park. The remains of a volcanic eruption about 900 years ago with striking lava terrain; part of the Flagstaff dark-sky protection area, under the clear, transparent Arizona plateau sky."
   },
   {
     "name": "紐波特州立公園",
@@ -657,7 +716,8 @@
     "lng": -86.99,
     "zoom": 10,
     "desc": "IDA 認證暗天公園。威斯康辛州首座暗天公園，多爾半島北端三面環湖，湖面鏡映繁星，夏夜偶可見極光，是五大湖區最受歡迎的觀星地之一。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified dark sky park. Wisconsin's first dark sky park, at the north tip of the Door Peninsula, surrounded on three sides by water that mirrors the stars; the aurora is occasionally visible on summer nights — one of the Great Lakes region's most popular stargazing spots."
   },
   {
     "name": "中叉河森林保護區",
@@ -668,7 +728,8 @@
     "lng": -87.95,
     "zoom": 10,
     "desc": "IDA 認證暗天公園。伊利諾伊州農業平原中的濕地保護區，2018 年獲認，是美國中西部城市近郊少見的低光害自然保育地。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified dark sky park. A wetland reserve amid the farmland plains of Illinois, certified in 2018 — a rare low-light natural conservation site near a Midwestern city."
   },
   {
     "name": "大沙丘國家公園",
@@ -679,7 +740,8 @@
     "lng": -105.51,
     "zoom": 9,
     "desc": "北美最高沙丘群，高逾 230 公尺，2019 年獲 IDA 認證。聖路易斯河谷超低光害環境讓銀河倒映於沙丘之間，是科羅拉多州最震撼的夜空體驗之一。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Milky_Way_over_Great_Sand_Dunes_National_Park.jpg/500px-Milky_Way_over_Great_Sand_Dunes_National_Park.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Milky_Way_over_Great_Sand_Dunes_National_Park.jpg/500px-Milky_Way_over_Great_Sand_Dunes_National_Park.jpg",
+    "desc_en": "North America's tallest dunes, over 230 m high, IDA-certified in 2019. The very low light pollution of the San Luis Valley lets the Milky Way mirror among the dunes — one of Colorado's most stunning night-sky experiences."
   },
   {
     "name": "埃爾莫羅國家保護區",
@@ -690,7 +752,8 @@
     "lng": -108.35,
     "zoom": 11,
     "desc": "IDA 認證暗天公園。砂岩巨壁上刻有自西班牙殖民時期至今的千年銘文，新墨西哥高原清澈夜空讓這座歷史巨石在星光下熠熠生輝。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified dark sky park. Its great sandstone walls bear a thousand years of inscriptions from the Spanish colonial era onward; the clear New Mexico plateau sky makes this historic monolith glow beneath the stars."
   },
   {
     "name": "皮斯加天文研究院",
@@ -701,7 +764,8 @@
     "lng": -82.87,
     "zoom": 10,
     "desc": "IDA 認證暗天公園。前 NASA 追蹤站改建而成的天文研究與教育中心，位於北卡阿巴拉契亞山脈，是美東南部重要的暗天天文基地。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified dark sky park. An astronomy research and education center converted from a former NASA tracking station, in the Appalachians of North Carolina — a key dark-sky astronomy base in the southeastern US."
   },
   {
     "name": "懷伊蒂暗天公園",
@@ -712,7 +776,8 @@
     "lng": 173.08,
     "zoom": 10,
     "desc": "IDA 認證暗天公園。紐西蘭南島北部塔斯曼地區的農業山丘，低光害環境帶來清晰可見的南天星座，是南島北部的重要觀星據點。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified dark sky park. Farming hills in the Tasman region of the northern South Island, New Zealand; the low light pollution brings clearly visible southern constellations — an important stargazing base for the northern South Island."
   },
   {
     "name": "魁蒂科省立公園",
@@ -723,7 +788,8 @@
     "lng": -91.5,
     "zoom": 7,
     "desc": "IDA 認證暗天公園。加拿大安大略省廣袤的原始荒野，千湖交織、林木蒼翠，極低光害環境下可見壯麗銀河與北極光，是北美最純粹的野外觀星地之一。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified dark sky park. A vast pristine wilderness in Ontario, Canada, woven with a thousand lakes and lush forest; under very low light pollution the magnificent Milky Way and aurora appear — one of North America's purest wilderness stargazing spots."
   },
   {
     "name": "瓦萊斯卡爾德拉國家保護區",
@@ -734,7 +800,8 @@
     "lng": -106.55,
     "zoom": 9,
     "desc": "IDA 認證暗天公園。直徑約 22 公里的壯觀古火山破火山口，廣闊高原草地四周無光害，2021 年獲認，是美國西南部最磅礴的暗天景觀之一。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified dark sky park. A spectacular ancient volcanic caldera about 22 km across, its broad highland meadows free of light pollution; certified in 2021, one of the most majestic dark-sky landscapes in the southwestern US."
   },
   {
     "name": "天空牧場州立公園",
@@ -745,7 +812,8 @@
     "lng": -77.97,
     "zoom": 11,
     "desc": "IDA 認證暗天公園。維吉尼亞州阿巴拉契亞山麓的牧場公園，2021 年獲認，是大華盛頓地區居民最方便抵達的暗天觀星地之一。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified dark sky park. A pasture park in the Appalachian foothills of Virginia, certified in 2021 — one of the most accessible dark-sky stargazing spots for residents of the greater Washington area."
   },
   {
     "name": "巨岩城國家保護區",
@@ -756,7 +824,8 @@
     "lng": -113.72,
     "zoom": 10,
     "desc": "IDA 認證暗天公園。愛達荷州南部壯觀花崗岩柱群，昔日淘金小道的重要地標，2023 年獲認，巨石剪影在無光害星空下呈現超現實景象。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified dark sky park. A spectacular cluster of granite spires in southern Idaho, a key landmark on the old gold-rush trail, certified in 2023; the boulder silhouettes look surreal beneath the pollution-free sky."
   },
   {
     "name": "埃諾斯國家公園",
@@ -767,7 +836,8 @@
     "lng": 20.63,
     "zoom": 10,
     "desc": "IDA 認證暗天公園。位於希臘愛奧尼亞海克法利尼亞島的高山國家公園，2023 年獲認，是地中海地區首批暗天認證自然保護地之一。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified dark sky park. An alpine national park on the island of Kefalonia in the Ionian Sea, Greece, certified in 2023 — one of the Mediterranean region's first dark-sky-certified nature reserves."
   },
   {
     "name": "特朗布蘭山國家公園",
@@ -778,7 +848,8 @@
     "lng": -74.5,
     "zoom": 8,
     "desc": "IDA 認證暗天公園。魁北克省著名的四季度假勝地，2023 年獲認，廣袤勞倫欽高原森林遠離都市光害，提供北美城市近郊罕見的高品質暗天體驗。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified dark sky park. A famous four-season resort in Quebec, certified in 2023; the vast Laurentian highland forest lies far from city light, offering a high-quality dark-sky experience rare so near a North American city."
   },
   {
     "name": "牛津森林保護區",
@@ -789,7 +860,8 @@
     "lng": 172,
     "zoom": 10,
     "desc": "IDA 認證暗天公園。位於紐西蘭南島坎特伯雷地區，2024 年獲認，是紐西蘭持續推廣暗天保育成果的新一員。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified dark sky park. In the Canterbury region of New Zealand's South Island, certified in 2024 — a new addition to New Zealand's ongoing dark-sky conservation success."
   },
   {
     "name": "卡瓦勞吉布斯頓暗天公園",
@@ -800,7 +872,8 @@
     "lng": 169.03,
     "zoom": 10,
     "desc": "IDA 認證暗天公園。紐西蘭南島奧塔哥卡瓦勞峽谷，2024 年獲認，峽谷地形與清澈南半球夜空提供令人難忘的觀星環境。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified dark sky park. The Kawarau Gorge in Otago, South Island, New Zealand, certified in 2024; the gorge terrain and clear Southern Hemisphere sky offer an unforgettable stargazing setting."
   },
   {
     "name": "上帕斯維克國家公園",
@@ -811,7 +884,8 @@
     "lng": 28.901,
     "zoom": 8,
     "desc": "IDA 認證暗天公園。挪威最北端靠近俄芬邊境的原始荒野，2024 年獲認，是斯堪地納維亞首批 IDA 認證地點之一，極夜期間可觀測壯麗極光。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified dark sky park. A pristine wilderness near the Russo-Finnish border at Norway's far north, certified in 2024 — one of Scandinavia's first IDA-certified sites, with magnificent auroras during the polar night."
   },
   {
     "name": "卡普洛克峽谷州立公園",
@@ -822,7 +896,8 @@
     "lng": -101.06,
     "zoom": 8,
     "desc": "IDA 認證暗天公園。德克薩斯州帕納漢德爾南緣的紅砂岩峽谷，2025 年獲認，廣袤高原帶來優質黑暗夜空，是德州西部觀察銀河的絕佳去處。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified dark sky park. Red-sandstone canyons on the southern edge of the Texas Panhandle, certified in 2025; the broad plateau brings a fine dark sky — a superb spot for viewing the Milky Way in West Texas."
   },
   {
     "name": "雪峽谷州立公園",
@@ -833,7 +908,8 @@
     "lng": -113.65,
     "zoom": 10,
     "desc": "IDA 認證暗天公園。猶他州西南部火成岩峽谷，毗鄰聖喬治市，2025 年獲認，是猶他州南部暗天保育網絡的新成員。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified dark sky park. An igneous-rock canyon in southwestern Utah near St. George, certified in 2025 — a new member of southern Utah's dark-sky conservation network."
   },
   {
     "name": "墨累河國際暗天保護區",
@@ -844,7 +920,8 @@
     "lng": 140.5,
     "zoom": 7,
     "desc": "IDA 認證暗天保護區。南澳大利亞州墨累河流域廣大暗天區，2019 年獲認，是南半球最重要的 IDA 暗天保護區之一，南十字星高掛廣袤澳洲夜空。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified dark sky reserve. A vast dark-sky area in the Murray River basin of South Australia, certified in 2019 — one of the Southern Hemisphere's most important IDA dark sky reserves, the Southern Cross hanging high over the broad Australian sky."
   },
   {
     "name": "懷拉拉帕暗天保護區",
@@ -855,7 +932,8 @@
     "lng": 175.5,
     "zoom": 8,
     "desc": "IDA 認證暗天保護區。紐西蘭北島南端的農業平原，2023 年獲認，為惠靈頓都會區居民提供絕佳的暗天觀星體驗，南十字星倒映於靜謐田野。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified dark sky reserve. Farming plains at the southern end of New Zealand's North Island, certified in 2023, offering Wellington-area residents a superb dark-sky experience, the Southern Cross mirrored over quiet fields."
   },
   {
     "name": "荷馬格倫暗天社區",
@@ -866,7 +944,8 @@
     "lng": -87.94,
     "zoom": 12,
     "desc": "IDA 認證暗天社區。伊利諾伊州芝加哥郊區，2011 年獲認，是美國中西部大都市圈內推動暗天保育的先驅社區，積極推廣負責任照明政策。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Community. A Chicago suburb in Illinois, certified in 2011 — a pioneering dark-sky community within a major Midwestern metropolis, actively promoting responsible-lighting policy."
   },
   {
     "name": "貝弗利海岸暗天社區",
@@ -877,7 +956,8 @@
     "lng": -86.978,
     "zoom": 12,
     "desc": "IDA 認證暗天社區。印第安納沙丘國家公園旁的密歇根湖濱小社區，2014 年獲認，是大湖區城市近郊推廣暗天保育的典範。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Community. A small Lake Michigan lakeside community beside Indiana Dunes National Park, certified in 2014 — a model of dark-sky conservation near the Great Lakes cities."
   },
   {
     "name": "塞多納暗天社區",
@@ -888,7 +968,8 @@
     "lng": -111.79,
     "zoom": 11,
     "desc": "IDA 認證暗天社區。亞利桑那州的紅岩旅遊名城，2014 年獲認，壯麗紅岩地景搭配清澈亞利桑那夜空，是全美最知名的觀星旅遊小鎮之一。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Community. Arizona's famed red-rock tourist town, certified in 2014; its magnificent red-rock scenery beneath the clear Arizona sky makes it one of America's best-known stargazing towns."
   },
   {
     "name": "雷霆山普特西暗天社區",
@@ -899,7 +980,8 @@
     "lng": -112.8,
     "zoom": 12,
     "desc": "IDA 認證暗天社區。位於亞利桑那州北部的小型社區，2015 年獲認，是美國西南部推廣暗天保育的重要基層組織之一。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Community. A small community in northern Arizona, certified in 2015 — an important grassroots organization for dark-sky conservation in the southwestern US."
   },
   {
     "name": "邦阿科德暗天社區",
@@ -910,7 +992,8 @@
     "lng": -113.42,
     "zoom": 12,
     "desc": "IDA 認證暗天社區。亞伯達省埃德蒙頓市郊小鎮，2015 年獲認，是加拿大首批 IDA 認證暗天社區之一，積極推動城鎮照明改革。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Community. A town on the outskirts of Edmonton, Alberta, certified in 2015 — one of Canada's first IDA-certified dark sky communities, actively driving municipal lighting reform."
   },
   {
     "name": "馬蹄灣暗天社區",
@@ -921,7 +1004,8 @@
     "lng": -98.37,
     "zoom": 12,
     "desc": "IDA 認證暗天社區。德克薩斯州希爾鄉的湖濱社區，2015 年獲認，是德州推廣暗天友善照明的重要社區典範。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Community. A lakeside community in the Texas Hill Country, certified in 2015 — an important Texas model for dark-sky-friendly lighting."
   },
   {
     "name": "大公園橡溪村暗天社區",
@@ -932,7 +1016,8 @@
     "lng": -111.78,
     "zoom": 12,
     "desc": "IDA 認證暗天社區。塞多納附近橡溪峽谷的住宅社區，2016 年獲認，與周邊暗天地點共同構成亞利桑那州最密集的暗天保育帶。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Community. A residential community in Oak Creek Canyon near Sedona, certified in 2016; together with nearby dark-sky sites it forms Arizona's densest dark-sky conservation belt."
   },
   {
     "name": "凱彻姆暗天社區",
@@ -943,7 +1028,8 @@
     "lng": -114.36,
     "zoom": 12,
     "desc": "IDA 認證暗天社區。愛達荷州太陽谷滑雪度假小鎮，2017 年獲認，高海拔乾燥氣候帶來卓越星空透明度，是愛達荷州最知名的暗天社區。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Community. The Sun Valley ski resort town in Idaho, certified in 2017; its high, dry climate brings outstanding sky transparency — Idaho's best-known dark sky community."
   },
   {
     "name": "莫恩與尼奧爾暗天社區",
@@ -954,7 +1040,8 @@
     "lng": 12.29,
     "zoom": 11,
     "desc": "IDA 認證暗天社區。丹麥波羅的海的寧靜小島，2017 年獲認，是北歐首批 IDA 認證地點，島嶼自然隔離帶來斯堪地納維亞難得的低光害夜空。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Community. A tranquil island in the Danish Baltic, certified in 2017 — one of the Nordic region's first IDA-certified sites, the island's natural isolation giving a low-light sky rare in Scandinavia."
   },
   {
     "name": "噴泉山暗天社區",
@@ -965,7 +1052,8 @@
     "lng": -111.72,
     "zoom": 12,
     "desc": "IDA 認證暗天社區。鳳凰城東北郊以世界最高噴泉聞名，2018 年獲認，積極改善社區照明，是大鳳凰城地區推廣暗天保育的標竿社區。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Community. A northeast Phoenix suburb famed for the world's tallest fountain, certified in 2018; by actively improving community lighting it is a benchmark for dark-sky conservation in greater Phoenix."
   },
   {
     "name": "托雷暗天社區",
@@ -976,7 +1064,8 @@
     "lng": -111.4,
     "zoom": 12,
     "desc": "IDA 認證暗天社區。緊鄰峽谷地與Capitol Reef國家公園的小鎮，2018 年獲認，是猶他州暗天保育最活躍的社區之一。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Community. A town adjoining Canyonlands and Capitol Reef National Parks, certified in 2018 — one of Utah's most active dark-sky conservation communities."
   },
   {
     "name": "坎普維德暗天社區",
@@ -987,7 +1076,8 @@
     "lng": -111.84,
     "zoom": 12,
     "desc": "IDA 認證暗天社區。亞利桑那州維德河谷的歷史小鎮，2018 年獲認，低光害河谷地形帶來優質觀星條件，是亞利桑那中部重要的暗天保育社區。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Community. A historic town in the Verde Valley of Arizona, certified in 2018; the low-light valley terrain brings fine stargazing — an important dark-sky community in central Arizona."
   },
   {
     "name": "溫伯利與伍德克里克暗天社區",
@@ -998,7 +1088,8 @@
     "lng": -98.1,
     "zoom": 12,
     "desc": "IDA 認證暗天社區。德克薩斯州希爾鄉的藝術小鎮，2018 年獲認，賽普拉斯溪旁的自然環境與嚴格照明管制共同守護這片德州南部的美麗暗天。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Community. An arts town in the Texas Hill Country, certified in 2018; the natural setting along Cypress Creek and strict lighting control together guard this beautiful South Texas dark sky."
   },
   {
     "name": "萊克伍德村暗天社區",
@@ -1009,7 +1100,8 @@
     "lng": -97.01,
     "zoom": 13,
     "desc": "IDA 認證暗天社區。達拉斯-沃斯堡大都市區北郊的湖濱社區，2019 年獲認，是大都市圈郊區積極推動暗天友善照明的典範。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Community. A lakeside community in the northern Dallas-Fort Worth metroplex, certified in 2019 — a model of suburban dark-sky-friendly lighting in a major metro area."
   },
   {
     "name": "克雷斯通暗天社區",
@@ -1020,7 +1112,8 @@
     "lng": -105.7,
     "zoom": 12,
     "desc": "IDA 認證暗天社區。科羅拉多州聖路易斯河谷的靈性高山小鎮，海拔約 2,470 公尺，2020 年獲認，銀河橫跨布蘭卡峰的景象令人屏息。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Community. A spiritual alpine town in Colorado's San Luis Valley at about 2,470 m, certified in 2020, where the Milky Way arching over Blanca Peak takes the breath away."
   },
   {
     "name": "格羅夫蘭暗天社區",
@@ -1031,7 +1124,8 @@
     "lng": -81.85,
     "zoom": 12,
     "desc": "IDA 認證暗天社區。佛羅里達州中部小鎮，2023 年獲認，是佛州首批 IDA 認證暗天社區之一，積極推廣負責任照明政策。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Community. A town in central Florida, certified in 2023 — one of Florida's first IDA-certified dark sky communities, actively promoting responsible-lighting policy."
   },
   {
     "name": "蜂巢暗天社區",
@@ -1042,7 +1136,8 @@
     "lng": -97.96,
     "zoom": 12,
     "desc": "IDA 認證暗天社區。奧斯汀西郊快速發展中的社區，2023 年獲認，在都市擴張壓力下仍積極維護暗天環境，是德州大都市近郊暗天保育的創新實踐。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Community. A rapidly growing community west of Austin, certified in 2023; despite urban-expansion pressure it actively preserves its dark sky — an innovative practice in dark-sky conservation near a Texas metropolis."
   },
   {
     "name": "布雷肯里奇暗天社區",
@@ -1053,7 +1148,8 @@
     "lng": -106.04,
     "zoom": 12,
     "desc": "IDA 認證暗天社區。科羅拉多州著名高山滑雪度假小鎮，海拔約 2,926 公尺，2025 年獲認，是洛磯山區推動暗天保育的最新成員。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Community. The famed Colorado ski-resort town at about 2,926 m, certified in 2025 — the newest member driving dark-sky conservation in the Rockies."
   },
   {
     "name": "納斯比暗天社區",
@@ -1064,7 +1160,8 @@
     "lng": 170.14,
     "zoom": 12,
     "desc": "IDA 認證暗天社區。紐西蘭南島奧塔哥的淘金時代歷史小鎮，2025 年獲認，是紐西蘭最新一批暗天認證社區之一。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Community. A gold-rush-era historic town in Otago, South Island, New Zealand, certified in 2025 — among New Zealand's newest dark-sky communities."
   },
   {
     "name": "宇宙露營地暗天庇護所",
@@ -1075,7 +1172,8 @@
     "lng": -108.51,
     "zoom": 9,
     "desc": "美洲首座 IDA 認證暗天庇護所（2016 年），位於希拉國家森林邊緣，無人工照明，銀河橫跨整個天穹，是北美大陸最純粹的原始暗天體驗之一。",
-    "img": null
+    "img": null,
+    "desc_en": "The Americas' first IDA-certified Dark Sky Sanctuary (2016), on the edge of Gila National Forest with no artificial lighting; the Milky Way spans the whole dome — one of North America's purest pristine dark-sky experiences."
   },
   {
     "name": "奧蒂亞大障礙島暗天庇護所",
@@ -1086,7 +1184,8 @@
     "lng": 175.45,
     "zoom": 9,
     "desc": "IDA 認證暗天庇護所。奧克蘭以北的大障礙島，無市政電力供應，以再生能源驅動的離網社區保存了紐西蘭北島最純淨的夜空，是南太平洋獨特的暗天保育典範。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Sanctuary. Great Barrier Island north of Auckland, with no municipal power; this off-grid community runs on renewable energy and preserves the purest sky of New Zealand's North Island — a distinctive dark-sky model of the South Pacific."
   },
   {
     "name": "加布里埃拉米斯特拉爾暗天庇護所",
@@ -1097,7 +1196,8 @@
     "lng": -70.5,
     "zoom": 8,
     "desc": "IDA 認證暗天庇護所。以諾貝爾文學獎得主命名，位於智利埃爾基河谷，是南美洲首批 IDA 認證地點之一，智利天文觀測條件享譽全球。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Sanctuary. Named for the Nobel laureate in literature, in Chile's Elqui Valley — one of South America's first IDA-certified sites, with Chile's world-renowned astronomical observing conditions."
   },
   {
     "name": "大屠殺岩暗天庇護所",
@@ -1108,7 +1208,8 @@
     "lng": -119.5,
     "zoom": 8,
     "desc": "IDA 認證暗天庇護所。內華達州黑岩沙漠旁的偏遠高原，2019 年獲認，大盆地廣袤荒野帶來 Bortle 1-2 級的超暗天空，是終極暗天朝聖地。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Sanctuary. A remote plateau beside Nevada's Black Rock Desert, certified in 2019; the vast Great Basin wilderness brings a Bortle 1-2 ultra-dark sky — an ultimate dark-sky pilgrimage."
   },
   {
     "name": "惡魔河暗天庇護所",
@@ -1119,7 +1220,8 @@
     "lng": -100.97,
     "zoom": 8,
     "desc": "IDA 認證暗天庇護所。德克薩斯州最偏遠的州立自然保護區，2019 年獲認，惡魔河流域無人荒野帶來德州最純淨的夜空之一。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Sanctuary. Texas's most remote state natural area, certified in 2019; the uninhabited wilderness of the Devils River basin brings one of Texas's purest skies."
   },
   {
     "name": "彩虹橋暗天庇護所",
@@ -1130,7 +1232,8 @@
     "lng": -110.96,
     "zoom": 10,
     "desc": "IDA 認證暗天庇護所。世界最大天然石橋之一，納瓦霍民族聖地，需乘船抵達，2018 年獲認，幾乎零光害的夜空讓神聖砂岩彩虹橋在繁星下更顯莊嚴。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Sanctuary. One of the world's largest natural stone bridges and a sacred Navajo site, reachable only by boat, certified in 2018; the near-zero light pollution makes the sacred sandstone rainbow bridge all the more solemn beneath the stars."
   },
   {
     "name": "卡塔丁森林與水域暗天庇護所",
@@ -1141,7 +1244,8 @@
     "lng": -68.7,
     "zoom": 8,
     "desc": "IDA 認證暗天庇護所。緬因州北部原始荒野，阿帕拉契山徑的北端終點，2020 年獲認，人跡罕至的原始森林保存了美國東北部最純淨的星空，秋冬可見極光。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Sanctuary. A pristine wilderness in northern Maine, the northern terminus of the Appalachian Trail, certified in 2020; the little-visited old-growth forest preserves the purest sky in the northeastern US, with the aurora visible in autumn and winter."
   },
   {
     "name": "紐埃暗天庇護所",
@@ -1152,7 +1256,8 @@
     "lng": -169.87,
     "zoom": 10,
     "desc": "IDA 認證暗天庇護所。南太平洋中的珊瑚礁島國，2020 年整個島國獲認，是全球最早以國家規模獲得 IDA 認證的地方，熱帶夜空南天星座一覽無遺。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Sanctuary. A coral-reef island nation in the South Pacific, the entire country certified in 2020 — the first place certified at a national scale by the IDA, its tropical sky revealing the southern constellations in full."
   },
   {
     "name": "醫藥岩暗天庇護所",
@@ -1163,7 +1268,8 @@
     "lng": -104.55,
     "zoom": 10,
     "desc": "IDA 認證暗天庇護所。蒙大拿州東部奇特砂岩地貌，美洲原住民聖地，2020 年獲認，廣袤蒙大拿大平原帶來超低光害環境，「大天空之州」的名副其實之處。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Sanctuary. A striking sandstone landscape in eastern Montana and a Native American sacred site, certified in 2020; the vast Montana plains bring an ultra-low-light environment — a fitting home for the 'Big Sky State.'"
   },
   {
     "name": "邊界水域暗天庇護所",
@@ -1174,7 +1280,8 @@
     "lng": -91.8,
     "zoom": 7,
     "desc": "IDA 認證暗天庇護所。明尼蘇達州超過 100 萬英畝的原始荒野水域，2020 年獲認，千湖之間純淨夜空倒映繁星如畫，每年北極光頻繁出現，是美國中西部最珍貴的暗天地。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Sanctuary. A pristine wilderness of over a million acres of waters in Minnesota, certified in 2020; among the thousand lakes the pure sky mirrors the stars, and frequent auroras make it one of the Midwest's most precious dark-sky lands."
   },
   {
     "name": "艾哈海卡拉哈里暗天庇護所",
@@ -1185,7 +1292,8 @@
     "lng": 20.5,
     "zoom": 7,
     "desc": "IDA 認證暗天庇護所。南非喀拉哈里沙漠中的桑族文化遺產公園，2019 年獲認，是非洲首個 IDA 認證地點，乾燥沙漠帶來非洲南部最純淨的夜空。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Sanctuary. A San heritage park in South Africa's Kalahari Desert, certified in 2019 — Africa's first IDA-certified site, the dry desert bringing one of southern Africa's purest skies."
   },
   {
     "name": "跳坡暗天庇護所",
@@ -1196,7 +1304,8 @@
     "lng": 145,
     "zoom": 8,
     "desc": "IDA 認證暗天庇護所。澳大利亞昆士蘭州內陸偏遠地區，2019 年獲認，廣袤澳洲內陸極低光害環境是觀測南天銀河核心和南十字星的絕佳地點。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Sanctuary. A remote inland area of Queensland, Australia, certified in 2019; the vast Australian outback's very low light pollution makes it an excellent spot to observe the southern Milky Way core and the Southern Cross."
   },
   {
     "name": "斯圖爾特島拉基烏拉暗天庇護所",
@@ -1207,7 +1316,8 @@
     "lng": 168.13,
     "zoom": 9,
     "desc": "IDA 認證暗天庇護所。紐西蘭最南端大型島嶼，以頻繁可見南半球極光著稱，2019 年獲認，原始森林與純淨海洋空氣帶來南太平洋最純淨的夜空之一。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Sanctuary. New Zealand's southernmost large island, famed for frequent Southern Hemisphere auroras, certified in 2019; its pristine forest and clean ocean air bring one of the South Pacific's purest skies."
   },
   {
     "name": "皮特凱恩群島暗天庇護所",
@@ -1218,7 +1328,8 @@
     "lng": -130.1,
     "zoom": 10,
     "desc": "IDA 認證暗天庇護所。以邦蒂號叛變後裔居住著稱，世界上人口最少的有人島，2019 年獲認，遠離塵囂帶來地球上最純淨的夜空之一，肉眼可見數千顆星星。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Sanctuary. Famed as home to descendants of the Bounty mutineers and the world's least-populous inhabited island, certified in 2019; its remoteness brings one of Earth's purest skies, with thousands of stars visible to the naked eye."
   },
   {
     "name": "巴西島暗天庇護所",
@@ -1229,7 +1340,8 @@
     "lng": -4.79,
     "zoom": 12,
     "desc": "IDA 認證暗天庇護所。威爾斯西端中世紀基督教朝聖小島，常住人口極少，2023 年獲認，凱爾特海清澈大氣帶來卓越夜空透明度，古老修道院在銀河映照下盡顯神聖。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Sanctuary. A medieval Christian pilgrimage island off the western tip of Wales with very few permanent residents, certified in 2023; the clear Celtic Sea air gives outstanding sky transparency, the ancient monastery solemn beneath the Milky Way."
   },
   {
     "name": "俄勒岡荒野暗天庇護所",
@@ -1240,7 +1352,8 @@
     "lng": -120.5,
     "zoom": 7,
     "desc": "IDA 認證暗天庇護所。俄勒岡州東南部廣袤高沙漠荒野，2024 年獲認，是美國西海岸最大連續暗天區域之一，壯麗的高沙漠銀河全景令人歎為觀止。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Sanctuary. A vast high-desert wilderness in southeastern Oregon, certified in 2024 — one of the largest continuous dark-sky areas on the US West Coast, with a magnificent high-desert Milky Way panorama."
   },
   {
     "name": "凱科拉暗天庇護所",
@@ -1251,7 +1364,8 @@
     "lng": 173.68,
     "zoom": 10,
     "desc": "IDA 認證暗天庇護所。紐西蘭南島東岸以觀賞鯨豚著稱的海濱小鎮，2024 年獲認，太平洋海濱清澈夜空帶來優質觀星環境，日賞鯨豚、夜觀繁星是此地獨特體驗。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Sanctuary. A coastal town on the east coast of New Zealand's South Island famed for whale watching, certified in 2024; the clear Pacific coastal sky offers fine stargazing — whales by day and stars by night make a distinctive experience."
   },
   {
     "name": "塔胡納格倫諾基暗天庇護所",
@@ -1262,7 +1376,8 @@
     "lng": 168.4,
     "zoom": 11,
     "desc": "IDA 認證暗天庇護所。瓦卡蒂普湖北端、電影《魔戒》拍攝地之一，2025 年獲認，雪山倒映湖面的繁星景象如夢似幻，是紐西蘭最新一批暗天認證地點。",
-    "img": null
+    "img": null,
+    "desc_en": "An IDA-certified Dark Sky Sanctuary. At the north end of Lake Wakatipu and a filming location for 'The Lord of the Rings,' certified in 2025; the snow-capped peaks mirrored on the lake beneath the stars look dreamlike — among New Zealand's newest dark-sky sites."
   },
   {
     "name": "塞文山國家公園",
@@ -1273,7 +1388,8 @@
     "lng": 3.58,
     "zoom": 9,
     "desc": "歐洲面積最大的國際暗天保護區之一，2018 年獲認。花崗岩高原與深谷交織，遠離大城光害，是法國南部的觀星勝地。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/C%C3%A9vennes_France_night_sky_with_stars_01.jpg/500px-C%C3%A9vennes_France_night_sky_with_stars_01.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/C%C3%A9vennes_France_night_sky_with_stars_01.jpg/500px-C%C3%A9vennes_France_night_sky_with_stars_01.jpg",
+    "desc_en": "One of Europe's largest international dark sky reserves, certified in 2018. Its granite plateaus and deep valleys, far from city light, make it a stargazing destination in southern France."
   },
   {
     "name": "藍色阿爾卑斯—梅康圖爾",
@@ -1284,7 +1400,8 @@
     "lng": 6.95,
     "zoom": 9,
     "desc": "2019 年獲認的國際暗天保護區，緊鄰地中海卻保有純淨夜空，高山湖泊與峽谷在銀河下格外靜謐。",
-    "img": null
+    "img": null,
+    "desc_en": "An international dark sky reserve certified in 2019; though close to the Mediterranean it keeps a pure sky, its alpine lakes and gorges especially tranquil beneath the Milky Way."
   },
   {
     "name": "比克國家公園",
@@ -1295,7 +1412,8 @@
     "lng": 20.5,
     "zoom": 9,
     "desc": "匈牙利第三座 IDA 暗天公園（2017）。喀斯特石灰岩高地與茂密森林，是中歐少見的低光害觀星地。",
-    "img": null
+    "img": null,
+    "desc_en": "Hungary's third IDA dark sky park (2017). Its karst limestone uplands and dense forest make it a rare low-light stargazing spot in Central Europe."
   },
   {
     "name": "北約克沼澤國家公園",
@@ -1306,7 +1424,8 @@
     "lng": -0.9,
     "zoom": 9,
     "desc": "2020 年與約克郡谷地共同獲認的國際暗天保護區，遼闊石楠荒原延伸至海岸，是英格蘭東北最佳暗夜之一。",
-    "img": null
+    "img": null,
+    "desc_en": "An international dark sky reserve certified jointly with the Yorkshire Dales in 2020; the broad heather moors stretch to the coast — one of the best dark skies in northeast England."
   },
   {
     "name": "克蘭伯恩蔡斯",
@@ -1317,7 +1436,8 @@
     "lng": -2.07,
     "zoom": 9,
     "desc": "英格蘭南部白堊丘陵的國際暗天保護區（2019），古老林地與田園村落保有難得的黑暗夜空。",
-    "img": null
+    "img": null,
+    "desc_en": "An international dark sky reserve in the chalk hills of southern England (2019), where ancient woodland and pastoral villages preserve a rare dark sky."
   },
   {
     "name": "凱恩戈姆暗天公園",
@@ -1328,7 +1448,8 @@
     "lng": -3.37,
     "zoom": 9,
     "desc": "位於蘇格蘭凱恩戈姆山國家公園內（2018 認證），高地荒野人煙稀少，是英國本島最暗的天空之一。",
-    "img": null
+    "img": null,
+    "desc_en": "Within the Cairngorms National Park of Scotland (certified 2018); the sparsely populated highland wilderness has one of the darkest skies on the British mainland."
   },
   {
     "name": "OM 暗天公園",
@@ -1339,7 +1460,8 @@
     "lng": -6.93,
     "zoom": 10,
     "desc": "北愛爾蘭首座 IDA 暗天公園（2020）。達瓦森林結合史前石圈與現代天文台，文化與星空兼具。",
-    "img": null
+    "img": null,
+    "desc_en": "Northern Ireland's first IDA dark sky park (2020). Davagh Forest combines a prehistoric stone circle with a modern observatory — culture and stars together."
   },
   {
     "name": "圓頂礁國家公園",
@@ -1350,7 +1472,8 @@
     "lng": -111.17,
     "zoom": 9,
     "desc": "猶他州色彩斑斕的褶皺岩層「水穴褶曲」，2015 年獲 IDA 認證，乾燥高原帶來極佳的銀河能見度。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Fruita_Schoolhouse_with_night_sky.jpg/500px-Fruita_Schoolhouse_with_night_sky.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Fruita_Schoolhouse_with_night_sky.jpg/500px-Fruita_Schoolhouse_with_night_sky.jpg",
+    "desc_en": "Utah's colorful folded rock layers known as the Waterpocket Fold, IDA-certified in 2015; the dry plateau brings superb Milky Way visibility."
   },
   {
     "name": "峽谷地國家公園",
@@ -1361,7 +1484,8 @@
     "lng": -109.88,
     "zoom": 9,
     "desc": "科羅拉多河與綠河切割出的壯闊峽谷迷宮，2015 年獲認，是美國西南最原始遼闊的暗夜荒野。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Night_Sky_at_Chesler_Park_%2821523214929%29.jpg/500px-Night_Sky_at_Chesler_Park_%2821523214929%29.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Night_Sky_at_Chesler_Park_%2821523214929%29.jpg/500px-Night_Sky_at_Chesler_Park_%2821523214929%29.jpg",
+    "desc_en": "The vast canyon maze carved by the Colorado and Green Rivers, certified in 2015 — the most pristine and expansive dark-night wilderness of the American Southwest."
   },
   {
     "name": "拱門國家公園",
@@ -1372,7 +1496,8 @@
     "lng": -109.59,
     "zoom": 10,
     "desc": "擁有逾兩千座天然石拱，2019 年獲 IDA 認證，銀河自紅岩拱門間升起是攝影師夢寐以求的畫面。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Milky_Way_at_Double_Arch.jpg/500px-Milky_Way_at_Double_Arch.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Milky_Way_at_Double_Arch.jpg/500px-Milky_Way_at_Double_Arch.jpg",
+    "desc_en": "Home to over two thousand natural stone arches, IDA-certified in 2019; the Milky Way rising between the red-rock arches is a scene photographers dream of."
   },
   {
     "name": "甘尼森黑峽谷國家公園",
@@ -1383,7 +1508,8 @@
     "lng": -107.72,
     "zoom": 10,
     "desc": "以深邃陡峭的黑色峽壁聞名，2015 年獲認。狹窄谷底僅午間見光，入夜後星空格外深邃。",
-    "img": null
+    "img": null,
+    "desc_en": "Famed for its deep, sheer black canyon walls, certified in 2015. The narrow floor sees sunlight only at midday, and after dark the starry sky is especially deep."
   },
   {
     "name": "羚羊島州立公園",
@@ -1394,7 +1520,8 @@
     "lng": -112.2,
     "zoom": 10,
     "desc": "大鹽湖中最大的島嶼，2017 年獲認。雖鄰近鹽湖城卻保有開闊暗空，湖面映星別具一格。",
-    "img": null
+    "img": null,
+    "desc_en": "The largest island in the Great Salt Lake, certified in 2017. Though near Salt Lake City it keeps an open dark sky, the stars mirrored on the lake in a distinctive way."
   },
   {
     "name": "卡普林火山國家紀念地",
@@ -1405,7 +1532,8 @@
     "lng": -103.97,
     "zoom": 10,
     "desc": "一座保存完好的死火山錐，2016 年獲認。登上火山口邊緣可 360 度飽覽地平線上的繁星。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Capulin_Night_Sky.jpg/500px-Capulin_Night_Sky.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Capulin_Night_Sky.jpg/500px-Capulin_Night_Sky.jpg",
+    "desc_en": "A well-preserved extinct volcanic cone, certified in 2016. From the crater rim one can take in a 360° panorama of stars along the horizon."
   },
   {
     "name": "石化林國家公園",
@@ -1416,7 +1544,8 @@
     "lng": -109.81,
     "zoom": 9,
     "desc": "以兩億年前的矽化木與彩繪沙漠著稱，2018 年獲 IDA 認證，荒漠夜空清澈無比。",
-    "img": null
+    "img": null,
+    "desc_en": "Famed for its 200-million-year-old petrified wood and Painted Desert, IDA-certified in 2018; the desert sky is exceptionally clear."
   },
   {
     "name": "雪松崩國家紀念地",
@@ -1427,7 +1556,8 @@
     "lng": -112.84,
     "zoom": 10,
     "desc": "海拔逾 3,000 公尺的天然圓形劇場岩壁，2017 年獲認。高海拔與乾燥空氣造就頂級觀星條件。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/The_starry_night_sky_casts_celestial_light_onto_a_meadow_framed_by_conifer_trees_at_Cedar_Breaks_National_Monument%2C_Utah._%286bd9a8c7-155d-451f-6704-cdbe39baad12%29.jpg/500px-thumbnail.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/The_starry_night_sky_casts_celestial_light_onto_a_meadow_framed_by_conifer_trees_at_Cedar_Breaks_National_Monument%2C_Utah._%286bd9a8c7-155d-451f-6704-cdbe39baad12%29.jpg/500px-thumbnail.jpg",
+    "desc_en": "A natural amphitheater of rock walls over 3,000 m high, certified in 2017. The high elevation and dry air make for top-tier stargazing."
   },
   {
     "name": "妖精谷州立公園",
@@ -1438,7 +1568,8 @@
     "lng": -110.7,
     "zoom": 10,
     "desc": "遍布奇形蘑菇狀岩柱的紅色谷地，2016 年獲認，宛如異星地表般的夜景。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Man_Stars_Goblin_Valley_%28Unsplash%29.jpg/500px-Man_Stars_Goblin_Valley_%28Unsplash%29.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Man_Stars_Goblin_Valley_%28Unsplash%29.jpg/500px-Man_Stars_Goblin_Valley_%28Unsplash%29.jpg",
+    "desc_en": "A red valley scattered with oddly shaped mushroom-like hoodoos, certified in 2016 — a nightscape like the surface of an alien world."
   },
   {
     "name": "水牛國家河流",
@@ -1449,7 +1580,8 @@
     "lng": -92.75,
     "zoom": 9,
     "desc": "美國首批受保護的自由流動河流之一，2019 年獲認，是美國中南部難得的大片暗夜保護地。",
-    "img": null
+    "img": null,
+    "desc_en": "One of America's first protected free-flowing rivers, certified in 2019 — a rare large dark-night reserve in the south-central US."
   },
   {
     "name": "西奧多·羅斯福國家公園",
@@ -1460,7 +1592,8 @@
     "lng": -103.54,
     "zoom": 9,
     "desc": "北達科他惡地地貌與野牛群棲地，2024 年獲認，是美國北方大平原上的新晉暗天公園。",
-    "img": null
+    "img": null,
+    "desc_en": "The badlands and bison range of North Dakota, certified in 2024 — a newly designated dark sky park on the northern Great Plains."
   },
   {
     "name": "大盆地國家公園",
@@ -1471,7 +1604,8 @@
     "lng": -114.3,
     "zoom": 9,
     "desc": "內華達偏遠的高山沙漠公園，2016 年獲認，擁有美國本土最黑暗的天空之一與古老的狐尾松林。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Starry_sky_over_Great_Basin_National_Park_%2826904034291%29.jpg/500px-Starry_sky_over_Great_Basin_National_Park_%2826904034291%29.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Starry_sky_over_Great_Basin_National_Park_%2826904034291%29.jpg/500px-Starry_sky_over_Great_Basin_National_Park_%2826904034291%29.jpg",
+    "desc_en": "A remote alpine desert park in Nevada, certified in 2016, with one of the darkest skies in the contiguous US and ancient bristlecone pine forest."
   },
   {
     "name": "史蒂芬·福斯特州立公園",
@@ -1482,7 +1616,8 @@
     "lng": -82.36,
     "zoom": 10,
     "desc": "深入奧克弗諾基沼澤的入口，2016 年獲認，是美國東南部最暗的天空之一，星光倒映黑水沼澤尤為夢幻。",
-    "img": null
+    "img": null,
+    "desc_en": "The gateway into the Okefenokee Swamp, certified in 2016 — one of the darkest skies in the southeastern US, the starlight mirrored on the black-water swamp especially dreamlike."
   },
   {
     "name": "布萊斯峽谷國家公園",
@@ -1493,7 +1628,8 @@
     "lng": -112.18,
     "zoom": 10,
     "desc": "以紅岩尖塔群聞名，2019 年獲認，高海拔與乾燥空氣造就極佳透明度，肉眼可見約 7500 顆星。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Bryce_Canyon%2C_the_heart_of_the_Milky_Way_%2815170471778%29.jpg/500px-Bryce_Canyon%2C_the_heart_of_the_Milky_Way_%2815170471778%29.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Bryce_Canyon%2C_the_heart_of_the_Milky_Way_%2815170471778%29.jpg/500px-Bryce_Canyon%2C_the_heart_of_the_Milky_Way_%2815170471778%29.jpg",
+    "desc_en": "Famed for its red-rock hoodoo spires, certified in 2019; the high elevation and dry air give superb transparency, with about 7,500 stars visible to the naked eye."
   },
   {
     "name": "梅薩維德國家公園",
@@ -1504,7 +1640,8 @@
     "lng": -108.46,
     "zoom": 10,
     "desc": "保存古普韋布洛人懸崖民居的世界遺產，2021 年獲認，千年遺址在璀璨銀河下別具歷史氛圍。",
-    "img": null
+    "img": null,
+    "desc_en": "A World Heritage Site preserving ancient Puebloan cliff dwellings, certified in 2021; the thousand-year-old ruins take on a special historic air beneath the brilliant Milky Way."
   },
   {
     "name": "圖馬卡科里國家歷史公園",
@@ -1515,7 +1652,8 @@
     "lng": -111.05,
     "zoom": 11,
     "desc": "保存西班牙傳教站遺跡，2024 年獲認，古老教堂在亞利桑那南部的星空下訴說邊疆歲月。",
-    "img": null
+    "img": null,
+    "desc_en": "Preserving the ruins of a Spanish mission, certified in 2024; the old church tells of frontier days beneath the southern Arizona sky."
   },
   {
     "name": "薩瓜羅國家公園",
@@ -1526,7 +1664,8 @@
     "lng": -110.5,
     "zoom": 10,
     "desc": "守護高大的巨柱仙人掌，2023 年獲認都市暗空地，緊鄰圖森仍保有壯麗的沙漠夜空剪影。",
-    "img": null
+    "img": null,
+    "desc_en": "Guardian of the towering saguaro cactus, certified an urban dark-sky place in 2023; though next to Tucson it keeps a magnificent desert night-sky silhouette."
   },
   {
     "name": "恐龍國家紀念地",
@@ -1537,7 +1676,8 @@
     "lng": -108.98,
     "zoom": 9,
     "desc": "以化石牆與峽谷河流著稱，2019 年獲認，遠離城市的高原荒野提供開闊無遮的銀河視野。",
-    "img": null
+    "img": null,
+    "desc_en": "Famed for its fossil wall and canyon river, certified in 2019; the highland wilderness far from cities offers an open, unobstructed view of the Milky Way."
   },
   {
     "name": "庫雷坎蒂國家遊憩區",
@@ -1548,7 +1688,8 @@
     "lng": -107.33,
     "zoom": 10,
     "desc": "甘尼森河上的串連水庫，2015 年獲認，高山湖泊倒映繁星，是科羅拉多西部的觀星佳所。",
-    "img": null
+    "img": null,
+    "desc_en": "A chain of reservoirs on the Gunnison River, certified in 2015; the alpine lakes mirror the stars — a fine stargazing spot in western Colorado."
   },
   {
     "name": "黑台地州立公園",
@@ -1559,7 +1700,8 @@
     "lng": -102.883,
     "zoom": 10,
     "desc": "位於奧克拉荷馬狹長地帶西端，2021 年成為該州首座暗空公園，三州交界的偏遠高地天空極為純淨。",
-    "img": null
+    "img": null,
+    "desc_en": "At the western end of the Oklahoma Panhandle, in 2021 it became the state's first dark sky park; the remote highland at the three-state border has an extremely pure sky."
   },
   {
     "name": "航海家國家公園",
@@ -1570,7 +1712,8 @@
     "lng": -92.88,
     "zoom": 9,
     "desc": "以縱橫水道與湖泊構成的北方森林公園，2020 年獲認，緯度高時偶可見極光與倒映湖面的星河。",
-    "img": null
+    "img": null,
+    "desc_en": "A northern forest park of crisscrossing waterways and lakes, certified in 2020; at its high latitude the aurora and a star-river mirrored on the lakes are occasionally visible."
   },
   {
     "name": "猛獁洞國家公園",
@@ -1581,7 +1724,8 @@
     "lng": -86.1,
     "zoom": 10,
     "desc": "守護世界最長洞穴系統的世界遺產，2021 年獲認，地面森林之上保有美國東部少見的黑暗天空。",
-    "img": null
+    "img": null,
+    "desc_en": "A World Heritage Site guarding the world's longest cave system, certified in 2021; above its surface forest it keeps a dark sky rare in the eastern US."
   },
   {
     "name": "瓦托加州立公園",
@@ -1592,7 +1736,8 @@
     "lng": -80.14,
     "zoom": 11,
     "desc": "西維吉尼亞最大的州立公園，2021 年偕鄰近自然區共同獲認，阿帕拉契山林深處天空格外幽暗。",
-    "img": null
+    "img": null,
+    "desc_en": "West Virginia's largest state park, certified in 2021 together with nearby natural areas; deep in the Appalachian forest the sky is especially dark."
   },
   {
     "name": "基西米草原保護州立公園",
@@ -1603,7 +1748,8 @@
     "lng": -81.05,
     "zoom": 10,
     "desc": "保存佛羅里達殘存的乾草原，2016 年獲認，是佛州少數能見銀河與深空天體的暗空避風港。",
-    "img": null
+    "img": null,
+    "desc_en": "Preserving Florida's remnant dry prairie, certified in 2016 — one of the few dark-sky havens in Florida where the Milky Way and deep-sky objects can be seen."
   },
   {
     "name": "斯湯頓河州立公園",
@@ -1614,7 +1760,8 @@
     "lng": -78.66,
     "zoom": 11,
     "desc": "維吉尼亞南部河畔的州立公園，2015 年成為該州首座暗空公園，遠離都會光暈的鄉野夜空清朗。",
-    "img": null
+    "img": null,
+    "desc_en": "A riverside state park in southern Virginia; in 2015 it became the state's first dark sky park, its rural sky clear and far from city glow."
   },
   {
     "name": "T.K. 勞利斯郡立公園",
@@ -1625,7 +1772,8 @@
     "lng": -85.74,
     "zoom": 12,
     "desc": "密西根西南部的郡立公園，2019 年獲認，雖位於人口稠密區域卻意外保有優質的黑暗天空。",
-    "img": null
+    "img": null,
+    "desc_en": "A county park in southwestern Michigan, certified in 2019; though in a densely populated region it unexpectedly keeps a fine dark sky."
   },
   {
     "name": "皮克特 CCC 紀念州立公園",
@@ -1636,7 +1784,8 @@
     "lng": -84.79,
     "zoom": 11,
     "desc": "坎伯蘭高原上的州立公園，2015 年成為田納西首座暗空公園，林木環抱的天然劇場仰望星河。",
-    "img": null
+    "img": null,
+    "desc_en": "A state park on the Cumberland Plateau; in 2015 it became Tennessee's first dark sky park, a natural amphitheater embraced by forest for gazing at the star-river."
   },
   {
     "name": "北叉公園",
@@ -1647,7 +1796,8 @@
     "lng": -111.83,
     "zoom": 12,
     "desc": "韋伯郡的山谷公園，2015 年獲認，緊鄰奧格登都會區卻憑山勢屏障保有難得的暗空。",
-    "img": null
+    "img": null,
+    "desc_en": "A valley park in Weber County, certified in 2015; though near the Ogden metro area, the mountains shield it to keep a rare dark sky."
   },
   {
     "name": "朱利安暗空社區",
@@ -1658,7 +1808,8 @@
     "lng": -116.6,
     "zoom": 12,
     "desc": "聖地牙哥東部的山中小鎮，2021 年獲認暗空社區，以蘋果派與清朗星空吸引週末造訪的觀星者。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Milky_Way_Tree_Julian_Starfest_%2885487917%29.jpeg/500px-Milky_Way_Tree_Julian_Starfest_%2885487917%29.jpeg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Milky_Way_Tree_Julian_Starfest_%2885487917%29.jpeg/500px-Milky_Way_Tree_Julian_Starfest_%2885487917%29.jpeg",
+    "desc_en": "A mountain town east of San Diego, certified a dark sky community in 2021, drawing weekend stargazers with apple pie and clear skies."
   },
   {
     "name": "布拉夫暗空社區",
@@ -1669,7 +1820,8 @@
     "lng": -109.55,
     "zoom": 12,
     "desc": "聖胡安河畔的歷史小鎮，2025 年獲認暗空社區，紅岩環抱的偏遠聚落保有極為原始的夜空。",
-    "img": null
+    "img": null,
+    "desc_en": "A historic town on the San Juan River, certified a dark sky community in 2025; the remote red-rock settlement keeps a very pristine sky."
   },
   {
     "name": "約克郡谷地國家公園",
@@ -1680,7 +1832,8 @@
     "lng": -2.16,
     "zoom": 9,
     "desc": "綿延石牆與草甸谷地構成的英格蘭北部公園，2020 年獲認暗空保護區，是英國重要的觀星地。",
-    "img": null
+    "img": null,
+    "desc_en": "A northern England park of drystone walls and meadow valleys, certified a dark sky reserve in 2020 — an important stargazing site in Britain."
   },
   {
     "name": "勞沃斯梅爾國家公園",
@@ -1691,7 +1844,8 @@
     "lng": 6.235,
     "zoom": 11,
     "desc": "荷蘭北部圍墾而成的濕地湖泊公園，2016 年獲認暗空公園，是人口稠密的荷蘭少有的黑暗天空。",
-    "img": null
+    "img": null,
+    "desc_en": "A reclaimed wetland-and-lake park in the northern Netherlands, certified a dark sky park in 2016 — a rare dark sky in the densely populated Netherlands."
   },
   {
     "name": "拉帕拉拉荒野自然保護區",
@@ -1702,7 +1856,8 @@
     "lng": 28.31,
     "zoom": 9,
     "desc": "林波波省的私人荒野保護區，2025 年成為南非首座暗空公園，南半球的草原夜空可見南十字與銀河核心。",
-    "img": null
+    "img": null,
+    "desc_en": "A private wilderness reserve in Limpopo Province; in 2025 it became South Africa's first dark sky park, its Southern Hemisphere grassland sky revealing the Southern Cross and galactic core."
   },
   {
     "name": "南拉諾河州立公園",
@@ -1713,7 +1868,8 @@
     "lng": -99.8002,
     "zoom": 11,
     "desc": "德州丘陵地帶的河谷公園，遠離大城市光害，被認證為國際暗空公園，夏季可見明亮的銀河橫跨天際。",
-    "img": null
+    "img": null,
+    "desc_en": "A river-valley park in the Texas Hill Country, far from city light and certified an International Dark Sky Park; in summer the bright Milky Way spans the sky."
   },
   {
     "name": "弗洛里森特化石層國家紀念地",
@@ -1724,7 +1880,8 @@
     "lng": -105.2814,
     "zoom": 11,
     "desc": "科羅拉多落磯山間的化石保護區，海拔逾 2500 公尺的高原乾燥空氣帶來通透夜空，銀河與深空天體清晰可辨。",
-    "img": null
+    "img": null,
+    "desc_en": "A fossil reserve in Colorado's Rocky Mountains; the dry air of the plateau, over 2,500 m high, brings a clear sky where the Milky Way and deep-sky objects are easily seen."
   },
   {
     "name": "煙囪岩國家紀念地",
@@ -1732,10 +1889,11 @@
     "country": "美國・科羅拉多州",
     "year": 2025,
     "lat": 37.1842,
-    "lng": -107.3120,
+    "lng": -107.312,
     "zoom": 11,
     "desc": "科羅拉多西南部的古普韋布洛遺址，先民曾在此觀測天象，2025 年獲暗空認證，延續千年的星空文化。",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Star_Trails_Over_Chimney_Rock_%28233832313%29.jpeg/500px-Star_Trails_Over_Chimney_Rock_%28233832313%29.jpeg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Star_Trails_Over_Chimney_Rock_%28233832313%29.jpeg/500px-Star_Trails_Over_Chimney_Rock_%28233832313%29.jpeg",
+    "desc_en": "An ancient Puebloan site in southwestern Colorado where the ancestors once observed the heavens, dark-sky-certified in 2025 — carrying on a thousand-year star culture."
   },
   {
     "name": "棉木峽谷州立公園",
@@ -1746,7 +1904,8 @@
     "lng": -120.4426,
     "zoom": 10,
     "desc": "奧勒岡中北部約翰戴河沿岸的乾燥峽谷公園，人煙稀少，是該州最暗的夜空之一，銀河核心清晰可見。",
-    "img": null
+    "img": null,
+    "desc_en": "A dry canyon park along the John Day River in north-central Oregon, sparsely populated, with one of the state's darkest skies and a clearly visible galactic core."
   },
   {
     "name": "奧勒岡洞窟國家紀念地",
@@ -1754,10 +1913,11 @@
     "country": "美國・奧勒岡州",
     "year": 2024,
     "lat": 42.0951,
-    "lng": -123.4030,
+    "lng": -123.403,
     "zoom": 11,
     "desc": "奧勒岡西南山區的大理石洞窟保護區，四周森林環繞且遠離光源，地面之上的夜空同樣值得細賞。",
-    "img": null
+    "img": null,
+    "desc_en": "A marble cave reserve in the mountains of southwestern Oregon, ringed by forest and far from light; the sky above its surface is equally worth admiring."
   },
   {
     "name": "西斯特斯暗空社區",
@@ -1768,7 +1928,8 @@
     "lng": -121.5493,
     "zoom": 12,
     "desc": "奧勒岡中部喀斯喀特山腳下的小鎮，以照明友善政策保護星空，2025 年獲認證為國際暗空社區。",
-    "img": null
+    "img": null,
+    "desc_en": "A town at the foot of the Cascades in central Oregon that protects its sky with lighting-friendly policy, certified an International Dark Sky Community in 2025."
   },
   {
     "name": "安特洛普暗空社區",
@@ -1779,7 +1940,8 @@
     "lng": -120.7227,
     "zoom": 12,
     "desc": "奧勒岡中北部人口僅數十人的偏遠小鎮，四周為遼闊牧野，幾乎無人造光害，夜空純淨深邃。",
-    "img": null
+    "img": null,
+    "desc_en": "A remote town of only a few dozen people in north-central Oregon, surrounded by vast rangeland with almost no artificial light — a pure, deep night sky."
   },
   {
     "name": "阿提斯皇家動物園暗空地",
@@ -1790,7 +1952,8 @@
     "lng": 4.9165,
     "zoom": 14,
     "desc": "位於阿姆斯特丹市中心的歷史動物園，透過照明改造成為全球首座獲暗空認證的動物園，示範都市中的星空守護。",
-    "img": null
+    "img": null,
+    "desc_en": "A historic zoo in central Amsterdam that, through a lighting retrofit, became the world's first dark-sky-certified zoo — a model of guarding the stars within a city."
   },
   {
     "name": "東峽谷州立公園",
@@ -1801,7 +1964,8 @@
     "lng": -111.5886,
     "zoom": 11,
     "desc": "猶他州沃薩奇山脈中的水庫公園，距鹽湖城不遠卻有受保護的暗空，是城市居民就近觀星的去處。",
-    "img": null
+    "img": null,
+    "desc_en": "A reservoir park in Utah's Wasatch Mountains; though not far from Salt Lake City it has a protected dark sky — a nearby stargazing spot for city residents."
   },
   {
     "name": "約旦內爾州立公園",
@@ -1812,7 +1976,8 @@
     "lng": -111.4138,
     "zoom": 11,
     "desc": "猶他州沃薩奇後山的高山水庫公園，海拔較高、空氣清澈，提供良好的星空觀測環境。",
-    "img": null
+    "img": null,
+    "desc_en": "A high-mountain reservoir park behind the Wasatch in Utah; its higher elevation and clear air provide a fine stargazing environment."
   },
   {
     "name": "羅克波特州立公園",
@@ -1823,18 +1988,20 @@
     "lng": -111.3983,
     "zoom": 11,
     "desc": "猶他州北部的水庫公園，群山環抱阻隔了周邊城鎮的光害，夜空可見銀河與眾多星座。",
-    "img": null
+    "img": null,
+    "desc_en": "A reservoir park in northern Utah where surrounding mountains block the light of nearby towns, the night sky revealing the Milky Way and many constellations."
   },
   {
     "name": "鵝頸州立公園",
     "ename": "Goosenecks State Park",
     "country": "美國・猶他州",
     "year": 2021,
-    "lat": 37.1740,
+    "lat": 37.174,
     "lng": -109.9268,
     "zoom": 12,
     "desc": "猶他州東南聖胡安河的深切曲流峽谷，地處科羅拉多高原荒漠，是少有光害干擾的絕佳觀星地。",
-    "img": null
+    "img": null,
+    "desc_en": "The deeply entrenched meanders of the San Juan River in southeastern Utah; set in the Colorado Plateau desert, it is an excellent stargazing spot little troubled by light pollution."
   },
   {
     "name": "奧瑞克州立公園",
@@ -1845,7 +2012,8 @@
     "lng": -110.7271,
     "zoom": 12,
     "desc": "亞利桑那州聖卡塔利娜山北麓的自然公園，雖近土桑市仍維持暗空，是該州早期獲認證的暗空公園之一。",
-    "img": null
+    "img": null,
+    "desc_en": "A nature park on the north flank of the Santa Catalina Mountains in Arizona; though near Tucson it keeps a dark sky — one of the state's early certified dark sky parks."
   },
   {
     "name": "普林維爾水庫州立公園",
@@ -1856,7 +2024,8 @@
     "lng": -120.7237,
     "zoom": 11,
     "desc": "奧勒岡中部高原沙漠中的水庫公園，是該州首座獲國際暗空認證的公園，夜空極為通透。",
-    "img": null
+    "img": null,
+    "desc_en": "A reservoir park in the high desert of central Oregon — the state's first certified International Dark Sky park, with an exceptionally transparent sky."
   },
   {
     "name": "薩利納斯普韋布洛教會國家紀念地",
@@ -1867,7 +2036,8 @@
     "lng": -106.1021,
     "zoom": 11,
     "desc": "新墨西哥州中部的西班牙殖民時期教會與普韋布洛遺址，四周荒原開闊，夜空保留著數百年前的純淨。",
-    "img": null
+    "img": null,
+    "desc_en": "Spanish colonial-era mission and Puebloan ruins in central New Mexico; the open wilderness around it preserves a sky as pure as it was centuries ago."
   },
   {
     "name": "里奇韋暗空社區",
@@ -1878,7 +2048,8 @@
     "lng": -107.7617,
     "zoom": 12,
     "desc": "科羅拉多西南聖胡安山脈腳下的小鎮，以嚴格的照明規範守護星空，被認證為國際暗空社區。",
-    "img": null
+    "img": null,
+    "desc_en": "A town at the foot of the San Juan Mountains in southwestern Colorado that guards its sky with strict lighting rules, certified an International Dark Sky Community."
   },
   {
     "name": "博德明荒原暗空地景",
@@ -1886,10 +2057,11 @@
     "country": "英國・英格蘭",
     "year": 2017,
     "lat": 50.583,
-    "lng": -4.60,
+    "lng": -4.6,
     "zoom": 11,
     "desc": "英格蘭康沃爾郡的花崗岩荒原，地廣人稀的曠野遠離城市燈火，是英格蘭西南最佳的暗空地景之一。",
-    "img": null
+    "img": null,
+    "desc_en": "The granite moorland of Cornwall, England; its broad, sparsely peopled wilderness lies far from city lights — one of the best dark-sky landscapes in southwest England."
   },
   {
     "name": "諾伍德暗空社區",
@@ -1900,7 +2072,8 @@
     "lng": -108.2923,
     "zoom": 12,
     "desc": "科羅拉多西南高原上的農牧小鎮，海拔逾 2100 公尺，乾燥的高地空氣帶來清晰深邃的星空。",
-    "img": null
+    "img": null,
+    "desc_en": "A farming-and-ranching town on a southwestern Colorado plateau, over 2,100 m high, where the dry highland air brings a clear, deep starry sky."
   },
   {
     "name": "城堡谷暗空社區",
@@ -1908,10 +2081,11 @@
     "country": "美國・猶他州",
     "year": 2024,
     "lat": 38.6394,
-    "lng": -109.4090,
+    "lng": -109.409,
     "zoom": 12,
     "desc": "猶他州摩押附近的紅岩谷地小鎮，群峰環繞，遠離光源，是觀賞科羅拉多高原星空的隱秘據點。",
-    "img": null
+    "img": null,
+    "desc_en": "A red-rock valley town near Moab, Utah, ringed by peaks and far from light — a hidden base for viewing the Colorado Plateau sky."
   },
   {
     "name": "斯普林戴爾暗空社區",
@@ -1922,7 +2096,8 @@
     "lng": -112.9986,
     "zoom": 12,
     "desc": "猶他州錫安國家公園門戶的小鎮，與相鄰的國家公園共同守護紅岩峽谷上方的璀璨夜空。",
-    "img": null
+    "img": null,
+    "desc_en": "A gateway town to Utah's Zion National Park that, together with the adjoining park, guards the brilliant sky above the red-rock canyons."
   },
   {
     "name": "美星町",
@@ -1933,7 +2108,8 @@
     "lng": 133.5448,
     "zoom": 12,
     "desc": "岡山縣井原市的山間小鎮，早在 1989 年就制定日本首部光害防制條例，2021 年成為亞洲首座國際暗空社區。",
-    "img": null
+    "img": null,
+    "desc_en": "A mountain town in Ibara City, Okayama Prefecture, that enacted Japan's first light-pollution ordinance back in 1989 and in 2021 became Asia's first International Dark Sky Community."
   },
   {
     "name": "南六呂師",
@@ -1944,7 +2120,8 @@
     "lng": 136.5799,
     "zoom": 12,
     "desc": "福井縣大野市的六呂師高原，2023 年成為亞洲首座都市夜空地，在易達的高原上守護著清澈星空。",
-    "img": null
+    "img": null,
+    "desc_en": "The Rokuroshi Highland in Ono City, Fukui Prefecture; in 2023 it became Asia's first Urban Night Sky Place, guarding a clear sky on an easily reached highland."
   },
   {
     "name": "黃龍風景區",
@@ -1955,29 +2132,32 @@
     "lng": 103.9282,
     "zoom": 11,
     "desc": "四川松潘縣的世界自然遺產，以鈣華彩池聞名，海拔逾 3000 公尺，2025 年成為中國大陸首座國際暗空公園。",
-    "img": null
+    "img": null,
+    "desc_en": "A World Natural Heritage Site in Songpan County, Sichuan, famed for its travertine pools; over 3,000 m high, in 2025 it became mainland China's first International Dark Sky Park."
   },
   {
     "name": "西涌暗空社區",
     "ename": "Xichong, Shenzhen",
     "country": "中國・廣東省",
     "year": 2023,
-    "lat": 22.4870,
+    "lat": 22.487,
     "lng": 114.5332,
     "zoom": 13,
     "desc": "深圳大鵬半島東南端的海濱社區，三面環山、一面向海，2023 年成為中國首座國際暗空社區。",
-    "img": null
+    "img": null,
+    "desc_en": "A coastal community at the southeast tip of Shenzhen's Dapeng Peninsula, embraced by mountains on three sides and open to the sea on one; in 2023 it became China's first International Dark Sky Community."
   },
   {
     "name": "歐拉瑪納拉與蓋拉米爾自然保護區",
     "ename": "AlUla Manara and AlGharameel Nature Reserves",
     "country": "沙烏地阿拉伯",
     "year": 2024,
-    "lat": 26.7800,
-    "lng": 37.9000,
+    "lat": 26.78,
+    "lng": 37.9,
     "zoom": 11,
     "desc": "沙烏地阿拉伯歐拉古城周邊的沙漠保護區，2024 年成為中東與海灣地區首座國際暗空公園，奇岩之上星河璀璨。",
-    "img": null
+    "img": null,
+    "desc_en": "A desert reserve around the ancient city of AlUla in Saudi Arabia; in 2024 it became the first International Dark Sky Park in the Middle East and Gulf region, a brilliant star-river above the strange rock formations."
   },
   {
     "name": "沙爾安國家公園",
@@ -1988,18 +2168,20 @@
     "lng": 38.2442,
     "zoom": 10,
     "desc": "歐拉地區的砂岩峽谷國家公園，2025 年納入暗空認證，遼闊荒漠遠離人造光源，是阿拉伯半島的觀星勝地。",
-    "img": null
+    "img": null,
+    "desc_en": "A sandstone-canyon national park in the AlUla region, added to dark-sky certification in 2025; the vast desert far from artificial light makes it a stargazing destination of the Arabian Peninsula."
   },
   {
     "name": "納夫得暗空公園",
     "ename": "AlNufud Dark Sky Park",
     "country": "沙烏地阿拉伯",
     "year": 2025,
-    "lat": 28.9200,
-    "lng": 40.3980,
+    "lat": 28.92,
+    "lng": 40.398,
     "zoom": 8,
     "desc": "哈伊勒地區的納夫得沙漠保護區，面積逾 1.3 萬平方公里，2025 年成為中東與北非最大的國際暗空公園。",
-    "img": null
+    "img": null,
+    "desc_en": "The Nafud Desert reserve in the Ha'il region, over 13,000 sq km; in 2025 it became the largest International Dark Sky Park in the Middle East and North Africa."
   },
   {
     "name": "普切德暗空社區",
@@ -2010,18 +2192,20 @@
     "lng": 6.1353,
     "zoom": 12,
     "desc": "盧森堡北部阿爾登丘陵的鄉村社區，2025 年成為盧森堡首座國際暗空社區，林野間保有少見的黑暗夜空。",
-    "img": null
+    "img": null,
+    "desc_en": "A rural community in the Ardennes hills of northern Luxembourg; in 2025 it became Luxembourg's first International Dark Sky Community, keeping a rare dark sky among the woodlands."
   },
   {
     "name": "艾威勒暗空社區",
     "ename": "Eiweiler",
     "country": "德國・薩爾蘭",
     "year": 2024,
-    "lat": 49.5550,
+    "lat": 49.555,
     "lng": 7.0128,
     "zoom": 12,
     "desc": "德國薩爾蘭諾菲爾登鎮的小村，透過照明改造守護星空，2024 年獲認證為國際暗空社區。",
-    "img": null
+    "img": null,
+    "desc_en": "A village in the town of Nohfelden in Saarland, Germany, that guards its sky through a lighting retrofit, certified an International Dark Sky Community in 2024."
   },
   {
     "name": "諾森廷／施溫澤荒原自然公園",
@@ -2032,7 +2216,8 @@
     "lng": 12.2978,
     "zoom": 11,
     "desc": "德國梅克倫堡—前波美拉尼亞中部的森林與湖沼自然公園，地廣人稀，是德國北部觀賞銀河的理想之地。",
-    "img": null
+    "img": null,
+    "desc_en": "A forest-and-lake nature park in central Mecklenburg-Vorpommern, Germany, broad and sparsely peopled — an ideal place to view the Milky Way in northern Germany."
   },
   {
     "name": "巴伐利亞森林國家公園",
@@ -2043,7 +2228,8 @@
     "lng": 13.3799,
     "zoom": 11,
     "desc": "德國巴伐利亞與捷克邊境的廣袤林地，是德國最古老的國家公園，2025 年與相鄰自然公園共同獲暗空保護區認證。",
-    "img": null
+    "img": null,
+    "desc_en": "A vast forest on the German-Czech border in Bavaria, Germany's oldest national park; in 2025 it was certified a dark sky reserve together with the adjoining nature park."
   },
   {
     "name": "施皮克羅格星空島",
@@ -2054,7 +2240,8 @@
     "lng": 7.6947,
     "zoom": 13,
     "desc": "德國東弗里西亞群島中無汽車的小島，北海環抱、人造光稀少，是低地海島難得的暗空之地。",
-    "img": null
+    "img": null,
+    "desc_en": "A car-free island among the East Frisian Islands of Germany; embraced by the North Sea with little artificial light, it is a rare dark-sky spot among the lowland sea islands."
   },
   {
     "name": "佩爾沃姆星空島",
@@ -2065,7 +2252,8 @@
     "lng": 8.6385,
     "zoom": 12,
     "desc": "德國北弗里西亞的潮間帶小島，地勢低平、村落稀疏，瓦登海上的夜空清澈深邃。",
-    "img": null
+    "img": null,
+    "desc_en": "A tidal-flat island in North Frisia, Germany, low-lying with scattered villages; the sky over the Wadden Sea is clear and deep."
   },
   {
     "name": "拉姆島",
@@ -2073,10 +2261,11 @@
     "country": "英國・蘇格蘭",
     "year": 2024,
     "lat": 56.9976,
-    "lng": -6.3410,
+    "lng": -6.341,
     "zoom": 11,
     "desc": "蘇格蘭內赫布里底群島中的火山島，2024 年成為蘇格蘭首座國際暗空聖地，山海之間夜空近乎全然黑暗。",
-    "img": null
+    "img": null,
+    "desc_en": "A volcanic island in the Inner Hebrides of Scotland; in 2024 it became Scotland's first International Dark Sky Sanctuary, its sky between mountain and sea nearly wholly black."
   },
   {
     "name": "普雷斯泰恩與諾頓暗空社區",
@@ -2087,7 +2276,8 @@
     "lng": -3.0305,
     "zoom": 12,
     "desc": "威爾斯與英格蘭交界的邊境小鎮，2024 年成為威爾斯首座國際暗空社區，丘陵環抱間星光明亮。",
-    "img": null
+    "img": null,
+    "desc_en": "A border town on the Wales-England boundary; in 2024 it became Wales's first International Dark Sky Community, the starlight bright among the surrounding hills."
   },
   {
     "name": "索靈頓街暗空社區",
@@ -2098,18 +2288,20 @@
     "lng": 0.9249,
     "zoom": 13,
     "desc": "英格蘭薩福克郡的鄉間小村，2024 年成為英格蘭首座國際暗空社區，田園之上保有罕見的黑暗夜空。",
-    "img": null
+    "img": null,
+    "desc_en": "A rural village in Suffolk, England; in 2024 it became England's first International Dark Sky Community, keeping a rare dark sky above its farmland."
   },
   {
     "name": "高爾半島暗空社區",
     "ename": "Gower",
     "country": "英國・威爾斯",
     "year": 2025,
-    "lat": 51.5850,
-    "lng": -4.1800,
+    "lat": 51.585,
+    "lng": -4.18,
     "zoom": 12,
     "desc": "威爾斯斯旺西西側的高爾半島，是英國首處法定傑出自然景觀區，2025 年獲認證為國際暗空社區。",
-    "img": null
+    "img": null,
+    "desc_en": "The Gower Peninsula west of Swansea, Wales — Britain's first statutory Area of Outstanding Natural Beauty, certified an International Dark Sky Community in 2025."
   },
   {
     "name": "曼島暗空公園",
@@ -2120,18 +2312,20 @@
     "lng": 8.5553,
     "zoom": 12,
     "desc": "丹麥瓦登海國家公園中的潮汐小島，僅靠潮間道路與本土相連，人煙稀少，夜空可見銀河與北極光。",
-    "img": null
+    "img": null,
+    "desc_en": "A tidal island in Denmark's Wadden Sea National Park, linked to the mainland only by a tidal road and sparsely peopled, its night sky revealing the Milky Way and the aurora."
   },
   {
     "name": "卡里卡靈加暗空社區",
     "ename": "Carrickalinga",
     "country": "澳大利亞・南澳",
     "year": 2024,
-    "lat": -35.4240,
+    "lat": -35.424,
     "lng": 138.3244,
     "zoom": 13,
     "desc": "南澳弗勒里厄半島的海濱小鎮，2024 年獲認證為國際暗空社區，南半球夜空可見南十字與麥哲倫雲。",
-    "img": null
+    "img": null,
+    "desc_en": "A coastal town on the Fleurieu Peninsula of South Australia, certified an International Dark Sky Community in 2024; the Southern Hemisphere sky reveals the Southern Cross and the Magellanic Clouds."
   },
   {
     "name": "甘特里希自然公園",
@@ -2142,7 +2336,8 @@
     "lng": 7.4219,
     "zoom": 11,
     "desc": "瑞士伯恩與弗里堡之間的前阿爾卑斯自然公園，介於城市之間卻保有受保護的暗空，是中歐難得的觀星區。",
-    "img": null
+    "img": null,
+    "desc_en": "A pre-Alpine nature park between Bern and Fribourg, Switzerland; set among cities yet keeping a protected dark sky — a rare stargazing area in Central Europe."
   },
   {
     "name": "海狸島州立野生動物研究區",
@@ -2153,7 +2348,8 @@
     "lng": -85.5544,
     "zoom": 11,
     "desc": "密西根湖中最大島嶼上的野生動物研究區，四周湖水隔絕了本土光害，是五大湖區優良的觀星地。",
-    "img": null
+    "img": null,
+    "desc_en": "A wildlife research area on the largest island in Lake Michigan; the surrounding lake waters block mainland light, making it a fine stargazing spot in the Great Lakes region."
   },
   {
     "name": "布魯諾沙丘州立公園",
@@ -2164,7 +2360,8 @@
     "lng": -115.7028,
     "zoom": 12,
     "desc": "愛達荷州南部擁有北美最高沙丘的州立公園，園內設有公眾天文台，乾燥沙漠夜空通透明亮。",
-    "img": null
+    "img": null,
+    "desc_en": "A state park in southern Idaho with the tallest dunes in North America; it has a public observatory, and the dry desert sky is clear and bright."
   },
   {
     "name": "摩押市",
@@ -2175,7 +2372,8 @@
     "lng": -109.5462,
     "zoom": 12,
     "desc": "猶他州紅岩峽谷間的門戶城鎮，鄰近拱門與峽谷地國家公園，2024 年以照明友善政策獲認證為國際暗空社區。",
-    "img": null
+    "img": null,
+    "desc_en": "A gateway town among Utah's red-rock canyons, near Arches and Canyonlands National Parks; in 2024 it was certified an International Dark Sky Community for its lighting-friendly policy."
   },
   {
     "name": "甘尼森峽谷國家保護區",
@@ -2186,7 +2384,8 @@
     "lng": -107.7947,
     "zoom": 11,
     "desc": "科羅拉多西部甘尼森河切割的荒野峽谷，地處高原乾燥地帶，遠離城鎮光害，夜空深邃清晰。",
-    "img": null
+    "img": null,
+    "desc_en": "A wilderness gorge carved by the Gunnison River in western Colorado; set in the dry highlands far from town light, its night sky is deep and clear."
   },
   {
     "name": "圖巴克暗空社區",
@@ -2197,6 +2396,7 @@
     "lng": -111.0459,
     "zoom": 13,
     "desc": "亞利桑那州南部聖克魯茲河谷的歷史藝術小鎮，2024 年獲認證為國際暗空社區，沙漠夜空銀河清晰可見。",
-    "img": null
+    "img": null,
+    "desc_en": "A historic arts town in the Santa Cruz River valley of southern Arizona; in 2024 it was certified an International Dark Sky Community, the desert sky revealing a clear Milky Way."
   }
 ]

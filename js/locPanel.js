@@ -9,8 +9,12 @@ import { getDjlorenzData, ratioToZone,
 import { reverseGeocode }               from './geocode.js';
 import { renderStargazeInfo,
          clearStargazeInfo }            from './stargazing.js';
-import { BORTLE_TIPS }                  from './config.js';
+import { t, zoneDesc, bortleTip,
+         onLangChange }                 from './i18n.js';
 import { state }                        from './state.js';
+
+// 快取最近一次查詢結果，供語言切換時就地重繪
+let lastLoc = null;
 
 const locPanel = document.getElementById('loc-panel');
 const locPlace = document.getElementById('loc-place');
@@ -79,7 +83,7 @@ export async function queryLocation(lat, lng) {
 
     locPanel.classList.add('open');
     locPlace.textContent = `${lat.toFixed(4)}, ${dispLng.toFixed(4)}`;
-    locBody.innerHTML    = `<div class="loc-loading">載入中...</div>`;
+    locBody.innerHTML    = `<div class="loc-loading">${t('loading')}</div>`;
     renderStargazeInfo(lat, dispLng);
 
     // 並行查詢光害數據與地名
@@ -109,45 +113,50 @@ map.on('click', (e) => {
  * @param {number} lng
  */
 function renderLocBody(data, lat, lng) {
+    lastLoc = { data, lat, lng };
+
     if (data?.error === 'range') {
         locBody.innerHTML = `
-            <div class="loc-loading">
-                此位置超出資料範圍<br>(65°S ~ 75°N)
-            </div>`;
+            <div class="loc-loading">${t('loc_out_of_range')}</div>`;
         return;
     }
 
     if (data?.error === 'network') {
         locBody.innerHTML = `
-            <div class="loc-error">
-                ⚠ 光害資料載入失敗<br>請確認網路連線後再試
-            </div>`;
+            <div class="loc-error">${t('lp_load_fail')}</div>`;
         return;
     }
 
     const z   = ratioToZone(data.ratio);
-    const tip = BORTLE_TIPS[z.bortle] ?? '';
+    const tip = bortleTip(z.bortle);
 
     locBody.innerHTML = `
         <div class="loc-class-num"   style="color:${z.color}">Class ${z.bortle}</div>
-        <div class="loc-class-label" style="color:${z.color}">${z.desc}</div>
+        <div class="loc-class-label" style="color:${z.color}">${zoneDesc(z.desc)}</div>
         <div class="loc-class-tip">${tip}</div>
         <hr class="loc-divider">
         <div class="loc-row">
-            <span class="loc-key">天空品質 SQM</span>
+            <span class="loc-key">${t('sqm')}</span>
             <span class="loc-val">${data.sqm.toFixed(2)} <small>mag/arcsec²</small></span>
         </div>
         <div class="loc-row">
-            <span class="loc-key">光害指數</span>
+            <span class="loc-key">${t('lp_index')}</span>
             <span class="loc-val">${roundRatio(data.ratio)}</span>
         </div>
         <div class="loc-row">
-            <span class="loc-key">資料年份</span>
+            <span class="loc-key">${t('data_year')}</span>
             <span class="loc-val">${state.currentYear}</span>
         </div>
         <div class="loc-row">
-            <span class="loc-key">座標</span>
+            <span class="loc-key">${t('coords')}</span>
             <span class="loc-val">${lat.toFixed(4)}, ${lng.toFixed(4)}</span>
         </div>
     `;
 }
+
+// 語言切換：若位置面板開著，就地以新語言重繪內容
+onLangChange(() => {
+    if (locPanel.classList.contains('open') && lastLoc) {
+        renderLocBody(lastLoc.data, lastLoc.lat, lastLoc.lng);
+    }
+});

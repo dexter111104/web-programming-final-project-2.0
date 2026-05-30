@@ -5,6 +5,10 @@
 
 // 經緯度 → IANA 時區查詢（離線資料庫，海上回傳 Etc/GMT±X）
 import tzlookup from 'https://esm.sh/tz-lookup@6.1.25';
+import { t, bestFrom, onLangChange } from './i18n.js';
+
+// 快取最近一次觀星查詢座標，供語言切換時就地重繪
+let lastStargaze = null;
 
 /**
  * 取得座標所屬的官方時區（IANA 名稱）；查詢失敗時回傳 null
@@ -140,10 +144,11 @@ export function calcSunTimes(lat, lng) {
  * 清空「今晚觀星時間」區塊，回到「請選擇地點」提示（未選取任何地點時）
  */
 export function clearStargazeInfo() {
+    lastStargaze = null;
     document.getElementById('stargazeLoc').textContent = '';
     const el = document.getElementById('stargazeInfo');
     el.className = 'stargaze-loading';
-    el.innerHTML = '請選擇地點';
+    el.innerHTML = t('select_location');
 }
 
 /**
@@ -152,6 +157,7 @@ export function clearStargazeInfo() {
  * @param {number} lng
  */
 export function renderStargazeInfo(lat, lng) {
+    lastStargaze = { lat, lng };
     document.getElementById('stargazeLoc').textContent = `${lat.toFixed(1)}°, ${lng.toFixed(1)}°`;
 
     const el  = document.getElementById('stargazeInfo');
@@ -159,41 +165,47 @@ export function renderStargazeInfo(lat, lng) {
 
     if (sun.type === 'polar-night') {
         el.className = 'stargaze-loading';
-        el.innerHTML = '極夜 — 全天可觀星！';
+        el.innerHTML = t('polar_night');
         return;
     }
     if (sun.type === 'midnight-sun') {
         el.className = 'stargaze-loading';
-        el.innerHTML = '極晝 — 今夜無天文黑夜';
+        el.innerHTML = t('midnight_sun');
         return;
     }
 
     el.className = 'stargaze-info';
     el.innerHTML = `
         <div class="stargaze-row">
-            <span class="stargaze-key">日落</span>
+            <span class="stargaze-key">${t('sunset')}</span>
             <span class="stargaze-val">${sun.sunset}</span>
         </div>
         ${sun.civilEnd ? `
         <div class="stargaze-row">
-            <span class="stargaze-key">民用暮光終</span>
+            <span class="stargaze-key">${t('civil_end')}</span>
             <span class="stargaze-val">${sun.civilEnd}</span>
         </div>` : ''}
         ${sun.nautEnd ? `
         <div class="stargaze-row">
-            <span class="stargaze-key">航海暮光終</span>
+            <span class="stargaze-key">${t('naut_end')}</span>
             <span class="stargaze-val">${sun.nautEnd}</span>
         </div>` : ''}
         <div class="stargaze-row" style="border-bottom:none">
-            <span class="stargaze-key">天文黑夜始</span>
-            <span class="stargaze-val" style="color:#fff">${sun.astroEnd ?? '不發生'}</span>
+            <span class="stargaze-key">${t('astro_start')}</span>
+            <span class="stargaze-val" style="color:#fff">${sun.astroEnd ?? t('not_occur')}</span>
         </div>
         ${sun.astroEnd ? `
         <div class="stargaze-best">
-            ⭐ 建議從 <strong>${sun.astroEnd}</strong> 開始觀星
+            ${bestFrom(sun.astroEnd)}
         </div>` : `
         <div class="stargaze-best stargaze-best-none">
-            ☁ 今夜無完整天文黑夜，不適合深空觀星
+            ${t('stargaze_none')}
         </div>`}
     `;
 }
+
+// 語言切換：有選取地點則重算重繪，否則回到「請選擇地點」提示
+onLangChange(() => {
+    if (lastStargaze) renderStargazeInfo(lastStargaze.lat, lastStargaze.lng);
+    else clearStargazeInfo();
+});

@@ -6,6 +6,9 @@
 import { map }                        from './map.js';
 import { getDjlorenzData, ratioToZone } from './lpData.js';
 import { state }                      from './state.js';
+import { t, zoneDesc, idaYear, continentName,
+         siteName, siteSubName, siteCountry, siteDesc,
+         onLangChange }               from './i18n.js';
 
 // 模組私有狀態
 let DARK_SITES     = [];
@@ -44,7 +47,8 @@ const sitePanel = document.getElementById('site-panel');
  */
 async function loadDarkSites() {
     try {
-        return await fetch('data/darksites.json')
+        // 加上 cache: 'no-cache' 強制向伺服器重新驗證，避免資料更新後仍讀到瀏覽器舊快取
+        return await fetch('data/darksites.json', { cache: 'no-cache' })
             .then(r => { if (!r.ok) throw r; return r.json(); });
     } catch (err) {
         console.error('[darkSites] 暗空聖地資料載入失敗:', err);
@@ -179,7 +183,7 @@ function flyTo(index) {
             icon: L.divIcon({
                 className: 'site-marker-icon',
                 html: `<div class="site-marker-pin"></div>
-                       <div class="site-marker-label">${site.name}</div>`,
+                       <div class="site-marker-label">${siteName(site)}</div>`,
                 iconSize:  [140, 38],
                 iconAnchor:[70, 6],
             }),
@@ -237,24 +241,21 @@ function loadSitePanelImage(site) {
 
 /** 填充聖地資訊面板（文字資訊 + 非同步光害數據），全聖地通用 */
 function fillSitePanel(site) {
-    document.getElementById('site-panel-year').textContent =
-        site.year ? `IDA 認證 ${site.year}` : 'IDA 認證';
-    document.getElementById('site-panel-name').textContent    = site.name  || site.ename || '';
-    document.getElementById('site-panel-ename').textContent   =
-        (site.ename && site.ename !== site.name) ? site.ename : '';
-    document.getElementById('site-panel-country').textContent = site.country || '';
-    document.getElementById('site-panel-desc').textContent    =
-        site.desc || 'IDA 認證暗天聖地，提供優質黑暗夜空環境。';
+    document.getElementById('site-panel-year').textContent    = idaYear(site.year);
+    document.getElementById('site-panel-name').textContent    = siteName(site);
+    document.getElementById('site-panel-ename').textContent   = siteSubName(site);
+    document.getElementById('site-panel-country').textContent = siteCountry(site);
+    document.getElementById('site-panel-desc').textContent    = siteDesc(site);
 
     const bortleEl = document.getElementById('site-panel-bortle');
-    bortleEl.innerHTML = '<div class="site-bortle-loading">載入光害資料…</div>';
+    bortleEl.innerHTML = `<div class="site-bortle-loading">${t('site_bortle_loading')}</div>`;
 
     const snapIndex = state.currentSiteIndex;
     getDjlorenzData(site.lat, site.lng).then(data => {
         if (state.currentSiteIndex !== snapIndex) return; // 已切換聖地，捨棄結果
 
         if (data?.error === 'network') {
-            bortleEl.innerHTML = '<div class="site-bortle-loading">⚠ 光害資料載入失敗</div>';
+            bortleEl.innerHTML = `<div class="site-bortle-loading">${t('site_lp_fail')}</div>`;
             return;
         }
         if (data?.error === 'range') {
@@ -268,7 +269,7 @@ function fillSitePanel(site) {
             <div class="site-bortle-row">
                 <span class="site-bortle-dot"   style="background:${z.color}"></span>
                 <span class="site-bortle-class" style="color:${z.color}">Bortle ${z.bortle}</span>
-                <span class="site-bortle-desc">${z.desc}</span>
+                <span class="site-bortle-desc">${zoneDesc(z.desc)}</span>
             </div>
             <div class="site-bortle-sqm">SQM ${data.sqm.toFixed(2)} mag/arcsec²</div>
         `;
@@ -387,7 +388,7 @@ function hideAllSites() {
     const btn = document.getElementById('toggle-all-sites');
     if (btn) {
         btn.classList.remove('active');
-        btn.textContent = '標出全部地點';
+        btn.textContent = t('show_all_sites');
     }
 }
 
@@ -403,7 +404,27 @@ function toggleAllSites(btn) {
     allSitesLayer = new AllSitesCanvas();
     allSitesLayer.addTo(map);
     btn.classList.add('active');
-    btn.textContent = '隱藏全部地點';
+    btn.textContent = t('hide_all_sites');
+}
+
+/**
+ * 語言切換時就地更新列表文字（大洲名、地點名、國家），
+ * 不重建 DOM，保留分組展開狀態、選取高亮與事件綁定
+ */
+function refreshSiteListLang() {
+    document.querySelectorAll('.darksite-group').forEach(g => {
+        const zh     = g.dataset.continent;
+        const nameEl = g.querySelector('.darksite-group-name');
+        if (zh && nameEl) nameEl.textContent = continentName(zh);
+    });
+    itemEls.forEach((el, i) => {
+        if (!el) return;
+        const site = DARK_SITES[i];
+        const n = el.querySelector('.darksite-name');
+        const l = el.querySelector('.darksite-loc');
+        if (n) n.textContent = siteName(site);
+        if (l) l.textContent = siteCountry(site);
+    });
 }
 
 // ── 初始化（非同步，由 main.js 呼叫）────────────────────────
@@ -415,14 +436,14 @@ function toggleAllSites(btn) {
 export async function initDarkSites() {
     const darksiteList = document.getElementById('darksite-list');
     darksiteList.innerHTML = `
-        <div style="color:#444;font-size:0.75rem;padding:8px 0">載入中…</div>`;
+        <div style="color:#444;font-size:0.75rem;padding:8px 0">${t('list_loading')}</div>`;
 
     const sites = await loadDarkSites();
 
     if (!sites) {
         darksiteList.innerHTML = `
             <div style="color:#c05050;font-size:0.75rem;padding:8px 0;line-height:1.5">
-                ⚠ 暗空聖地資料載入失敗<br>請重新整理頁面
+                ${t('list_load_fail')}
             </div>`;
         return;
     }
@@ -451,11 +472,13 @@ export async function initDarkSites() {
         const group = document.createElement('div');
         group.className = 'darksite-group collapsed'; // 預設全部摺疊
 
+        group.dataset.continent = continent;   // 保留中文鍵供語言切換重繪
+
         const header = document.createElement('div');
         header.className = 'darksite-group-header';
         header.innerHTML = `
             <span class="darksite-group-arrow">▸</span>
-            <span class="darksite-group-name">${continent}</span>
+            <span class="darksite-group-name">${continentName(continent)}</span>
             <span class="darksite-group-count">${members.length}</span>`;
         header.addEventListener('click', () => {
             const willOpen = group.classList.contains('collapsed');
@@ -482,8 +505,8 @@ export async function initDarkSites() {
             el.innerHTML = `
                 ${STAR_SVG}
                 <div>
-                    <div class="darksite-name">${site.name}</div>
-                    <div class="darksite-loc">${site.country}</div>
+                    <div class="darksite-name">${siteName(site)}</div>
+                    <div class="darksite-loc">${siteCountry(site)}</div>
                 </div>`;
             el.addEventListener('click', () => flyTo(i));
             el.addEventListener('animationend', () => el.classList.remove('deselecting'));
@@ -500,7 +523,27 @@ export async function initDarkSites() {
 
     // 「標出全部地點」切換按鈕
     const toggleBtn = document.getElementById('toggle-all-sites');
-    if (toggleBtn) toggleBtn.addEventListener('click', () => toggleAllSites(toggleBtn));
+    if (toggleBtn) {
+        toggleBtn.textContent = t('show_all_sites');
+        toggleBtn.addEventListener('click', () => toggleAllSites(toggleBtn));
+    }
+
+    // 語言切換：就地更新列表/按鈕/開啟中的聖地面板（保留展開與選取狀態）
+    onLangChange(() => {
+        refreshSiteListLang();
+        const btn = document.getElementById('toggle-all-sites');
+        if (btn) btn.textContent = allSitesActive ? t('hide_all_sites') : t('show_all_sites');
+        if (state.currentSiteIndex !== -1) {
+            const site = DARK_SITES[state.currentSiteIndex];
+            if (site) {
+                fillSitePanel(site);
+                if (siteMarker) {
+                    const lbl = siteMarker.getElement()?.querySelector('.site-marker-label');
+                    if (lbl) lbl.textContent = siteName(site);
+                }
+            }
+        }
+    });
 
     // 地圖拖動時：同步更新面板位置
     map.on('move', () => {

@@ -11,6 +11,8 @@ import './geolocate.js';
 import { initDarkSites, closeSitePanel } from './darkSites.js';
 import { clearStargazeInfo }             from './stargazing.js';
 import { LP_ZONES }                      from './config.js';
+import { applyStaticI18n, zoneDesc,
+         getLang, setLang, onLangChange } from './i18n.js';
 
 // ── 啟動畫面 ──────────────────────────────────────────────────
 window.addEventListener('load', () => {
@@ -33,15 +35,38 @@ document.querySelector('.site-panel-close').addEventListener('click', closeSiteP
 
 // ── 波特爾等級圖例（由 LP_ZONES 動態產生，不再寫死在 HTML）──
 const bortleLegend = document.getElementById('bortle-legend');
-LP_ZONES.filter(z => z.legend).forEach(z => {
-    const row = document.createElement('div');
-    row.className = 'bortle-row';
-    row.innerHTML = `
-        <span class="bortle-dot"  style="background:${z.color}"></span>
-        <span class="bortle-class">${z.bortle}</span>
-        <span class="bortle-desc">${z.desc}</span>`;
-    bortleLegend.appendChild(row);
+function renderBortleLegend() {
+    bortleLegend.innerHTML = '';
+    LP_ZONES.filter(z => z.legend).forEach(z => {
+        const row = document.createElement('div');
+        row.className = 'bortle-row';
+        row.innerHTML = `
+            <span class="bortle-dot"  style="background:${z.color}"></span>
+            <span class="bortle-class">${z.bortle}</span>
+            <span class="bortle-desc">${zoneDesc(z.desc)}</span>`;
+        bortleLegend.appendChild(row);
+    });
+}
+renderBortleLegend();
+
+// ── 語言切換（面板開關鈕旁的 中/EN 鈕）──────────────────────
+const langToggle = document.getElementById('lang-toggle');
+function updateLangToggleLabel() {
+    // 顯示「可切換到的語言」
+    langToggle.textContent = getLang() === 'zh' ? 'EN' : '中';
+}
+langToggle.addEventListener('click', () => {
+    setLang(getLang() === 'zh' ? 'en' : 'zh');
 });
+onLangChange(() => {
+    applyStaticI18n();
+    renderBortleLegend();
+    updateLangToggleLabel();
+});
+
+// 初始套用目前語言
+applyStaticI18n();
+updateLangToggleLabel();
 
 // ── 預設觀星資訊：未選取地點，顯示提示 ──────────────────────
 clearStargazeInfo();

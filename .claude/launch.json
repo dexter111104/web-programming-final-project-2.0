@@ -2,9 +2,9 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "app",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["start"],
+      "name": "static",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8150"],
       "port": 8150
     }
   ]

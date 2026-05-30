@@ -8,7 +8,6 @@
 import './map.js';
 import './locPanel.js';
 import './geolocate.js';
-import './account.js';
 import { initDarkSites, closeSitePanel } from './darkSites.js';
 import { clearStargazeInfo }             from './stargazing.js';
 import { LP_ZONES }                      from './config.js';
